@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distanbol</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 70%;
+        width: 50%;
+      }
+
+
+    </style>
+    <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h2>Source</h2>
+<div id="rawJson"></div>
+
+<h2>Map Locations</h2>
+<div id="map" class="map"></div>
+<script id="script" type="text/javascript">
+      const markerSource = new ol.source.Vector();
+
+      var markerStyle = new ol.style.Style({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+          anchor: [0.5, 46],
+          anchorXUnits: 'fraction',
+          anchorYUnits: 'pixels',
+          opacity: 0.75,
+          src: 'https://openlayers.org/en/v4.6.4/examples/data/icon.png'
+        }))
+      });
+
+      let map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM(),
+          }),
+          new ol.layer.Vector({
+            source: markerSource,
+            style: markerStyle,
+          }),
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([6.661594, 50.433237]),
+          zoom: 1.5,
+        })
+      });
+
+
+      function addMarker(lon, lat) {
+        console.log(lat);
+        console.log(lon);
+
+        var iconFeatures = [];
+
+        var iconFeature = new ol.Feature({
+          geometry: new ol.geom.Point(ol.proj.transform([lon, lat], 'EPSG:4326',
+            'EPSG:3857'))
+        });
+
+        markerSource.addFeature(iconFeature);
+      }
+      //addMarker(0,0);
+      //addMarker(10,10);
+
+</script>
+
+<h2>Information</h2>
+<div id="viewables"></div>
+
+</body>
+</html>

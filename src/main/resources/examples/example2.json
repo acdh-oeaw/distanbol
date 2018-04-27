@@ -1,0 +1,2591 @@
+{
+"@context": {
+"dbp-ont": "http://dbpedia.org/ontology/",
+"dbp-ont:birthDate": {
+"@type": "xsd:dateTime"
+},
+"dbp-ont:populationTotal": {
+"@type": "xsd:long"
+},
+"dc": "http://purl.org/dc/terms/",
+"dc:created": {
+"@type": "xsd:dateTime"
+},
+"dc:creator": {
+"@type": "xsd:string"
+},
+"dc:relation": {
+"@type": "@id"
+},
+"dc:type": {
+"@type": "@id"
+},
+"enhancer": "http://fise.iks-project.eu/ontology/",
+"enhancer:confidence": {
+"@type": "xsd:double"
+},
+"enhancer:end": {
+"@type": "xsd:int"
+},
+"enhancer:entity-reference": {
+"@type": "@id"
+},
+"enhancer:entity-type": {
+"@type": "@id"
+},
+"enhancer:extracted-from": {
+"@type": "@id"
+},
+"enhancer:start": {
+"@type": "xsd:int"
+},
+"foaf": "http://xmlns.com/foaf/0.1/",
+"foaf:depiction": {
+"@type": "@id"
+},
+"geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+"geo:lat": {
+"@type": "xsd:double"
+},
+"geo:long": {
+"@type": "xsd:double"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/firstWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/nextSentence": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/parent": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": {
+"@type": "xsd:string"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": {
+"@type": "xsd:int"
+},
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": {
+"@type": "xsd:int"
+},
+"http://nlp2rdf.lod2.eu/schema/string/superString": {
+"@type": "@id"
+},
+"owl": "http://www.w3.org/2002/07/owl#",
+"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+"schema": "http://schema.org/",
+"xsd": "http://www.w3.org/2001/XMLSchema#"
+},
+"@graph": [
+{
+"@id": "http://dbpedia.org/resource/%C3%963_Austria_Top_40",
+"rdfs:comment": {
+"@language": "en",
+"@value": "Ö3 Austria Top 40 is the name of the official Austrian singles chart, as well as the radio show which presents it, aired Fridays on Hitradio Ö3. The show presents the Austrian singles, ringtones and downloads chart. It premiered on 26 November 1968 as Disc Parade and was presented by Ernst Grissemann. The show has had other names and other presenters, as detailed below. The weekly number-ones are released by Musikmarkt and go TV."
+},
+"rdfs:label": [
+{
+"@language": "de",
+"@value": "Ö3 Austria Top 40"
+},
+{
+"@language": "en",
+"@value": "Ö3 Austria Top 40"
+},
+{
+"@language": "es",
+"@value": "Ö3 Austria Top 40"
+},
+{
+"@language": "fr",
+"@value": "Ö3 Austria Top 40"
+},
+{
+"@language": "it",
+"@value": "Ö3 Austria Top 40"
+},
+{
+"@language": "pt",
+"@value": "Ö3 Austria Top 40"
+},
+{
+"@language": "ru",
+"@value": "Ö3 Austria Top 40"
+},
+{
+"@language": "tr",
+"@value": "Ö3 Austria Top 40"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Austria",
+"@type": [
+"dbp-ont:Country",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing",
+"schema:Country",
+"schema:Place"
+],
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/200px-Flag_of_Austria.svg.png"
+],
+"geo:lat": 48.2,
+"geo:long": 16.35,
+"rdfs:comment": {
+"@language": "en",
+"@value": "Austria, officially the Republic of Austria, is a landlocked country of roughly 8.47 million people in Central Europe. It is bordered by the Czech Republic and Germany to the north, Hungary and Slovakia to the east, Slovenia and Italy to the south, and Switzerland and Liechtenstein to the west. The territory of Austria covers 83,855 square kilometres (32,377 sq mi) and has a temperate and alpine climate."
+},
+"rdfs:label": [
+{
+"@language": "en",
+"@value": "Austria"
+},
+{
+"@language": "es",
+"@value": "Austria"
+},
+{
+"@language": "it",
+"@value": "Austria"
+},
+{
+"@language": "fr",
+"@value": "Autriche"
+},
+{
+"@language": "tr",
+"@value": "Avusturya"
+},
+{
+"@language": "pt",
+"@value": "Áustria"
+},
+{
+"@language": "de",
+"@value": "Österreich"
+},
+{
+"@language": "ru",
+"@value": "Австрия"
+},
+{
+"@language": "he",
+"@value": "אוסטריה"
+},
+{
+"@language": "ar",
+"@value": "النمسا"
+},
+{
+"@language": "zh",
+"@value": "奥地利"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Central,_Hong_Kong",
+"@type": "http://www.opengis.net/gml/_Feature",
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/0/0e/Hong_Kong_Island_Skyline_2009.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Hong_Kong_Island_Skyline_2009.jpg/200px-Hong_Kong_Island_Skyline_2009.jpg"
+],
+"geo:lat": 22.281944,
+"geo:long": 114.15806,
+"rdfs:comment": {
+"@language": "en",
+"@value": "Central (also Central District; Chinese: 中環) is the central business district of Hong Kong. It is located in Central and Western District, on the north shore of Hong Kong Island, across Victoria Harbour from Tsim Sha Tsui, the southernmost point of Kowloon Peninsula. The area was the heart of Victoria City, although that name is rarely used today. As the central business district of Hong Kong, many multinational financial services corporations have their headquarters in the area."
+},
+"rdfs:label": [
+{
+"@language": "de",
+"@value": "Central (Hongkong)"
+},
+{
+"@language": "en",
+"@value": "Central, Hong Kong"
+},
+{
+"@language": "he",
+"@value": "סנטרל (הונג קונג)"
+},
+{
+"@language": "zh",
+"@value": "中環"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Ghana",
+"@type": [
+"dbp-ont:Country",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing",
+"schema:Country",
+"schema:Place"
+],
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Ghana.svg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/200px-Flag_of_Ghana.svg.png"
+],
+"geo:lat": 5.55,
+"geo:long": -0.25,
+"rdfs:comment": {
+"@language": "en",
+"@value": "Ghana Listen/ˈɡɑːnə/ is a country located in West Africa. It is bordered by Côte d'Ivoire (Ivory Coast) to the west, Burkina Faso to the north, Togo to the east, and the Gulf of Guinea to the south. The word Ghana means \"Warrior King\" and is derived from the ancient Ghana Empire. Ghana was inhabited in pre-colonial times by a number of ancient predominantly Akan kingdoms, including the inland Ashanti Empire, the Akwamu, the Akyem, the Bonoman, the Denkyira, and the Fante among others."
+},
+"rdfs:label": [
+{
+"@language": "pt",
+"@value": "Gana"
+},
+{
+"@language": "tr",
+"@value": "Gana"
+},
+{
+"@language": "de",
+"@value": "Ghana"
+},
+{
+"@language": "en",
+"@value": "Ghana"
+},
+{
+"@language": "es",
+"@value": "Ghana"
+},
+{
+"@language": "fr",
+"@value": "Ghana"
+},
+{
+"@language": "it",
+"@value": "Ghana"
+},
+{
+"@language": "ru",
+"@value": "Гана"
+},
+{
+"@language": "he",
+"@value": "גאנה"
+},
+{
+"@language": "ar",
+"@value": "غانا"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Hong_Kong",
+"@type": [
+"dbp-ont:Country",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing",
+"schema:Country",
+"schema:Place"
+],
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/200px-Flag_of_Hong_Kong.svg.png"
+],
+"geo:lat": 22.278334,
+"geo:long": [
+114.15888,
+114.15889
+],
+"rdfs:comment": {
+"@language": "en",
+"@value": "Hong Kong is one of two special administrative regions (SARs) of the People's Republic of China (PRC), the other being Macau. A city-state situated on China's south coast and enclosed by the Pearl River Delta and South China Sea, it is known for its expansive skyline and deep natural harbour. With a land mass of 1,104 km (426 sq mi) and a population of seven million people, Hong Kong is one of the most densely populated areas in the world."
+},
+"rdfs:label": [
+{
+"@language": "en",
+"@value": "Hong Kong"
+},
+{
+"@language": "es",
+"@value": "Hong Kong"
+},
+{
+"@language": "fr",
+"@value": "Hong Kong"
+},
+{
+"@language": "it",
+"@value": "Hong Kong"
+},
+{
+"@language": "pt",
+"@value": "Hong Kong"
+},
+{
+"@language": "tr",
+"@value": "Hong Kong"
+},
+{
+"@language": "de",
+"@value": "Hongkong"
+},
+{
+"@language": "ru",
+"@value": "Гонконг"
+},
+{
+"@language": "he",
+"@value": "הונג קונג"
+},
+{
+"@language": "ar",
+"@value": "هونغ كونغ"
+},
+{
+"@language": "zh",
+"@value": "香港"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Leonardo_da_Vinci",
+"@type": [
+"dbp-ont:Agent",
+"dbp-ont:Artist",
+"dbp-ont:Person",
+"foaf:Person",
+"owl:Thing",
+"schema:Person"
+],
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/f/f9/Leonardo_da_Vinci_-_Self-Portrait_-_WGA12798.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Leonardo_da_Vinci_-_Self-Portrait_-_WGA12798.jpg/200px-Leonardo_da_Vinci_-_Self-Portrait_-_WGA12798.jpg"
+],
+"rdfs:comment": {
+"@language": "en",
+"@value": "Leonardo di ser Piero da Vinci was an Italian Renaissance polymath: painter, sculptor, architect, musician, scientist, mathematician, engineer, inventor, anatomist, geologist, cartographer, botanist, and writer whose genius, perhaps more than that of any other figure, epitomized the Renaissance humanist ideal. Leonardo has often been described as the archetype of the Renaissance Man, a man of \"unquenchable curiosity\" and \"feverishly inventive imagination\"."
+},
+"rdfs:label": [
+{
+"@language": "de",
+"@value": "Leonardo da Vinci"
+},
+{
+"@language": "en",
+"@value": "Leonardo da Vinci"
+},
+{
+"@language": "es",
+"@value": "Leonardo da Vinci"
+},
+{
+"@language": "it",
+"@value": "Leonardo da Vinci"
+},
+{
+"@language": "pt",
+"@value": "Leonardo da Vinci"
+},
+{
+"@language": "tr",
+"@value": "Leonardo da Vinci"
+},
+{
+"@language": "fr",
+"@value": "Léonard de Vinci"
+},
+{
+"@language": "ru",
+"@value": "Леонардо да Винчи"
+},
+{
+"@language": "he",
+"@value": "לאונרדו דה וינצ'י"
+},
+{
+"@language": "ar",
+"@value": "ليوناردو دا فينشي"
+},
+{
+"@language": "zh",
+"@value": "列奥纳多·达·芬奇"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Mus%C3%A9e_du_Louvre",
+"@type": [
+"dbp-ont:ArchitecturalStructure",
+"dbp-ont:Building",
+"dbp-ont:Museum",
+"dbp-ont:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing",
+"schema:Museum",
+"schema:Place"
+],
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/5/53/Le_Louvre_-_Aile_Richelieu.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Le_Louvre_-_Aile_Richelieu.jpg/200px-Le_Louvre_-_Aile_Richelieu.jpg"
+],
+"geo:lat": 48.86034,
+"geo:long": 2.337599,
+"rdfs:comment": {
+"@language": "en",
+"@value": "The Musée du Louvre—in English, the Louvre Museum or simply the Louvre—is one of the world's largest museums, the most visited art museum in the world and a historic monument. A central landmark of Paris, France, it is located on the Right Bank of the Seine in the 1st arrondissement (district). Nearly 35,000 objects from prehistory to the 19th century are exhibited over an area of 60,600 square metres (652,300 square feet)."
+},
+"rdfs:label": [
+{
+"@language": "de",
+"@value": "Louvre"
+},
+{
+"@language": "tr",
+"@value": "Louvre Müzesi"
+},
+{
+"@language": "es",
+"@value": "Museo del Louvre"
+},
+{
+"@language": "it",
+"@value": "Museo del Louvre"
+},
+{
+"@language": "pt",
+"@value": "Museu do Louvre"
+},
+{
+"@language": "en",
+"@value": "Musée du Louvre"
+},
+{
+"@language": "fr",
+"@value": "Musée du Louvre"
+},
+{
+"@language": "ru",
+"@value": "Лувр"
+},
+{
+"@language": "he",
+"@value": "מוזיאון הלובר"
+},
+{
+"@language": "ar",
+"@value": "متحف اللوفر"
+},
+{
+"@language": "zh",
+"@value": "卢浮宫"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Sigmund_Freud",
+"@type": [
+"dbp-ont:Agent",
+"dbp-ont:Person",
+"dbp-ont:Scientist",
+"foaf:Person",
+"owl:Thing",
+"schema:Person"
+],
+"dbp-ont:birthDate": "1856-05-05T23:00:00Z",
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/1/12/Sigmund_Freud_LIFE.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Sigmund_Freud_LIFE.jpg/200px-Sigmund_Freud_LIFE.jpg"
+],
+"rdfs:comment": {
+"@language": "en",
+"@value": "Sigmund Freud, born Sigismund Schlomo Freud (6 May 1856 – 23 September 1939), was an Austrian neurologist who founded the discipline of psychoanalysis. Freud's family and ancestry were Jewish. Freud always considered himself a Jew even though he rejected Judaism and had a critical view of religion. Freud's parents were poor, but ensured his education. Freud was an outstanding pupil in high school, and graduated the Matura with honors in 1873."
+},
+"rdfs:label": [
+{
+"@language": "de",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "en",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "es",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "fr",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "it",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "pt",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "tr",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "ru",
+"@value": "Фрейд, Зигмунд"
+},
+{
+"@language": "he",
+"@value": "זיגמונד פרויד"
+},
+{
+"@language": "ar",
+"@value": "سيغموند فرويد"
+},
+{
+"@language": "zh",
+"@value": "西格蒙德·弗洛伊德"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Vienna",
+"@type": [
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"dbp-ont:Settlement",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing",
+"schema:Place"
+],
+"dbp-ont:populationTotal": 1714142,
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/7/7c/Collage_von_Wien.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Collage_von_Wien.jpg/200px-Collage_von_Wien.jpg"
+],
+"geo:lat": [
+48.208332,
+48.20889
+],
+"geo:long": [
+16.3725,
+16.373056
+],
+"rdfs:comment": {
+"@language": "en",
+"@value": "Vienna is the capital and largest city of Austria and one of the nine states of Austria. Vienna is Austria's primary city, with a population of about 1.723 million (2.4 million within the metropolitan area, more than 25% of Austria's population), and is by far the largest city in Austria, as well as its cultural, economic, and political centre. It is the 9th-largest city by population in the European Union."
+},
+"rdfs:label": [
+{
+"@language": "es",
+"@value": "Viena"
+},
+{
+"@language": "pt",
+"@value": "Viena"
+},
+{
+"@language": "en",
+"@value": "Vienna"
+},
+{
+"@language": "it",
+"@value": "Vienna"
+},
+{
+"@language": "fr",
+"@value": "Vienne (Autriche)"
+},
+{
+"@language": "tr",
+"@value": "Viyana"
+},
+{
+"@language": "de",
+"@value": "Wien"
+},
+{
+"@language": "ru",
+"@value": "Вена"
+},
+{
+"@language": "he",
+"@value": "וינה"
+},
+{
+"@language": "ar",
+"@value": "فيينا"
+},
+{
+"@language": "zh",
+"@value": "維也納"
+}
+]
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_1",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.986731,
+0.99134344
+],
+"http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_2_6",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PersonalPronoun",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_1",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "I"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 1,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Sentence",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/nextSentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "I went to see Leonardo Da Vinci's painting Mona Lisa in Louvre Paris."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 69
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_102_105",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9891524,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_106_110",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#CoordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_92_101",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "CC",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_97_101",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "and"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 102,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 105
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_106_110",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.97462344,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_111_117",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adverb",
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_106_110",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "RB",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_102_105",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "even"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 106,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 110,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_10_13",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9705299,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_14_22",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Infinitive",
+"http://purl.org/olia/olia.owl#Verb"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_2_13",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VB",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_7_9",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "see"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 10,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 13
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_111_117",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.8680927,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_118_122",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_111_117",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_106_110",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "before"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 111,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 117,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_118_122",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.50884956,
+0.9898767
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_123_124",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer",
+"http://purl.org/olia/olia.owl#WHDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_118_122",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "WDT",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_111_117",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "that"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 118,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 122,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_123_124",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.98530513,
+0.98855996
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_125_132",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PersonalPronoun",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_123_124",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_118_122",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "I"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 123,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 124,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_125_132",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.98210067,
+0.9890235
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_133_138",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#PastParticiple",
+"http://purl.org/olia/olia.owl#Verb",
+"http://purl.org/olia/olia.owl#VerbPhrase"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_125_132",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_123_124",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "visited"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 125,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 132,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_133_138",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.9796402,
+0.9887589
+],
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_138_139",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_133_138",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_125_132",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Ghana"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 133,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 138,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_138_139",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.97432244,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_143",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Point",
+"http://purl.org/olia/olia.owl#Punctuation"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_133_138",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": ".",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_133_138",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 138,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 139
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_143",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.8122936,
+0.95797557
+],
+"http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_144_146",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Determiner",
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_143",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "DT",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_138_139",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "All"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 140,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 143,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Sentence",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/nextSentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "All of these places I reached with flights from Austria with Austrian Airways."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 140,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 218
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_144_146",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.98566264,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_147_152",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_144_146",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_143",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "of"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 144,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 146,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_147_152",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9942224,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_153_159",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Determiner",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_147_159",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "DT",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_144_146",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "these"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 147,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 152
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_147_159",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9911292,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "these places"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 147,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 159,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_14_22",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9780352,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_23_25",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_14_31",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_10_13",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Leonardo"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 14,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 22
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_14_31",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.96572405,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Leonardo Da Vinci"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 14,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 31,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_153_159",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.99006814,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_160_161",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#CommonNoun",
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#PluralQuantifier",
+"http://purl.org/olia/olia.owl#Quantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_147_159",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNS",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_147_152",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "places"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 153,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 159
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_160_161",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.9173918,
+0.9260173
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_162_169",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PersonalPronoun",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_160_161",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_153_159",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "I"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 160,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 161,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_162_169",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.97514874,
+0.9874765
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_170_174",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#PastParticiple",
+"http://purl.org/olia/olia.owl#Verb",
+"http://purl.org/olia/olia.owl#VerbPhrase"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_162_169",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_160_161",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "reached"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 162,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 169,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_170_174",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9691158,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_175_182",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_170_174",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_162_169",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "with"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 170,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 174,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_175_182",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.98241544,
+0.9861066
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_183_187",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#CommonNoun",
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PluralQuantifier",
+"http://purl.org/olia/olia.owl#Quantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_175_182",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNS",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_170_174",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "flights"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 175,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 182,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_183_187",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9800329,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_188_195",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_183_187",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_175_182",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "from"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 183,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 187,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_188_195",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.9619591,
+0.964841
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_196_200",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_188_195",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_183_187",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Austria"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 188,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 195,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_196_200",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9657724,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_201_209",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_196_200",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_188_195",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "with"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 196,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 200,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_201_209",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.8812102,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_210_217",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_201_217",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_196_200",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Austrian"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 201,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 209
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_201_217",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9842286,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Austrian Airways"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 201,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 217,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_210_217",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.49486127,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_217_218",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#PluralQuantifier",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_201_217",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNPS",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_201_209",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Airways"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 210,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 217
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_217_218",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9776211,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_220",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Point",
+"http://purl.org/olia/olia.owl#Punctuation"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_201_217",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": ".",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_210_217",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 217,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 218
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_220",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.9752111,
+0.98483956
+],
+"http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_221_225",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PersonalPronoun",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_220",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_217_218",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "I"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 219,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 220,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Sentence",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "I read about Sigmund Freud on the way."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 219,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 257
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_221_225",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.57674074,
+0.9840389
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_226_231",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#PastParticiple",
+"http://purl.org/olia/olia.owl#Verb",
+"http://purl.org/olia/olia.owl#VerbPhrase"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_221_225",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_220",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "read"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 221,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 225,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_226_231",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.5236292,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_232_239",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adverb",
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_226_245",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "RB",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_221_225",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "about"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 226,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 231
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_226_245",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.8522194,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "about Sigmund Freud"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 226,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 245,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_232_239",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.976357,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_240_245",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_226_245",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_226_231",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Sigmund"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 232,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 239
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_23_25",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.99240154,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_26_31",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_14_31",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_14_22",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Da"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 23,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 25
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_240_245",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.7160568,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_246_248",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_226_245",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_232_239",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Freud"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 240,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 245
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_246_248",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.97759587,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_249_252",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_246_248",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_240_245",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "on"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 246,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 248,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_249_252",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9970468,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_253_256",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Determiner",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_249_256",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "DT",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_246_248",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "the"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 249,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 252
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_249_256",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.996901,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "the way"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 249,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 256,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_253_256",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.99842125,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_256_257",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#CommonNoun",
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_249_256",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_249_252",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "way"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 253,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 256
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_256_257",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.99058217,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Point",
+"http://purl.org/olia/olia.owl#Punctuation"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_249_256",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": ".",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_253_256",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_219_257",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 256,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 257
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_26_31",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9728204,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_33",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_14_31",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_23_25",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Vinci"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 26,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 31
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_2_13",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9484037,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#VerbPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "went to see"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 2,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 13,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_2_6",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.99133754,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_7_9",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#PastParticiple",
+"http://purl.org/olia/olia.owl#Verb"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_2_13",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_1",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "went"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 2,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 6
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_33",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.95232797,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_34_42",
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_52",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "POS",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_26_31",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "'s"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 31,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 33
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_52",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9689612,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "'s painting Mona Lisa"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 31,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 52,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_34_42",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9313058,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_43_47",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#CommonNoun",
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_52",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_33",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "painting"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 34,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 42
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_43_47",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.93650573,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_48_52",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_52",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_34_42",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Mona"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 43,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 47
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_48_52",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.99378306,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_53_55",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_31_52",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_43_47",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Lisa"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 48,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 52
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_53_55",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.95577693,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_56_62",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_53_55",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_48_52",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "in"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 53,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 55,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_56_62",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.83826005,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_63_68",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_56_68",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_53_55",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Louvre"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 56,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 62
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_56_68",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9818154,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Louvre Paris"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 56,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 68,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_63_68",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.99626726,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_68_69",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_56_68",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_56_62",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Paris"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 63,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 68
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_68_69",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9853742,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_76",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Point",
+"http://purl.org/olia/olia.owl#Punctuation"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_56_68",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": ".",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_63_68",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 68,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 69
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Sentence",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/nextSentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_140_218",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Before that I visited Hong Kong and even before that I visited Ghana."
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 70,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 139
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_76",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.8904388,
+"http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_77_81",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_76",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_68_69",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Before"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 70,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 76,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_77_81",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.49010321,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_82_83",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_77_81",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_76",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "that"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 77,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 81,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_7_9",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.98986393,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_10_13",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adposition",
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_2_13",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "TO",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_2_6",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_0_69",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "to"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 7,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 9
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_82_83",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.99044746,
+0.9910495
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_84_91",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#PersonalPronoun",
+"http://purl.org/olia/olia.owl#PronounOrDeterminer"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_82_83",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_77_81",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "I"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 82,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 83,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_84_91",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.9813142,
+0.98189825
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_92_96",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#PastParticiple",
+"http://purl.org/olia/olia.owl#Verb",
+"http://purl.org/olia/olia.owl#VerbPhrase"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_84_91",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_82_83",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "visited"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 84,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 91,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_92_101",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.98585963,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Hong Kong"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 92,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 101,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139"
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_92_96",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.97594094,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_97_101",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_92_101",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_84_91",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Hong"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 92,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 96
+},
+{
+"@id": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_97_101",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9864515,
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_102_105",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_92_101",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_92_96",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4#offset_70_139",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Kong"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 97,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 101
+},
+{
+"@id": "urn:enhancement-2fb78201-0584-83ac-7fc6-fa2d69ad5040",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.526Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": "dbp-ont:Person",
+"enhancer:confidence": 1.0,
+"enhancer:end": 245,
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "Sigmund Freud"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": " from Austria with Austrian Airways. I read about Sigmund Freud on the way."
+},
+"enhancer:start": 232
+},
+{
+"@id": "urn:enhancement-3093db92-4fb3-8146-40f6-4b0e8b70ee8d",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.526Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-2fb78201-0584-83ac-7fc6-fa2d69ad5040",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Sigmund Freud"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Sigmund_Freud",
+"enhancer:entity-type": [
+"dbp-ont:Agent",
+"dbp-ont:Person",
+"dbp-ont:Scientist",
+"schema:Person",
+"owl:Thing",
+"foaf:Person"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-313ced54-24c7-1ce3-fe39-d0b77ff2d343",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.526Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-8dd30bd2-440f-517b-a930-bd2628e577a6",
+"enhancer:confidence": 0.5,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Austria Top 40"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/%C3%963_Austria_Top_40",
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-36401cf0-cf03-ba22-debd-057e0148e8fb",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.526Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-8dd30bd2-440f-517b-a930-bd2628e577a6",
+"enhancer:confidence": 0.53846157,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Wien, Austria"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Vienna",
+"enhancer:entity-type": [
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"dbp-ont:Settlement",
+"schema:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-44e91b52-3caf-ad78-b82c-48cddebb6a61",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.525Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-47caeaa3-2314-2116-1f92-3fd879cdf5f3",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Louvre Paris"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Mus%C3%A9e_du_Louvre",
+"enhancer:entity-type": [
+"dbp-ont:ArchitecturalStructure",
+"dbp-ont:Building",
+"dbp-ont:Museum",
+"dbp-ont:Place",
+"schema:Museum",
+"schema:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-47caeaa3-2314-2116-1f92-3fd879cdf5f3",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.525Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": "dbp-ont:Place",
+"enhancer:confidence": 1.0,
+"enhancer:end": 68,
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "Louvre Paris"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": " to see Leonardo Da Vinci's painting Mona Lisa in Louvre Paris. Before that I visited Hong Kong and even before"
+},
+"enhancer:start": 56
+},
+{
+"@id": "urn:enhancement-49c4e53d-f264-688b-88da-0308a39cf253",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.525Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": [
+"dbp-ont:Country",
+"dbp-ont:Place"
+],
+"enhancer:confidence": 1.0,
+"enhancer:end": 138,
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "Ghana"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": " visited Hong Kong and even before that I visited Ghana. All of these places I reached with flights from"
+},
+"enhancer:start": 133
+},
+{
+"@id": "urn:enhancement-72c5c7ae-d785-0441-0cef-269c52178687",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.525Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-bf3e6cf4-7eb0-a2a5-f950-cbcf362fda3a",
+"enhancer:confidence": 0.4,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Choong Wan"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Central,_Hong_Kong",
+"enhancer:entity-type": "http://www.opengis.net/gml/_Feature",
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-8b70d010-4802-07e7-7af8-834097b30070",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.524Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": "dbp-ont:Person",
+"enhancer:confidence": 1.0,
+"enhancer:end": 31,
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "Leonardo Da Vinci"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": "I went to see Leonardo Da Vinci's painting Mona Lisa in Louvre Paris. Before that"
+},
+"enhancer:start": 14
+},
+{
+"@id": "urn:enhancement-8dd30bd2-440f-517b-a930-bd2628e577a6",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.526Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": [
+"dbp-ont:Country",
+"dbp-ont:Place"
+],
+"enhancer:confidence": 1.0,
+"enhancer:end": 195,
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "Austria"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": " All of these places I reached with flights from Austria with Austrian Airways. I read about Sigmund Freud"
+},
+"enhancer:start": 188
+},
+{
+"@id": "urn:enhancement-9069f3fe-d206-6169-17e5-c61684807f6f",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.526Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-8dd30bd2-440f-517b-a930-bd2628e577a6",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Austria"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Austria",
+"enhancer:entity-type": [
+"dbp-ont:Country",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"schema:Country",
+"schema:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-a0497627-b909-b7eb-9c9d-497ce53b0874",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.525Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-bf3e6cf4-7eb0-a2a5-f950-cbcf362fda3a",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Hong Kong"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Hong_Kong",
+"enhancer:entity-type": [
+"dbp-ont:Country",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"schema:Country",
+"schema:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-ae1d7795-d027-da1b-b4b8-0bea7bfdae40",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.526Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-49c4e53d-f264-688b-88da-0308a39cf253",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Ghana"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Ghana",
+"enhancer:entity-type": [
+"dbp-ont:Country",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"schema:Country",
+"schema:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-bf3e6cf4-7eb0-a2a5-f950-cbcf362fda3a",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.525Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": [
+"dbp-ont:Country",
+"dbp-ont:Place"
+],
+"enhancer:confidence": 1.0,
+"enhancer:end": 101,
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "Hong Kong"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": " Mona Lisa in Louvre Paris. Before that I visited Hong Kong and even before that I visited Ghana. All of"
+},
+"enhancer:start": 92
+},
+{
+"@id": "urn:enhancement-c3fa6ad6-6ac6-97d4-398b-84bbf014a0d7",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-01T15:41:03.525Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-8b70d010-4802-07e7-7af8-834097b30070",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Leonardo Da Vinci"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Leonardo_da_Vinci",
+"enhancer:entity-type": [
+"dbp-ont:Agent",
+"dbp-ont:Artist",
+"dbp-ont:Person",
+"schema:Person",
+"owl:Thing",
+"foaf:Person"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+},
+{
+"@id": "urn:enhancement-e6262d9f-6cd8-e1e2-91f2-a1f88e8d7475",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-01T15:41:02.360Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine",
+"dc:language": "en",
+"dc:type": "dc:LinguisticSystem",
+"enhancer:confidence": 0.9999974,
+"enhancer:extracted-from": "urn:content-item-sha1-eeb76fa876564d108b994e0004e7db446064a0c4"
+}
+]
+}

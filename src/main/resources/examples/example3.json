@@ -1,0 +1,700 @@
+{
+"@context": {
+"dbp-ont": "http://dbpedia.org/ontology/",
+"dbp-ont:birthDate": {
+"@type": "xsd:dateTime"
+},
+"dbp-ont:populationTotal": {
+"@type": "xsd:long"
+},
+"dc": "http://purl.org/dc/terms/",
+"dc:created": {
+"@type": "xsd:dateTime"
+},
+"dc:creator": {
+"@type": "xsd:string"
+},
+"dc:relation": {
+"@type": "@id"
+},
+"dc:type": {
+"@type": "@id"
+},
+"enhancer": "http://fise.iks-project.eu/ontology/",
+"enhancer:confidence": {
+"@type": "xsd:double"
+},
+"enhancer:end": {
+"@type": "xsd:int"
+},
+"enhancer:entity-reference": {
+"@type": "@id"
+},
+"enhancer:entity-type": {
+"@type": "@id"
+},
+"enhancer:extracted-from": {
+"@type": "@id"
+},
+"enhancer:start": {
+"@type": "xsd:int"
+},
+"foaf": "http://xmlns.com/foaf/0.1/",
+"foaf:depiction": {
+"@type": "@id"
+},
+"geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+"geo:lat": {
+"@type": "xsd:double"
+},
+"geo:long": {
+"@type": "xsd:double"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/firstWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/parent": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": {
+"@type": "xsd:string"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": {
+"@type": "@id"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": {
+"@type": "xsd:int"
+},
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": {
+"@type": "xsd:int"
+},
+"http://nlp2rdf.lod2.eu/schema/string/superString": {
+"@type": "@id"
+},
+"owl": "http://www.w3.org/2002/07/owl#",
+"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+"schema": "http://schema.org/",
+"xsd": "http://www.w3.org/2001/XMLSchema#"
+},
+"@graph": [
+{
+"@id": "http://dbpedia.org/resource/Chelsea_F.C.",
+"@type": [
+"dbp-ont:Agent",
+"dbp-ont:Organisation",
+"dbp-ont:SoccerClub",
+"dbp-ont:SportsTeam",
+"owl:Thing",
+"schema:Organization",
+"schema:SportsTeam"
+],
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/c/cc/Chelsea_FC.svg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Chelsea_FC.svg/200px-Chelsea_FC.svg.png"
+],
+"rdfs:comment": {
+"@language": "en",
+"@value": "Chelsea Football Club is an English football club based in Fulham, London. Founded in 1905, they play in the Premier League and have spent most of their history in the top tier of English football. Their home is the 41,837-seat Stamford Bridge stadium, where they have played since their establishment. Since 2003 they have been owned by Russian billionaire Roman Abramovich."
+},
+"rdfs:label": [
+{
+"@language": "en",
+"@value": "Chelsea F.C."
+},
+{
+"@language": "tr",
+"@value": "Chelsea FC"
+},
+{
+"@language": "es",
+"@value": "Chelsea Football Club"
+},
+{
+"@language": "fr",
+"@value": "Chelsea Football Club"
+},
+{
+"@language": "it",
+"@value": "Chelsea Football Club"
+},
+{
+"@language": "pt",
+"@value": "Chelsea Football Club"
+},
+{
+"@language": "de",
+"@value": "FC Chelsea"
+},
+{
+"@language": "ru",
+"@value": "Челси (футбольный клуб)"
+},
+{
+"@language": "he",
+"@value": "צ'לסי (כדורגל)"
+},
+{
+"@language": "ar",
+"@value": "نادي تشيلسي"
+},
+{
+"@language": "zh",
+"@value": "切尔西足球俱乐部"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/London",
+"@type": [
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"dbp-ont:Settlement",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing",
+"schema:Place"
+],
+"dbp-ont:populationTotal": 7825200,
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/8/83/London_collage.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/London_collage.jpg/200px-London_collage.jpg"
+],
+"geo:lat": 51.50722,
+"geo:long": -0.1275,
+"rdfs:comment": {
+"@language": "en",
+"@value": "London Listen/ˈlʌndən/ is the capital city of England and the United Kingdom, the largest metropolitan area in the United Kingdom, and the largest urban zone in the European Union by most measures. Located on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium. London's ancient core, the City of London, largely retains its square-mile mediaeval boundaries."
+},
+"rdfs:label": [
+{
+"@language": "de",
+"@value": "London"
+},
+{
+"@language": "en",
+"@value": "London"
+},
+{
+"@language": "it",
+"@value": "Londra"
+},
+{
+"@language": "tr",
+"@value": "Londra"
+},
+{
+"@language": "es",
+"@value": "Londres"
+},
+{
+"@language": "fr",
+"@value": "Londres"
+},
+{
+"@language": "pt",
+"@value": "Londres"
+},
+{
+"@language": "ru",
+"@value": "Лондон"
+},
+{
+"@language": "he",
+"@value": "לונדון"
+},
+{
+"@language": "ar",
+"@value": "لندن"
+},
+{
+"@language": "zh",
+"@value": "伦敦"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/London,_Ontario",
+"@type": [
+"dbp-ont:City",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"dbp-ont:Settlement",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing",
+"schema:City",
+"schema:Place"
+],
+"dbp-ont:populationTotal": 366151,
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/0/0e/London,_Ontario,_Canada-_The_Forest_City_from_above.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/London,_Ontario,_Canada-_The_Forest_City_from_above.jpg/200px-London,_Ontario,_Canada-_The_Forest_City_from_above.jpg"
+],
+"geo:lat": 42.9837,
+"geo:long": -81.2497,
+"rdfs:comment": {
+"@language": "en",
+"@value": "London is a city in Southwestern Ontario, Canada, situated along the Quebec City–Windsor Corridor. The city has a population of 366,151 according to the 2011 Canadian census. London is the seat of Middlesex County, at the forks of the non-navigable Thames River, approximately halfway between Toronto, Ontario and Detroit, Michigan. The City of London is a separated municipality, politically separate from Middlesex County, though it remains the official county seat."
+},
+"rdfs:label": [
+{
+"@language": "it",
+"@value": "London (Canada)"
+},
+{
+"@language": "de",
+"@value": "London (Ontario)"
+},
+{
+"@language": "es",
+"@value": "London (Ontario)"
+},
+{
+"@language": "fr",
+"@value": "London (Ontario)"
+},
+{
+"@language": "pt",
+"@value": "London (Ontário)"
+},
+{
+"@language": "en",
+"@value": "London, Ontario"
+},
+{
+"@language": "ru",
+"@value": "Лондон (Онтарио)"
+},
+{
+"@language": "he",
+"@value": "לונדון (אונטריו)"
+},
+{
+"@language": "ar",
+"@value": "لندن (أونتاريو)"
+},
+{
+"@language": "zh",
+"@value": "伦敦 (加拿大)"
+}
+]
+},
+{
+"@id": "http://dbpedia.org/resource/Sigmund_Freud",
+"@type": [
+"dbp-ont:Agent",
+"dbp-ont:Person",
+"dbp-ont:Scientist",
+"foaf:Person",
+"owl:Thing",
+"schema:Person"
+],
+"dbp-ont:birthDate": "1856-05-05T23:00:00Z",
+"foaf:depiction": [
+"http://upload.wikimedia.org/wikipedia/commons/1/12/Sigmund_Freud_LIFE.jpg",
+"http://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Sigmund_Freud_LIFE.jpg/200px-Sigmund_Freud_LIFE.jpg"
+],
+"rdfs:comment": {
+"@language": "en",
+"@value": "Sigmund Freud, born Sigismund Schlomo Freud (6 May 1856 – 23 September 1939), was an Austrian neurologist who founded the discipline of psychoanalysis. Freud's family and ancestry were Jewish. Freud always considered himself a Jew even though he rejected Judaism and had a critical view of religion. Freud's parents were poor, but ensured his education. Freud was an outstanding pupil in high school, and graduated the Matura with honors in 1873."
+},
+"rdfs:label": [
+{
+"@language": "de",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "en",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "es",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "fr",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "it",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "pt",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "tr",
+"@value": "Sigmund Freud"
+},
+{
+"@language": "ru",
+"@value": "Фрейд, Зигмунд"
+},
+{
+"@language": "he",
+"@value": "זיגמונד פרויד"
+},
+{
+"@language": "ar",
+"@value": "سيغموند فرويد"
+},
+{
+"@language": "zh",
+"@value": "西格蒙德·弗洛伊德"
+}
+]
+},
+{
+"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_13",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.98024184,
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Sigmund Freud"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 13,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
+},
+{
+"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Sentence",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Sigmund Freud was in London"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 27
+},
+{
+"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_7",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.965026,
+"http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_8_13",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_13",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Sigmund"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 7
+},
+{
+"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.96902686,
+0.98745364
+],
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#PastParticiple",
+"http://purl.org/olia/olia.owl#Verb",
+"http://purl.org/olia/olia.owl#VerbPhrase"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_8_13",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "was"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 14,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 17,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
+},
+{
+"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.9854984,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_21_27",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Adposition",
+"http://purl.org/olia/olia.owl#Conjuction",
+"http://purl.org/olia/olia.owl#Preposition",
+"http://purl.org/olia/olia.owl#SubordinatingConjunction"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "in"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 18,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 20,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
+},
+{
+"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_21_27",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": [
+0.7732126,
+0.93251246
+],
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#NounPhrase",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_21_27",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "London"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 21,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 27,
+"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
+},
+{
+"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_8_13",
+"@type": [
+"http://nlp2rdf.lod2.eu/schema/sso/Word",
+"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
+],
+"enhancer:confidence": 0.81553525,
+"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
+"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
+"http://purl.org/olia/olia.owl#Noun",
+"http://purl.org/olia/olia.owl#ProperNoun",
+"http://purl.org/olia/olia.owl#Quantifier",
+"http://purl.org/olia/olia.owl#SingularQuantifier"
+],
+"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_13",
+"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
+"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_7",
+"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
+"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
+"@language": "en",
+"@value": "Freud"
+},
+"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 8,
+"http://nlp2rdf.lod2.eu/schema/string/endIndex": 13
+},
+{
+"@id": "urn:enhancement-30d348c4-2a71-de10-2df6-d1268d41f01f",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.554Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "London"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/London",
+"enhancer:entity-type": [
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"dbp-ont:Settlement",
+"schema:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
+},
+{
+"@id": "urn:enhancement-369e5df8-440a-030a-308b-feee79fba56e",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.547Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine",
+"dc:language": "en",
+"dc:type": "dc:LinguisticSystem",
+"enhancer:confidence": 0.8571409,
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
+},
+{
+"@id": "urn:enhancement-62735be2-2baa-d4f6-0dfc-7eb34d1b6506",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.554Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": "dbp-ont:Person",
+"enhancer:confidence": 1.0,
+"enhancer:end": 13,
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "Sigmund Freud"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": "Sigmund Freud was in London"
+},
+"enhancer:start": 0
+},
+{
+"@id": "urn:enhancement-7480c2e7-d1c9-1c33-57e0-09b55aeeebcc",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.554Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
+"enhancer:confidence": 0.6666667,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "London ON"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/London,_Ontario",
+"enhancer:entity-type": [
+"dbp-ont:City",
+"dbp-ont:Place",
+"dbp-ont:PopulatedPlace",
+"dbp-ont:Settlement",
+"schema:City",
+"schema:Place",
+"http://www.opengis.net/gml/_Feature",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
+},
+{
+"@id": "urn:enhancement-774ef05f-1d7e-ec34-9da7-1142b90fad60",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.554Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-62735be2-2baa-d4f6-0dfc-7eb34d1b6506",
+"enhancer:confidence": 1.0,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "Sigmund Freud"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Sigmund_Freud",
+"enhancer:entity-type": [
+"dbp-ont:Agent",
+"dbp-ont:Person",
+"dbp-ont:Scientist",
+"schema:Person",
+"owl:Thing",
+"foaf:Person"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
+},
+{
+"@id": "urn:enhancement-7830c15c-e9bc-ce8b-3de0-a81214324289",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:EntityAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.554Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:relation": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
+"enhancer:confidence": 0.54545456,
+"enhancer:entity-label": {
+"@language": "en",
+"@value": "CSKA London"
+},
+"enhancer:entity-reference": "http://dbpedia.org/resource/Chelsea_F.C.",
+"enhancer:entity-type": [
+"dbp-ont:Agent",
+"dbp-ont:Organisation",
+"dbp-ont:SoccerClub",
+"dbp-ont:SportsTeam",
+"schema:Organization",
+"schema:SportsTeam",
+"owl:Thing"
+],
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
+},
+{
+"@id": "urn:enhancement-791f47d8-f1bd-839d-1c60-11d83993c8aa",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.548Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine",
+"dc:language": "de",
+"dc:type": "dc:LinguisticSystem",
+"enhancer:confidence": 0.14285882,
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
+},
+{
+"@id": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
+"@type": [
+"enhancer:Enhancement",
+"enhancer:TextAnnotation"
+],
+"dc:created": "2018-02-02T09:03:33.554Z",
+"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
+"dc:type": "dbp-ont:Place",
+"enhancer:confidence": 1.0,
+"enhancer:end": 27,
+"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996",
+"enhancer:selected-text": {
+"@language": "en",
+"@value": "London"
+},
+"enhancer:selection-context": {
+"@language": "en",
+"@value": "Sigmund Freud was in London"
+},
+"enhancer:start": 21
+}
+]
+}
