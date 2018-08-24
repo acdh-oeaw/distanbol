@@ -1,9 +1,11 @@
 package at.ac.oeaw.routes;
 
-import at.ac.oeaw.Viewable.Viewable;
+import at.ac.oeaw.elements.Enhancement;
+import at.ac.oeaw.elements.Viewable;
 import at.ac.oeaw.helpers.FileReader;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -87,15 +89,11 @@ public class Distanbol {
             Document doc = Jsoup.parse(html);
 
             ObjectMapper mapper = new ObjectMapper();
+
             JsonNode jsonNode = mapper.readTree(json);
-            JsonNode graph = jsonNode.get("@graph");
 
-            if (graph == null) {
-                return Response.status(400).entity("The provided json-ld is not in a known Stanbol output format. Make sure that it has the '@graph' element.").build();
-            }
-
-            if (graph.isArray()) {
-                Iterator<JsonNode> iterator = graph.elements();
+            if (jsonNode.isArray()) {
+                Iterator<JsonNode> iterator = jsonNode.elements();
 
                 Element rawJsonHTML = doc.getElementById("rawJson");
 
@@ -106,127 +104,120 @@ public class Distanbol {
                 StringBuilder entitiesListSB = new StringBuilder();
 
                 Element script = doc.getElementById("script");
+
+                ArrayList<Viewable> viewables = new ArrayList<>();
+                ArrayList<Enhancement> enhancements = new ArrayList<>();
                 while (iterator.hasNext()) {
-                    JsonNode item = iterator.next();
+                    JsonNode node = iterator.next();
 
-                    Viewable viewable = createViewableFromItem(item);
-                    if ((!viewable.getId().startsWith("urn:content")) && (!viewable.getId().startsWith("urn:enhancement"))) {
+                    //there are two types of nodes: viewables and enhancements. Viewables are entities to display, enhancements contain confidence information.
+                    boolean viewableBool = true;
 
-                        String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
+                    ArrayNode typesNode = (ArrayNode) node.get("@type");
+                    if (typesNode != null) {
+                        for (JsonNode typeNode : typesNode) {
+                            if (typeNode.asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
+                                viewableBool = false;
+                            }
+                        }
+                    }
 
-                        String id = viewable.getId();
-                        if (id != null) {
-                            String idHTML = String.format(templateIDText, id, "Id:", id);
-                            viewablesHTML.append(idHTML);
+
+                    if (viewableBool) {
+                        Viewable viewable = new Viewable(node);
+                        viewables.add(viewable);
+
+                    } else {
+
+                        Enhancement enhancement = new Enhancement(node);
+
+                        if (enhancement.getConfidence() == 1.0) {
+                            enhancements.add(enhancement);
                         }
 
-                        String templateText = "<div><b>%s</b>%s</div>";
 
-                        String label = viewable.getLabel();
-                        if (label != null) {
-                            String labelHTML = String.format(templateText, "Label:", label);
-                            viewablesHTML.append(labelHTML);
-                        }
+                    }
 
-                        //this is for the first list with anchors
-                        entitiesListSB.append("<li><a href='#"+id+"'>").append(label).append("</a></li>");
 
-                        String comment = viewable.getComment();
-                        if (comment != null) {
-                            String commentHTML = String.format(templateText, "Comment:", comment);
-                            viewablesHTML.append(commentHTML);
-                        }
+                }
 
-                        ArrayList<String> types = viewable.getTypes();
-                        if ((types != null) && (!types.isEmpty())) {
+                for (Viewable viewable : viewables) {
+                    for (Enhancement enhancement : enhancements) {
 
-                            StringBuilder sb = new StringBuilder();
-                            for (String type : types) {
-                                sb.append("<li>").append(type).append("</li>");
+                        if (viewable.getId().equals(enhancement.getReference())) {
+
+
+                            String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
+
+                            String id = viewable.getId();
+                            if (id != null) {
+                                String idHTML = String.format(templateIDText, id, "Id:", id);
+                                viewablesHTML.append(idHTML);
                             }
 
-                            String typesHTML = "<div><b>Types:</b><ul>" + sb.toString() + "</ul></div>";
+                            String templateText = "<div><b>%s</b>%s</div>";
 
-                            viewablesHTML.append(typesHTML);
+                            String label = viewable.getLabel();
+                            if (label != null) {
+                                String labelHTML = String.format(templateText, "Label:", label);
+                                viewablesHTML.append(labelHTML);
+                            }
+
+                            //this is for the first list with anchors
+                            entitiesListSB.append("<li><a href='#" + id + "'>").append(label).append("</a></li>");
+
+                            String comment = viewable.getComment();
+                            if (comment != null) {
+                                String commentHTML = String.format(templateText, "Comment:", comment);
+                                viewablesHTML.append(commentHTML);
+                            }
+
+                            ArrayList<String> types = viewable.getTypes();
+                            if ((types != null) && (!types.isEmpty())) {
+
+                                StringBuilder sb = new StringBuilder();
+                                for (String type : types) {
+                                    sb.append("<li>").append(type).append("</li>");
+                                }
+
+                                String typesHTML = "<div><b>Types:</b><ul>" + sb.toString() + "</ul></div>";
+
+                                viewablesHTML.append(typesHTML);
+                            }
+
+
+                            if (viewable.getDepiction() != null) {
+                                String depiction = String.format("<div><b>depiction:</b><div><img src=\"%s\"></img></div></div>", viewable.getDepiction());
+                                viewablesHTML.append(depiction);
+                            }
+
+                            if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
+                                script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
+                            }
+                            viewablesHTML.append("<hr>");
                         }
 
-
-                        if (viewable.getDepiction() != null) {
-                            String depiction = String.format("<div><b>depiction:</b><div><img src=\"%s\"></img></div></div>", viewable.getDepiction());
-                            viewablesHTML.append(depiction);
-                        }
-
-                        if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
-                            script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
-                        }
-                        viewablesHTML.append("<hr>");
                     }
+
                 }
+
 
                 String entitiesListHTML = "<br><div><h2>Entities List:</h2><ul>" + entitiesListSB + "</ul></div>";
                 rawJsonHTML.append(entitiesListHTML);
 
+                //this is to remove the last <hr> element
                 viewablesHTML.children().last().remove();
 
+                return Response.accepted().entity(doc.html()).type("text/html").build();
+            } else {
+                return Response.status(400).entity("The given Stanbol output is not valid.").build();
             }
 
-            return Response.accepted().entity(doc.html()).type("text/html").build();
 
         } catch (IOException e) {
             logger.error("Can't read input json file: " + e.getMessage());
         }
 
-        return Response.serverError().entity("Can't read input json file").build();
-    }
-
-    private Viewable createViewableFromItem(JsonNode item) {
-        String id = item.get("@id").asText();
-
-        ArrayList<String> types = new ArrayList<>();
-        JsonNode typeArray = item.get("@type");
-        if ((typeArray != null) && (typeArray.isArray())) {
-            Iterator<JsonNode> iterator = typeArray.elements();
-            while (iterator.hasNext()) {
-                JsonNode type = iterator.next();
-                types.add(type.asText());
-            }
-        }
-
-        String depiction = item.get("foaf:depiction") == null ? null : item.get("foaf:depiction").get(0).asText();
-
-        String longitude = null;
-        if (item.get("geo:long") != null) {
-            if (item.get("geo:long").isArray()) {
-                longitude = item.get("geo:long").get(0).asText();
-            } else {
-                longitude = item.get("geo:long").asText();
-            }
-        }
-
-        String latitude = null;
-        if (item.get("geo:lat") != null) {
-            if (item.get("geo:lat").isArray()) {
-                latitude = item.get("geo:lat").get(0).asText();
-            } else {
-                latitude = item.get("geo:lat").asText();
-            }
-        }
-
-        String label = null;
-        JsonNode labelArray = item.get("rdfs:label");
-        if ((labelArray != null) && (labelArray.isArray())) {
-            Iterator<JsonNode> iterator = labelArray.elements();
-            while (iterator.hasNext()) {
-                JsonNode labelPair = iterator.next();
-                String language = labelPair.get("@language").asText();
-                if (language.equals("en")) {
-                    label = labelPair.get("@value").asText();
-                }
-            }
-        }
-
-        String comment = item.get("rdfs:comment") == null ? null : item.get("rdfs:comment").get("@value").asText();
-
-        return new Viewable(id, types, depiction, comment, label, latitude, longitude);
+        return Response.serverError().entity("Can't read input json file.").build();
     }
 }

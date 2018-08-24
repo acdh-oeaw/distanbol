@@ -1,0 +1,635 @@
+[ {
+  "@id" : "http://dbpedia.org/resource/Chelsea_F.C.",
+  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Organisation", "http://dbpedia.org/ontology/SoccerClub", "http://dbpedia.org/ontology/SportsTeam", "http://schema.org/Organization", "http://schema.org/SportsTeam", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Chelsea Football Club is an English football club based in Fulham, London. Founded in 1905, they play in the Premier League and have spent most of their history in the top tier of English football. Their home is the 41,837-seat Stamford Bridge stadium, where they have played since their establishment. Since 2003 they have been owned by Russian billionaire Roman Abramovich.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chelsea F.C.",
+    "@language" : "en"
+  }, {
+    "@value" : "Chelsea FC",
+    "@language" : "tr"
+  }, {
+    "@value" : "Chelsea Football Club",
+    "@language" : "es"
+  }, {
+    "@value" : "Chelsea Football Club",
+    "@language" : "fr"
+  }, {
+    "@value" : "Chelsea Football Club",
+    "@language" : "it"
+  }, {
+    "@value" : "Chelsea Football Club",
+    "@language" : "pt"
+  }, {
+    "@value" : "FC Chelsea",
+    "@language" : "de"
+  }, {
+    "@value" : "Челси (футбольный клуб)",
+    "@language" : "ru"
+  }, {
+    "@value" : "צ'לסי (כדורגל)",
+    "@language" : "he"
+  }, {
+    "@value" : "نادي تشيلسي",
+    "@language" : "ar"
+  }, {
+    "@value" : "切尔西足球俱乐部",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/cc/Chelsea_FC.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Chelsea_FC.svg/200px-Chelsea_FC.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Hamlet",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Tragedy of Hamlet, Prince of Denmark is a tragedy by William Shakespeare. Set in the Kingdom of Denmark, the play dramatizes the revenge Prince Hamlet exacts on his uncle Claudius for murdering King Hamlet, Claudius's brother and Prince Hamlet's father, and then succeeding to the throne and taking as his wife Gertrude, the old king's widow and Prince Hamlet's mother.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Amleto",
+    "@language" : "it"
+  }, {
+    "@value" : "Hamlet",
+    "@language" : "de"
+  }, {
+    "@value" : "Hamlet",
+    "@language" : "en"
+  }, {
+    "@value" : "Hamlet",
+    "@language" : "es"
+  }, {
+    "@value" : "Hamlet",
+    "@language" : "fr"
+  }, {
+    "@value" : "Hamlet",
+    "@language" : "pt"
+  }, {
+    "@value" : "Hamlet",
+    "@language" : "tr"
+  }, {
+    "@value" : "Гамлет, принц датский",
+    "@language" : "ru"
+  }, {
+    "@value" : "המלט",
+    "@language" : "he"
+  }, {
+    "@value" : "هاملت",
+    "@language" : "ar"
+  }, {
+    "@value" : "哈姆雷特",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/6a/Edwin_Booth_Hamlet_1870.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Edwin_Booth_Hamlet_1870.jpg/200px-Edwin_Booth_Hamlet_1870.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/London",
+  "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "London Listen/ˈlʌndən/ is the capital city of England and the United Kingdom, the largest metropolitan area in the United Kingdom, and the largest urban zone in the European Union by most measures. Located on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium. London's ancient core, the City of London, largely retains its square-mile mediaeval boundaries.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "London",
+    "@language" : "de"
+  }, {
+    "@value" : "London",
+    "@language" : "en"
+  }, {
+    "@value" : "Londra",
+    "@language" : "it"
+  }, {
+    "@value" : "Londra",
+    "@language" : "tr"
+  }, {
+    "@value" : "Londres",
+    "@language" : "es"
+  }, {
+    "@value" : "Londres",
+    "@language" : "fr"
+  }, {
+    "@value" : "Londres",
+    "@language" : "pt"
+  }, {
+    "@value" : "Лондон",
+    "@language" : "ru"
+  }, {
+    "@value" : "לונדון",
+    "@language" : "he"
+  }, {
+    "@value" : "لندن",
+    "@language" : "ar"
+  }, {
+    "@value" : "伦敦",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "51.50722",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "-0.1275",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/8/83/London_collage.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/London_collage.jpg/200px-London_collage.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/London,_Ontario",
+  "@type" : [ "http://dbpedia.org/ontology/City", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/City", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "London is a city in Southwestern Ontario, Canada, situated along the Quebec City–Windsor Corridor. The city has a population of 366,151 according to the 2011 Canadian census. London is the seat of Middlesex County, at the forks of the non-navigable Thames River, approximately halfway between Toronto, Ontario and Detroit, Michigan. The City of London is a separated municipality, politically separate from Middlesex County, though it remains the official county seat.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "London (Canada)",
+    "@language" : "it"
+  }, {
+    "@value" : "London (Ontario)",
+    "@language" : "de"
+  }, {
+    "@value" : "London (Ontario)",
+    "@language" : "es"
+  }, {
+    "@value" : "London (Ontario)",
+    "@language" : "fr"
+  }, {
+    "@value" : "London (Ontário)",
+    "@language" : "pt"
+  }, {
+    "@value" : "London, Ontario",
+    "@language" : "en"
+  }, {
+    "@value" : "Лондон (Онтарио)",
+    "@language" : "ru"
+  }, {
+    "@value" : "לונדון (אונטריו)",
+    "@language" : "he"
+  }, {
+    "@value" : "لندن (أونتاريو)",
+    "@language" : "ar"
+  }, {
+    "@value" : "伦敦 (加拿大)",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "42.9837",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "-81.2497",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/0/0e/London,_Ontario,_Canada-_The_Forest_City_from_above.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/London,_Ontario,_Canada-_The_Forest_City_from_above.jpg/200px-London,_Ontario,_Canada-_The_Forest_City_from_above.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Richard_III_(play)",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Richard III is a history play by William Shakespeare, believed to have been written in approximately 1591. It depicts the Machiavellian rise to power and subsequent short reign of Richard III of England. The play is grouped among the histories in the First Folio and is most often classified as such. Occasionally, however, as in the quarto edition, it is termed a tragedy. Richard III concludes Shakespeare's first tetralogy (also containing Henry VI parts 1–3).",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "III. Richard (oyun)",
+    "@language" : "tr"
+  }, {
+    "@value" : "Ricardo III (obra de teatro)",
+    "@language" : "es"
+  }, {
+    "@value" : "Riccardo III (Shakespeare)",
+    "@language" : "it"
+  }, {
+    "@value" : "Richard III",
+    "@language" : "pt"
+  }, {
+    "@value" : "Richard III (Shakespeare)",
+    "@language" : "fr"
+  }, {
+    "@value" : "Richard III (play)",
+    "@language" : "en"
+  }, {
+    "@value" : "Richard III. (Drama)",
+    "@language" : "de"
+  }, {
+    "@value" : "Ричард III (пьеса)",
+    "@language" : "ru"
+  }, {
+    "@value" : "ריצ'רד השלישי (מחזה)",
+    "@language" : "he"
+  }, {
+    "@value" : "理查三世 (戏剧)",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/b/bd/FirstFolioRichardIII.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/FirstFolioRichardIII.jpg/200px-FirstFolioRichardIII.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/William_Shakespeare",
+  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Artist", "http://dbpedia.org/ontology/Person", "http://dbpedia.org/ontology/Writer", "http://schema.org/Person", "http://www.w3.org/2002/07/owl#Thing", "http://xmlns.com/foaf/0.1/Person" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "William Shakespeare (baptised 26 April 1564; died 23 April 1616) was an English poet and playwright, widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet and the \"Bard of Avon\". His surviving works, including some collaborations, consist of about 38 plays, 154 sonnets, two long narrative poems, and several other poems.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "William Shakespeare",
+    "@language" : "de"
+  }, {
+    "@value" : "William Shakespeare",
+    "@language" : "en"
+  }, {
+    "@value" : "William Shakespeare",
+    "@language" : "es"
+  }, {
+    "@value" : "William Shakespeare",
+    "@language" : "fr"
+  }, {
+    "@value" : "William Shakespeare",
+    "@language" : "it"
+  }, {
+    "@value" : "William Shakespeare",
+    "@language" : "pt"
+  }, {
+    "@value" : "William Shakespeare",
+    "@language" : "tr"
+  }, {
+    "@value" : "Шекспир, Уильям",
+    "@language" : "ru"
+  }, {
+    "@value" : "ויליאם שייקספיר",
+    "@language" : "he"
+  }, {
+    "@value" : "ويليام شكسبير",
+    "@language" : "ar"
+  }, {
+    "@value" : "威廉·莎士比亚",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/a/a2/Shakespeare.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/200px-Shakespeare.jpg"
+  } ]
+}, {
+  "@id" : "urn:enhancement-05a7848b-13ea-8c04-6c8b-e5297435a660",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "London",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/London"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.236Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-895eca99-4fa1-4878-d31a-54ff65a7b5c0"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-1b5e9df3-4982-4526-ba91-c20e35c46b15",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Shakespeare",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/William_Shakespeare"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Agent"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Artist"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Person"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Writer"
+  }, {
+    "@id" : "http://schema.org/Person"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.236Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-2c2bb4ad-aece-f93e-17be-74c8f86c3af6"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-27bae3a1-df63-7ee2-51da-d68a7695e3fe",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Hamlet",
+    "@language" : "de"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Hamlet"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.237Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-db33b808-a5ba-9bf0-6e37-464026a23a11"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-2c2bb4ad-aece-f93e-17be-74c8f86c3af6",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "11",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Shakespeare",
+    "@language" : "de"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Shakespeare lebte in London. Sein Drama \"Hamlet\" ist weltweit",
+    "@language" : "de"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.236Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Person"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-42dce424-ab27-4b2c-1209-345f7464685e",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.5454545454545454",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "CSKA London",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Chelsea_F.C."
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Agent"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Organisation"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/SoccerClub"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/SportsTeam"
+  }, {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://schema.org/SportsTeam"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.237Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-895eca99-4fa1-4878-d31a-54ff65a7b5c0"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-895eca99-4fa1-4878-d31a-54ff65a7b5c0",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "27",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "London",
+    "@language" : "de"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Shakespeare lebte in London. Sein Drama \"Hamlet\" ist weltweit bekannt. Ein",
+    "@language" : "de"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "21",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.236Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-b29b892d-b12a-bfeb-9cbc-9f66295119fc",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9999977816207735",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:12.662Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/language" : [ {
+    "@value" : "de"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://purl.org/dc/terms/LinguisticSystem"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-cebf3afb-3a7a-8a01-e958-de673d2648a7",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.43999999999999995",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Richard III (Shakespeare)",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Richard_III_(play)"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.236Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-2c2bb4ad-aece-f93e-17be-74c8f86c3af6"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-db33b808-a5ba-9bf0-6e37-464026a23a11",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "47",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Hamlet",
+    "@language" : "de"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Shakespeare lebte in London. Sein Drama \"Hamlet\" ist weltweit bekannt. Ein dänischer Prinz ist",
+    "@language" : "de"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "41",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.237Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-e421b6ca-f30b-dfb4-a190-d1dc00ae2cd5",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.6666666666666667",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "London ON",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/London,_Ontario"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/City"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/City"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-0564127c6618eb48e741f4775111cbf35ff75f21"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T10:45:14.236Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-895eca99-4fa1-4878-d31a-54ff65a7b5c0"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+} ]
