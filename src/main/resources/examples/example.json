@@ -1,1420 +1,466 @@
-{
-  "@context": {
-    "dbp-ont": "http://dbpedia.org/ontology/",
-    "dbp-ont:birthDate": {
-      "@type": "xsd:dateTime"
-    },
-    "dbp-ont:populationTotal": {
-      "@type": "xsd:long"
-    },
-    "dc": "http://purl.org/dc/terms/",
-    "dc:created": {
-      "@type": "xsd:dateTime"
-    },
-    "dc:creator": {
-      "@type": "xsd:string"
-    },
-    "dc:relation": {
-      "@type": "@id"
-    },
-    "dc:type": {
-      "@type": "@id"
-    },
-    "enhancer": "http://fise.iks-project.eu/ontology/",
-    "enhancer:confidence": {
-      "@type": "xsd:double"
-    },
-    "enhancer:end": {
-      "@type": "xsd:int"
-    },
-    "enhancer:entity-reference": {
-      "@type": "@id"
-    },
-    "enhancer:entity-type": {
-      "@type": "@id"
-    },
-    "enhancer:extracted-from": {
-      "@type": "@id"
-    },
-    "enhancer:start": {
-      "@type": "xsd:int"
-    },
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "foaf:depiction": {
-      "@type": "@id"
-    },
-    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
-    "geo:lat": {
-      "@type": "xsd:double"
-    },
-    "geo:long": {
-      "@type": "xsd:double"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/firstWord": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/lastWord": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/nextSentence": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/nextWord": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/parent": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/posTag": {
-      "@type": "xsd:string"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/previousWord": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/sso/sentence": {
-      "@type": "@id"
-    },
-    "http://nlp2rdf.lod2.eu/schema/string/beginIndex": {
-      "@type": "xsd:int"
-    },
-    "http://nlp2rdf.lod2.eu/schema/string/endIndex": {
-      "@type": "xsd:int"
-    },
-    "http://nlp2rdf.lod2.eu/schema/string/superString": {
-      "@type": "@id"
-    },
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "http://dbpedia.org/resource/Ghana",
-      "@type": [
-        "dbp-ont:Country",
-        "dbp-ont:Place",
-        "dbp-ont:PopulatedPlace",
-        "http://www.opengis.net/gml/_Feature",
-        "owl:Thing",
-        "schema:Country",
-        "schema:Place"
-      ],
-      "foaf:depiction": [
-        "http://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Ghana.svg",
-        "http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/200px-Flag_of_Ghana.svg.png"
-      ],
-      "geo:lat": 5.55,
-      "geo:long": -0.25,
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Ghana Listen/ˈɡɑːnə/ is a country located in West Africa. It is bordered by Côte d'Ivoire (Ivory Coast) to the west, Burkina Faso to the north, Togo to the east, and the Gulf of Guinea to the south. The word Ghana means \"Warrior King\" and is derived from the ancient Ghana Empire. Ghana was inhabited in pre-colonial times by a number of ancient predominantly Akan kingdoms, including the inland Ashanti Empire, the Akwamu, the Akyem, the Bonoman, the Denkyira, and the Fante among others."
-      },
-      "rdfs:label": [
-        {
-          "@language": "pt",
-          "@value": "Gana"
-        },
-        {
-          "@language": "tr",
-          "@value": "Gana"
-        },
-        {
-          "@language": "de",
-          "@value": "Ghana"
-        },
-        {
-          "@language": "en",
-          "@value": "Ghana"
-        },
-        {
-          "@language": "es",
-          "@value": "Ghana"
-        },
-        {
-          "@language": "fr",
-          "@value": "Ghana"
-        },
-        {
-          "@language": "it",
-          "@value": "Ghana"
-        },
-        {
-          "@language": "ru",
-          "@value": "Гана"
-        },
-        {
-          "@language": "he",
-          "@value": "גאנה"
-        },
-        {
-          "@language": "ar",
-          "@value": "غانا"
-        }
-      ]
-    },
-    {
-      "@id": "http://dbpedia.org/resource/Sigmund_Freud",
-      "@type": [
-        "dbp-ont:Agent",
-        "dbp-ont:Person",
-        "dbp-ont:Scientist",
-        "foaf:Person",
-        "owl:Thing",
-        "schema:Person"
-      ],
-      "dbp-ont:birthDate": "1856-05-05T23:00:00Z",
-      "foaf:depiction": [
-        "http://upload.wikimedia.org/wikipedia/commons/1/12/Sigmund_Freud_LIFE.jpg",
-        "http://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Sigmund_Freud_LIFE.jpg/200px-Sigmund_Freud_LIFE.jpg"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Sigmund Freud, born Sigismund Schlomo Freud (6 May 1856 – 23 September 1939), was an Austrian neurologist who founded the discipline of psychoanalysis. Freud's family and ancestry were Jewish. Freud always considered himself a Jew even though he rejected Judaism and had a critical view of religion. Freud's parents were poor, but ensured his education. Freud was an outstanding pupil in high school, and graduated the Matura with honors in 1873."
-      },
-      "rdfs:label": [
-        {
-          "@language": "de",
-          "@value": "Sigmund Freud"
-        },
-        {
-          "@language": "en",
-          "@value": "Sigmund Freud"
-        },
-        {
-          "@language": "es",
-          "@value": "Sigmund Freud"
-        },
-        {
-          "@language": "fr",
-          "@value": "Sigmund Freud"
-        },
-        {
-          "@language": "it",
-          "@value": "Sigmund Freud"
-        },
-        {
-          "@language": "pt",
-          "@value": "Sigmund Freud"
-        },
-        {
-          "@language": "tr",
-          "@value": "Sigmund Freud"
-        },
-        {
-          "@language": "ru",
-          "@value": "Фрейд, Зигмунд"
-        },
-        {
-          "@language": "he",
-          "@value": "זיגמונד פרויד"
-        },
-        {
-          "@language": "ar",
-          "@value": "سيغموند فرويد"
-        },
-        {
-          "@language": "zh",
-          "@value": "西格蒙德·弗洛伊德"
-        }
-      ]
-    },
-    {
-      "@id": "http://dbpedia.org/resource/Vienna",
-      "@type": [
-        "dbp-ont:Place",
-        "dbp-ont:PopulatedPlace",
-        "dbp-ont:Settlement",
-        "http://www.opengis.net/gml/_Feature",
-        "owl:Thing",
-        "schema:Place"
-      ],
-      "dbp-ont:populationTotal": 1714142,
-      "foaf:depiction": [
-        "http://upload.wikimedia.org/wikipedia/commons/7/7c/Collage_von_Wien.jpg",
-        "http://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Collage_von_Wien.jpg/200px-Collage_von_Wien.jpg"
-      ],
-      "geo:lat": [
-        48.208332,
-        48.20889
-      ],
-      "geo:long": [
-        16.3725,
-        16.373056
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Vienna is the capital and largest city of Austria and one of the nine states of Austria. Vienna is Austria's primary city, with a population of about 1.723 million (2.4 million within the metropolitan area, more than 25% of Austria's population), and is by far the largest city in Austria, as well as its cultural, economic, and political centre. It is the 9th-largest city by population in the European Union."
-      },
-      "rdfs:label": [
-        {
-          "@language": "es",
-          "@value": "Viena"
-        },
-        {
-          "@language": "pt",
-          "@value": "Viena"
-        },
-        {
-          "@language": "en",
-          "@value": "Vienna"
-        },
-        {
-          "@language": "it",
-          "@value": "Vienna"
-        },
-        {
-          "@language": "fr",
-          "@value": "Vienne (Autriche)"
-        },
-        {
-          "@language": "tr",
-          "@value": "Viyana"
-        },
-        {
-          "@language": "de",
-          "@value": "Wien"
-        },
-        {
-          "@language": "ru",
-          "@value": "Вена"
-        },
-        {
-          "@language": "he",
-          "@value": "וינה"
-        },
-        {
-          "@language": "ar",
-          "@value": "فيينا"
-        },
-        {
-          "@language": "zh",
-          "@value": "維也納"
-        }
-      ]
-    },
-    {
-      "@id": "http://dbpedia.org/resource/Windows_7",
-      "foaf:depiction": [
-        "http://upload.wikimedia.org/wikipedia/commons/3/33/Windows_7_logo.svg",
-        "http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Windows_7_logo.svg/200px-Windows_7_logo.svg.png"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Windows 7 is the current release of Microsoft Windows, a series of operating systems produced by Microsoft for use on personal computers, including home and business desktops, laptops, netbooks, tablet PCs, and media center PCs. Windows 7 was released to manufacturing on July 22, 2009, and reached general retail availability worldwide on October 22, 2009, less than three years after the release of its predecessor, Windows Vista."
-      },
-      "rdfs:label": [
-        {
-          "@language": "de",
-          "@value": "Microsoft Windows 7"
-        },
-        {
-          "@language": "en",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "es",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "fr",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "he",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "it",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "pt",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "ru",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "tr",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "zh",
-          "@value": "Windows 7"
-        },
-        {
-          "@language": "ar",
-          "@value": "ويندوز 7"
-        }
-      ]
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_1",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.9874395,
-        0.9938847
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_2_5",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#NounPhrase",
-        "http://purl.org/olia/olia.owl#PersonalPronoun",
-        "http://purl.org/olia/olia.owl#PronounOrDeterminer"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_1",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "I"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 1,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Sentence",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/nextSentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "I was in Vienna and I left to go to Ghana and met Sigmund Freud there."
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 70
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_107_111",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9802438,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_112_115",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#CommonNoun",
-        "http://purl.org/olia/olia.owl#Noun",
-        "http://purl.org/olia/olia.owl#Quantifier",
-        "http://purl.org/olia/olia.owl#SingularQuantifier"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_111",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "NN",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_98_106",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "cafe"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 107,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 111
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_112_115",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.98457056,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_116_122",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Conjuction",
-        "http://purl.org/olia/olia.owl#CoordinatingConjunction"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_111",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "CC",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_107_111",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "and"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 112,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 115
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_116_122",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.8859908,
-        0.97829205
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_123_128",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#PastParticiple",
-        "http://purl.org/olia/olia.owl#Verb",
-        "http://purl.org/olia/olia.owl#VerbPhrase"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_116_122",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_112_115",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "talked"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 116,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 122,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_123_128",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.93430233,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_129_136",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Adposition",
-        "http://purl.org/olia/olia.owl#Conjuction",
-        "http://purl.org/olia/olia.owl#Preposition",
-        "http://purl.org/olia/olia.owl#SubordinatingConjunction"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_123_128",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_116_122",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "about"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 123,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 128,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_129_136",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.6341432,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_137_142",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adjective",
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_129_142",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "JJ",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_123_128",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "compuer"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 129,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 136
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_129_142",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9839296,
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "compuer games"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 129,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 142,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_137_142",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.983016,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_142_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#CommonNoun",
-        "http://purl.org/olia/olia.owl#Noun",
-        "http://purl.org/olia/olia.owl#PluralQuantifier",
-        "http://purl.org/olia/olia.owl#Quantifier"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_129_142",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNS",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_129_136",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "games"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 137,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 142
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_142_143",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.98833585,
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Point",
-        "http://purl.org/olia/olia.owl#Punctuation"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_129_142",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": ".",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_137_142",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "."
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 142,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 143
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_16_19",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9894905,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_20_21",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Conjuction",
-        "http://purl.org/olia/olia.owl#CoordinatingConjunction"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_9_15",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "CC",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_9_15",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "and"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 16,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 19
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_20_21",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.95488834,
-        0.98473006
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_22_26",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#NounPhrase",
-        "http://purl.org/olia/olia.owl#PersonalPronoun",
-        "http://purl.org/olia/olia.owl#PronounOrDeterminer"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_20_21",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_16_19",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "I"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 20,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 21,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_22_26",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9614875,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_27_29",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#PastParticiple",
-        "http://purl.org/olia/olia.owl#Verb"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_22_32",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_20_21",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "left"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 22,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 26
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_22_32",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.96916246,
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#VerbPhrase",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "left to go"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 22,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 32,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_27_29",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.96917343,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_30_32",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adposition",
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_22_32",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "TO",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_22_26",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "to"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 27,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 29
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_2_5",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.9932741,
-        0.99436235
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_6_8",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#PastParticiple",
-        "http://purl.org/olia/olia.owl#Verb",
-        "http://purl.org/olia/olia.owl#VerbPhrase"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_2_5",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_1",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "was"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 2,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 5,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_30_32",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.99226946,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_33_35",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Infinitive",
-        "http://purl.org/olia/olia.owl#Verb"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_22_32",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "VB",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_27_29",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "go"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 30,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 32
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_33_35",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9749482,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_36_41",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adposition",
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_33_35",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "TO",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_30_32",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "to"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 33,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 35,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_36_41",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.9836424,
-        0.99021554
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_42_45",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Noun",
-        "http://purl.org/olia/olia.owl#NounPhrase",
-        "http://purl.org/olia/olia.owl#ProperNoun",
-        "http://purl.org/olia/olia.owl#Quantifier",
-        "http://purl.org/olia/olia.owl#SingularQuantifier"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_36_41",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_33_35",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Ghana"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 36,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 41,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_42_45",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.96752965,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_46_49",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Conjuction",
-        "http://purl.org/olia/olia.owl#CoordinatingConjunction"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_36_41",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "CC",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_36_41",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "and"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 42,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 45
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_46_49",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.7295702,
-        0.98471016
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_50_57",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#PastParticiple",
-        "http://purl.org/olia/olia.owl#Verb",
-        "http://purl.org/olia/olia.owl#VerbPhrase"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_46_49",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_42_45",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "met"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 46,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 49,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_50_57",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9728373,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_58_63",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Noun",
-        "http://purl.org/olia/olia.owl#ProperNoun",
-        "http://purl.org/olia/olia.owl#Quantifier",
-        "http://purl.org/olia/olia.owl#SingularQuantifier"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_50_63",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_46_49",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Sigmund"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 50,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 57
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_50_63",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.97969115,
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Sigmund Freud"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 50,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 63,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_58_63",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.78771603,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_64_69",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Noun",
-        "http://purl.org/olia/olia.owl#ProperNoun",
-        "http://purl.org/olia/olia.owl#Quantifier",
-        "http://purl.org/olia/olia.owl#SingularQuantifier"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_50_63",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_50_57",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Freud"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 58,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 63
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_64_69",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.89275986,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_69_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adverb",
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_64_69",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "RB",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_58_63",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "there"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 64,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 69,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_69_70",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.98747826,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_81",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Point",
-        "http://purl.org/olia/olia.owl#Punctuation"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_64_69",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": ".",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_64_69",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "."
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 69,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 70
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_6_8",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.98146325,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_9_15",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Adposition",
-        "http://purl.org/olia/olia.owl#Conjuction",
-        "http://purl.org/olia/olia.owl#Preposition",
-        "http://purl.org/olia/olia.owl#SubordinatingConjunction"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_6_8",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_2_5",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "in"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 6,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 8,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Sentence",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Afterwards, we went to the Hardrock cafe and talked about compuer games."
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 71,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 143
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_81",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.7845637,
-      "http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_81_82",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adverb",
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_81",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "RB",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_69_70",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Afterwards"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 71,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 81,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_81_82",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.98686963,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_83_85",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Comma",
-        "http://purl.org/olia/olia.owl#Punctuation"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_81",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": ",",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_81",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": ","
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 81,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 82
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_83_85",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.9648707,
-        0.992885
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_86_90",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#NounPhrase",
-        "http://purl.org/olia/olia.owl#PersonalPronoun",
-        "http://purl.org/olia/olia.owl#PronounOrDeterminer"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_83_85",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "PRP",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_81_82",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "we"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 83,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 85,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_86_90",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.98866457,
-        0.9927737
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_91_93",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#PastParticiple",
-        "http://purl.org/olia/olia.owl#Verb",
-        "http://purl.org/olia/olia.owl#VerbPhrase"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_86_90",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_83_85",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "went"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 86,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 90,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_91_93",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.99410874,
-      "http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_97",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#Adposition",
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_91_93",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "TO",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_86_90",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "to"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 91,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 93,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_111",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9849689,
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "the Hardrock cafe"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 94,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 111,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143"
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_97",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.9781942,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_98_106",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Determiner",
-        "http://purl.org/olia/olia.owl#PronounOrDeterminer"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_111",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "DT",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_91_93",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "the"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 94,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 97
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_98_106",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": 0.89076734,
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_107_111",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Noun",
-        "http://purl.org/olia/olia.owl#ProperNoun",
-        "http://purl.org/olia/olia.owl#Quantifier",
-        "http://purl.org/olia/olia.owl#SingularQuantifier"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_111",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_94_97",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_71_143",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Hardrock"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 98,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 106
-    },
-    {
-      "@id": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_9_15",
-      "@type": [
-        "http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-        "http://nlp2rdf.lod2.eu/schema/sso/Word",
-        "http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-      ],
-      "enhancer:confidence": [
-        0.9849018,
-        0.996853
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_16_19",
-      "http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-        "http://purl.org/olia/olia.owl#Noun",
-        "http://purl.org/olia/olia.owl#NounPhrase",
-        "http://purl.org/olia/olia.owl#ProperNoun",
-        "http://purl.org/olia/olia.owl#Quantifier",
-        "http://purl.org/olia/olia.owl#SingularQuantifier"
-      ],
-      "http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_9_15",
-      "http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-      "http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_6_8",
-      "http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70",
-      "http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-        "@language": "en",
-        "@value": "Vienna"
-      },
-      "http://nlp2rdf.lod2.eu/schema/string/beginIndex": 9,
-      "http://nlp2rdf.lod2.eu/schema/string/endIndex": 15,
-      "http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba#offset_0_70"
-    },
-    {
-      "@id": "urn:enhancement-30d17705-3963-8b16-0dfa-6b1d3f98d338",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:TextAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.086Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-      "dc:type": "dbp-ont:Person",
-      "enhancer:confidence": 1.0,
-      "enhancer:end": 63,
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba",
-      "enhancer:selected-text": {
-        "@language": "en",
-        "@value": "Sigmund Freud"
-      },
-      "enhancer:selection-context": {
-        "@language": "en",
-        "@value": "I was in Vienna and I left to go to Ghana and met Sigmund Freud there. Afterwards, we went to the Hardrock cafe"
-      },
-      "enhancer:start": 50
-    },
-    {
-      "@id": "urn:enhancement-41d400cb-93a2-7a17-7e94-192b49d0e458",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:TextAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.086Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-      "dc:type": [
-        "dbp-ont:Country",
-        "dbp-ont:Place"
-      ],
-      "enhancer:confidence": 1.0,
-      "enhancer:end": 41,
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba",
-      "enhancer:selected-text": {
-        "@language": "en",
-        "@value": "Ghana"
-      },
-      "enhancer:selection-context": {
-        "@language": "en",
-        "@value": "I was in Vienna and I left to go to Ghana and met Sigmund Freud there. Afterwards, we went"
-      },
-      "enhancer:start": 36
-    },
-    {
-      "@id": "urn:enhancement-60fd791c-9eee-616a-a33d-837aa012a700",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:TextAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.033Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine",
-      "dc:language": "en",
-      "dc:type": "dc:LinguisticSystem",
-      "enhancer:confidence": 0.9999974,
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba"
-    },
-    {
-      "@id": "urn:enhancement-8c9c5429-8104-0ee5-6d99-beccbe1dd52c",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:EntityAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.086Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-      "dc:relation": "urn:enhancement-aa555b70-4006-5e04-f6c7-3a41a3d303f0",
-      "enhancer:confidence": 1.0,
-      "enhancer:entity-label": {
-        "@language": "en",
-        "@value": "Vienna"
-      },
-      "enhancer:entity-reference": "http://dbpedia.org/resource/Vienna",
-      "enhancer:entity-type": [
-        "dbp-ont:Place",
-        "dbp-ont:PopulatedPlace",
-        "dbp-ont:Settlement",
-        "schema:Place",
-        "http://www.opengis.net/gml/_Feature",
-        "owl:Thing"
-      ],
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba"
-    },
-    {
-      "@id": "urn:enhancement-aa555b70-4006-5e04-f6c7-3a41a3d303f0",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:TextAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.086Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-      "dc:type": "dbp-ont:Place",
-      "enhancer:confidence": 1.0,
-      "enhancer:end": 15,
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba",
-      "enhancer:selected-text": {
-        "@language": "en",
-        "@value": "Vienna"
-      },
-      "enhancer:selection-context": {
-        "@language": "en",
-        "@value": "I was in Vienna and I left to go to Ghana and met Sigmund Freud"
-      },
-      "enhancer:start": 9
-    },
-    {
-      "@id": "urn:enhancement-bc0fb95e-2659-dfbe-802b-9d121ae9ad36",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:EntityAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.086Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-      "dc:relation": "urn:enhancement-aa555b70-4006-5e04-f6c7-3a41a3d303f0",
-      "enhancer:confidence": 0.33333334,
-      "enhancer:entity-label": {
-        "@language": "en",
-        "@value": "Win 7"
-      },
-      "enhancer:entity-reference": "http://dbpedia.org/resource/Windows_7",
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba"
-    },
-    {
-      "@id": "urn:enhancement-c51d4390-26bf-da14-044f-726e3b8fb8af",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:EntityAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.086Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-      "dc:relation": "urn:enhancement-30d17705-3963-8b16-0dfa-6b1d3f98d338",
-      "enhancer:confidence": 1.0,
-      "enhancer:entity-label": {
-        "@language": "en",
-        "@value": "Sigmund Freud"
-      },
-      "enhancer:entity-reference": "http://dbpedia.org/resource/Sigmund_Freud",
-      "enhancer:entity-type": [
-        "dbp-ont:Agent",
-        "dbp-ont:Person",
-        "dbp-ont:Scientist",
-        "schema:Person",
-        "owl:Thing",
-        "foaf:Person"
-      ],
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba"
-    },
-    {
-      "@id": "urn:enhancement-d282a662-1cd6-8384-dd3f-e37c8a0aa3fb",
-      "@type": [
-        "enhancer:Enhancement",
-        "enhancer:EntityAnnotation"
-      ],
-      "dc:created": "2018-01-26T11:18:43.086Z",
-      "dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-      "dc:relation": "urn:enhancement-41d400cb-93a2-7a17-7e94-192b49d0e458",
-      "enhancer:confidence": 1.0,
-      "enhancer:entity-label": {
-        "@language": "en",
-        "@value": "Ghana"
-      },
-      "enhancer:entity-reference": "http://dbpedia.org/resource/Ghana",
-      "enhancer:entity-type": [
-        "dbp-ont:Country",
-        "dbp-ont:Place",
-        "dbp-ont:PopulatedPlace",
-        "schema:Country",
-        "schema:Place",
-        "http://www.opengis.net/gml/_Feature",
-        "owl:Thing"
-      ],
-      "enhancer:extracted-from": "urn:content-item-sha1-3ac3b1d03a1b38d5e71ac23bcce8ef7ff9ff14ba"
-    }
-  ]
-}
+[ {
+  "@id" : "http://dbpedia.org/resource/Bob_Marley",
+  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Artist", "http://dbpedia.org/ontology/MusicalArtist", "http://dbpedia.org/ontology/Person", "http://schema.org/MusicGroup", "http://schema.org/Person", "http://www.w3.org/2002/07/owl#Thing", "http://xmlns.com/foaf/0.1/Person" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Robert Nesta \"Bob\" Marley, OM (6 February 1945 – 11 May 1981) was a Jamaican singer-songwriter and musician. He was the rhythm guitarist and lead singer for the ska, rocksteady and reggae band Bob Marley & The Wailers (1963–1981). Marley remains the most widely known and revered performer of reggae music, and is credited with helping spread both Jamaican music and the Rastafari movement to a worldwide audience.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bob Marley",
+    "@language" : "de"
+  }, {
+    "@value" : "Bob Marley",
+    "@language" : "en"
+  }, {
+    "@value" : "Bob Marley",
+    "@language" : "es"
+  }, {
+    "@value" : "Bob Marley",
+    "@language" : "fr"
+  }, {
+    "@value" : "Bob Marley",
+    "@language" : "it"
+  }, {
+    "@value" : "Bob Marley",
+    "@language" : "pt"
+  }, {
+    "@value" : "Bob Marley",
+    "@language" : "tr"
+  }, {
+    "@value" : "Марли, Боб",
+    "@language" : "ru"
+  }, {
+    "@value" : "בוב מארלי",
+    "@language" : "he"
+  }, {
+    "@value" : "بوب مارلي",
+    "@language" : "ar"
+  }, {
+    "@value" : "巴布·馬利",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/5/5e/Bob-Marley.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bob-Marley.jpg/200px-Bob-Marley.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paris",
+  "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Paris is the capital and largest city of France. It is situated on the river Seine, in northern France, at the heart of the Île-de-France region (or Paris Region, French: Région parisienne). As of January 2008 the city of Paris, within its administrative limits largely unchanged since 1860, has an estimated population of 2,211,297 and a metropolitan population of 12,089,098, and is one of the most populated metropolitan areas in Europe.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Parigi",
+    "@language" : "it"
+  }, {
+    "@value" : "Paris",
+    "@language" : "de"
+  }, {
+    "@value" : "Paris",
+    "@language" : "en"
+  }, {
+    "@value" : "Paris",
+    "@language" : "fr"
+  }, {
+    "@value" : "Paris",
+    "@language" : "pt"
+  }, {
+    "@value" : "Paris",
+    "@language" : "tr"
+  }, {
+    "@value" : "París",
+    "@language" : "es"
+  }, {
+    "@value" : "Париж",
+    "@language" : "ru"
+  }, {
+    "@value" : "פריז",
+    "@language" : "he"
+  }, {
+    "@value" : "باريس",
+    "@language" : "ar"
+  }, {
+    "@value" : "巴黎",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "48.8567",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "2.3508",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/200px-Paris_-_Eiffelturm_und_Marsfeld2.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paris_Commune",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Paris Commune or Fourth French Revolution was a government that briefly ruled Paris from March 18 (more formally, from March 28) to May 28, 1871. It existed before the split between anarchists and Marxists had taken place, and it is hailed by both groups as the first assumption of power by the working class during the Industrial Revolution. Debates over the policies and outcome of the Commune contributed to the break between those two political groups.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Commune de Paris (1871)",
+    "@language" : "fr"
+  }, {
+    "@value" : "Comuna de Paris",
+    "@language" : "pt"
+  }, {
+    "@value" : "Comuna de París",
+    "@language" : "es"
+  }, {
+    "@value" : "Comune di Parigi (1871)",
+    "@language" : "it"
+  }, {
+    "@value" : "Paris Commune",
+    "@language" : "en"
+  }, {
+    "@value" : "Paris Komünü",
+    "@language" : "tr"
+  }, {
+    "@value" : "Pariser Kommune",
+    "@language" : "de"
+  }, {
+    "@value" : "Парижская коммуна",
+    "@language" : "ru"
+  }, {
+    "@value" : "הקומונה הפריזאית",
+    "@language" : "he"
+  }, {
+    "@value" : "كومونة باريس",
+    "@language" : "ar"
+  }, {
+    "@value" : "巴黎公社",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/200px-Flag_of_France.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paris_M%C3%A9tro",
+  "@type" : [ "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Infrastructure", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PublicTransitSystem", "http://dbpedia.org/ontology/RouteOfTransportation", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Paris Métro or Métropolitain (French: Métro de Paris) is the rapid transit metro system in Paris, France. It has become a symbol of the city, noted for its density within the city limits and its uniform architecture influenced by Art Nouveau. The network's sixteen lines are mostly underground and run to 214 km (133 mi) in length. There are 301 stations (384 stops), of which 62 facilitate transfer to another line.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Metro de París",
+    "@language" : "es"
+  }, {
+    "@value" : "Metropolitana di Parigi",
+    "@language" : "it"
+  }, {
+    "@value" : "Metropolitano de Paris",
+    "@language" : "pt"
+  }, {
+    "@value" : "Métro Paris",
+    "@language" : "de"
+  }, {
+    "@value" : "Métro de Paris",
+    "@language" : "fr"
+  }, {
+    "@value" : "Paris Métro",
+    "@language" : "en"
+  }, {
+    "@value" : "Paris metrosu",
+    "@language" : "tr"
+  }, {
+    "@value" : "Парижский метрополитен",
+    "@language" : "ru"
+  }, {
+    "@value" : "הרכבת התחתית של פריז",
+    "@language" : "he"
+  }, {
+    "@value" : "مترو باريس",
+    "@language" : "ar"
+  }, {
+    "@value" : "巴黎地鐵",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/66/Paris_Metro_Sign.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Paris_Metro_Sign.jpg/200px-Paris_Metro_Sign.jpg"
+  } ]
+}, {
+  "@id" : "urn:enhancement-204c7886-9f65-66dd-0eba-39428101b568",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.149326402127156",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Paris Commune",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Paris_Commune"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-37c8a8244041cf6113d4ee04b3a04d0a014f6e10"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:17:25.924Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-f90aea54-84fc-9179-95a3-042d37bec2af"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-2fa1e690-c55f-dba3-a932-70ecbb90260b",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9464704504529554",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "89",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-37c8a8244041cf6113d4ee04b3a04d0a014f6e10"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Bob Marley",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "The Stanbol enhancer can detect famous cities such as Paris and people such as Bob Marley.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "79",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:17:25.917Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Person"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-42c9756f-560f-2586-90ee-42dab09e8f9c",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Bob Marley",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Bob_Marley"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Agent"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Artist"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/MusicalArtist"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Person"
+  }, {
+    "@id" : "http://schema.org/MusicGroup"
+  }, {
+    "@id" : "http://schema.org/Person"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-37c8a8244041cf6113d4ee04b3a04d0a014f6e10"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:17:25.925Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-2fa1e690-c55f-dba3-a932-70ecbb90260b"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-76232a74-d59c-eaa4-945a-3901ded71cbf",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.2042835216594651",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Paris Métro",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Paris_M%C3%A9tro"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Infrastructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PublicTransitSystem"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/RouteOfTransportation"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-37c8a8244041cf6113d4ee04b3a04d0a014f6e10"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:17:25.924Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-f90aea54-84fc-9179-95a3-042d37bec2af"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-98676bcf-1733-402e-6e31-1d0368c3c0f0",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9999964696527387",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-37c8a8244041cf6113d4ee04b3a04d0a014f6e10"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:17:25.911Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/language" : [ {
+    "@value" : "en"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://purl.org/dc/terms/LinguisticSystem"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-99d1fa11-0032-c402-bd14-a00ef5819974",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Paris",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Paris"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-37c8a8244041cf6113d4ee04b3a04d0a014f6e10"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:17:25.924Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-f90aea54-84fc-9179-95a3-042d37bec2af"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-f90aea54-84fc-9179-95a3-042d37bec2af",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9322403510215739",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "59",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-37c8a8244041cf6113d4ee04b3a04d0a014f6e10"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Paris",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "The Stanbol enhancer can detect famous cities such as Paris and people such as Bob Marley.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "54",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:17:25.921Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+} ]

@@ -1,700 +1,1725 @@
-{
-"@context": {
-"dbp-ont": "http://dbpedia.org/ontology/",
-"dbp-ont:birthDate": {
-"@type": "xsd:dateTime"
-},
-"dbp-ont:populationTotal": {
-"@type": "xsd:long"
-},
-"dc": "http://purl.org/dc/terms/",
-"dc:created": {
-"@type": "xsd:dateTime"
-},
-"dc:creator": {
-"@type": "xsd:string"
-},
-"dc:relation": {
-"@type": "@id"
-},
-"dc:type": {
-"@type": "@id"
-},
-"enhancer": "http://fise.iks-project.eu/ontology/",
-"enhancer:confidence": {
-"@type": "xsd:double"
-},
-"enhancer:end": {
-"@type": "xsd:int"
-},
-"enhancer:entity-reference": {
-"@type": "@id"
-},
-"enhancer:entity-type": {
-"@type": "@id"
-},
-"enhancer:extracted-from": {
-"@type": "@id"
-},
-"enhancer:start": {
-"@type": "xsd:int"
-},
-"foaf": "http://xmlns.com/foaf/0.1/",
-"foaf:depiction": {
-"@type": "@id"
-},
-"geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
-"geo:lat": {
-"@type": "xsd:double"
-},
-"geo:long": {
-"@type": "xsd:double"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/firstWord": {
-"@type": "@id"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/lastWord": {
-"@type": "@id"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/nextWord": {
-"@type": "@id"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": {
-"@type": "@id"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/parent": {
-"@type": "@id"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/posTag": {
-"@type": "xsd:string"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/previousWord": {
-"@type": "@id"
-},
-"http://nlp2rdf.lod2.eu/schema/sso/sentence": {
-"@type": "@id"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": {
-"@type": "xsd:int"
-},
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": {
-"@type": "xsd:int"
-},
-"http://nlp2rdf.lod2.eu/schema/string/superString": {
-"@type": "@id"
-},
-"owl": "http://www.w3.org/2002/07/owl#",
-"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-"schema": "http://schema.org/",
-"xsd": "http://www.w3.org/2001/XMLSchema#"
-},
-"@graph": [
-{
-"@id": "http://dbpedia.org/resource/Chelsea_F.C.",
-"@type": [
-"dbp-ont:Agent",
-"dbp-ont:Organisation",
-"dbp-ont:SoccerClub",
-"dbp-ont:SportsTeam",
-"owl:Thing",
-"schema:Organization",
-"schema:SportsTeam"
-],
-"foaf:depiction": [
-"http://upload.wikimedia.org/wikipedia/commons/c/cc/Chelsea_FC.svg",
-"http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Chelsea_FC.svg/200px-Chelsea_FC.svg.png"
-],
-"rdfs:comment": {
-"@language": "en",
-"@value": "Chelsea Football Club is an English football club based in Fulham, London. Founded in 1905, they play in the Premier League and have spent most of their history in the top tier of English football. Their home is the 41,837-seat Stamford Bridge stadium, where they have played since their establishment. Since 2003 they have been owned by Russian billionaire Roman Abramovich."
-},
-"rdfs:label": [
-{
-"@language": "en",
-"@value": "Chelsea F.C."
-},
-{
-"@language": "tr",
-"@value": "Chelsea FC"
-},
-{
-"@language": "es",
-"@value": "Chelsea Football Club"
-},
-{
-"@language": "fr",
-"@value": "Chelsea Football Club"
-},
-{
-"@language": "it",
-"@value": "Chelsea Football Club"
-},
-{
-"@language": "pt",
-"@value": "Chelsea Football Club"
-},
-{
-"@language": "de",
-"@value": "FC Chelsea"
-},
-{
-"@language": "ru",
-"@value": "Челси (футбольный клуб)"
-},
-{
-"@language": "he",
-"@value": "צ'לסי (כדורגל)"
-},
-{
-"@language": "ar",
-"@value": "نادي تشيلسي"
-},
-{
-"@language": "zh",
-"@value": "切尔西足球俱乐部"
-}
-]
-},
-{
-"@id": "http://dbpedia.org/resource/London",
-"@type": [
-"dbp-ont:Place",
-"dbp-ont:PopulatedPlace",
-"dbp-ont:Settlement",
-"http://www.opengis.net/gml/_Feature",
-"owl:Thing",
-"schema:Place"
-],
-"dbp-ont:populationTotal": 7825200,
-"foaf:depiction": [
-"http://upload.wikimedia.org/wikipedia/commons/8/83/London_collage.jpg",
-"http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/London_collage.jpg/200px-London_collage.jpg"
-],
-"geo:lat": 51.50722,
-"geo:long": -0.1275,
-"rdfs:comment": {
-"@language": "en",
-"@value": "London Listen/ˈlʌndən/ is the capital city of England and the United Kingdom, the largest metropolitan area in the United Kingdom, and the largest urban zone in the European Union by most measures. Located on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium. London's ancient core, the City of London, largely retains its square-mile mediaeval boundaries."
-},
-"rdfs:label": [
-{
-"@language": "de",
-"@value": "London"
-},
-{
-"@language": "en",
-"@value": "London"
-},
-{
-"@language": "it",
-"@value": "Londra"
-},
-{
-"@language": "tr",
-"@value": "Londra"
-},
-{
-"@language": "es",
-"@value": "Londres"
-},
-{
-"@language": "fr",
-"@value": "Londres"
-},
-{
-"@language": "pt",
-"@value": "Londres"
-},
-{
-"@language": "ru",
-"@value": "Лондон"
-},
-{
-"@language": "he",
-"@value": "לונדון"
-},
-{
-"@language": "ar",
-"@value": "لندن"
-},
-{
-"@language": "zh",
-"@value": "伦敦"
-}
-]
-},
-{
-"@id": "http://dbpedia.org/resource/London,_Ontario",
-"@type": [
-"dbp-ont:City",
-"dbp-ont:Place",
-"dbp-ont:PopulatedPlace",
-"dbp-ont:Settlement",
-"http://www.opengis.net/gml/_Feature",
-"owl:Thing",
-"schema:City",
-"schema:Place"
-],
-"dbp-ont:populationTotal": 366151,
-"foaf:depiction": [
-"http://upload.wikimedia.org/wikipedia/commons/0/0e/London,_Ontario,_Canada-_The_Forest_City_from_above.jpg",
-"http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/London,_Ontario,_Canada-_The_Forest_City_from_above.jpg/200px-London,_Ontario,_Canada-_The_Forest_City_from_above.jpg"
-],
-"geo:lat": 42.9837,
-"geo:long": -81.2497,
-"rdfs:comment": {
-"@language": "en",
-"@value": "London is a city in Southwestern Ontario, Canada, situated along the Quebec City–Windsor Corridor. The city has a population of 366,151 according to the 2011 Canadian census. London is the seat of Middlesex County, at the forks of the non-navigable Thames River, approximately halfway between Toronto, Ontario and Detroit, Michigan. The City of London is a separated municipality, politically separate from Middlesex County, though it remains the official county seat."
-},
-"rdfs:label": [
-{
-"@language": "it",
-"@value": "London (Canada)"
-},
-{
-"@language": "de",
-"@value": "London (Ontario)"
-},
-{
-"@language": "es",
-"@value": "London (Ontario)"
-},
-{
-"@language": "fr",
-"@value": "London (Ontario)"
-},
-{
-"@language": "pt",
-"@value": "London (Ontário)"
-},
-{
-"@language": "en",
-"@value": "London, Ontario"
-},
-{
-"@language": "ru",
-"@value": "Лондон (Онтарио)"
-},
-{
-"@language": "he",
-"@value": "לונדון (אונטריו)"
-},
-{
-"@language": "ar",
-"@value": "لندن (أونتاريو)"
-},
-{
-"@language": "zh",
-"@value": "伦敦 (加拿大)"
-}
-]
-},
-{
-"@id": "http://dbpedia.org/resource/Sigmund_Freud",
-"@type": [
-"dbp-ont:Agent",
-"dbp-ont:Person",
-"dbp-ont:Scientist",
-"foaf:Person",
-"owl:Thing",
-"schema:Person"
-],
-"dbp-ont:birthDate": "1856-05-05T23:00:00Z",
-"foaf:depiction": [
-"http://upload.wikimedia.org/wikipedia/commons/1/12/Sigmund_Freud_LIFE.jpg",
-"http://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Sigmund_Freud_LIFE.jpg/200px-Sigmund_Freud_LIFE.jpg"
-],
-"rdfs:comment": {
-"@language": "en",
-"@value": "Sigmund Freud, born Sigismund Schlomo Freud (6 May 1856 – 23 September 1939), was an Austrian neurologist who founded the discipline of psychoanalysis. Freud's family and ancestry were Jewish. Freud always considered himself a Jew even though he rejected Judaism and had a critical view of religion. Freud's parents were poor, but ensured his education. Freud was an outstanding pupil in high school, and graduated the Matura with honors in 1873."
-},
-"rdfs:label": [
-{
-"@language": "de",
-"@value": "Sigmund Freud"
-},
-{
-"@language": "en",
-"@value": "Sigmund Freud"
-},
-{
-"@language": "es",
-"@value": "Sigmund Freud"
-},
-{
-"@language": "fr",
-"@value": "Sigmund Freud"
-},
-{
-"@language": "it",
-"@value": "Sigmund Freud"
-},
-{
-"@language": "pt",
-"@value": "Sigmund Freud"
-},
-{
-"@language": "tr",
-"@value": "Sigmund Freud"
-},
-{
-"@language": "ru",
-"@value": "Фрейд, Зигмунд"
-},
-{
-"@language": "he",
-"@value": "זיגמונד פרויד"
-},
-{
-"@language": "ar",
-"@value": "سيغموند فرويد"
-},
-{
-"@language": "zh",
-"@value": "西格蒙德·弗洛伊德"
-}
-]
-},
-{
-"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_13",
-"@type": [
-"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-],
-"enhancer:confidence": 0.98024184,
-"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": "http://purl.org/olia/olia.owl#NounPhrase",
-"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-"@language": "en",
-"@value": "Sigmund Freud"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": 13,
-"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
-},
-{
-"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"@type": [
-"http://nlp2rdf.lod2.eu/schema/sso/Sentence",
-"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-],
-"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-"@language": "en",
-"@value": "Sigmund Freud was in London"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": 27
-},
-{
-"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_7",
-"@type": [
-"http://nlp2rdf.lod2.eu/schema/sso/Word",
-"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-],
-"enhancer:confidence": 0.965026,
-"http://nlp2rdf.lod2.eu/schema/sso/firstWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_8_13",
-"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-"http://purl.org/olia/olia.owl#Noun",
-"http://purl.org/olia/olia.owl#ProperNoun",
-"http://purl.org/olia/olia.owl#Quantifier",
-"http://purl.org/olia/olia.owl#SingularQuantifier"
-],
-"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_13",
-"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-"@language": "en",
-"@value": "Sigmund"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 0,
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": 7
-},
-{
-"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
-"@type": [
-"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-"http://nlp2rdf.lod2.eu/schema/sso/Word",
-"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-],
-"enhancer:confidence": [
-0.96902686,
-0.98745364
-],
-"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
-"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-"http://purl.org/olia/olia.owl#PastParticiple",
-"http://purl.org/olia/olia.owl#Verb",
-"http://purl.org/olia/olia.owl#VerbPhrase"
-],
-"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
-"http://nlp2rdf.lod2.eu/schema/sso/posTag": "VBD",
-"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_8_13",
-"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-"@language": "en",
-"@value": "was"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 14,
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": 17,
-"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
-},
-{
-"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
-"@type": [
-"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-"http://nlp2rdf.lod2.eu/schema/sso/Word",
-"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-],
-"enhancer:confidence": 0.9854984,
-"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_21_27",
-"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-"http://purl.org/olia/olia.owl#Adposition",
-"http://purl.org/olia/olia.owl#Conjuction",
-"http://purl.org/olia/olia.owl#Preposition",
-"http://purl.org/olia/olia.owl#SubordinatingConjunction"
-],
-"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
-"http://nlp2rdf.lod2.eu/schema/sso/posTag": "IN",
-"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
-"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-"@language": "en",
-"@value": "in"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 18,
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": 20,
-"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
-},
-{
-"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_21_27",
-"@type": [
-"http://nlp2rdf.lod2.eu/schema/sso/Phrase",
-"http://nlp2rdf.lod2.eu/schema/sso/Word",
-"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-],
-"enhancer:confidence": [
-0.7732126,
-0.93251246
-],
-"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-"http://purl.org/olia/olia.owl#Noun",
-"http://purl.org/olia/olia.owl#NounPhrase",
-"http://purl.org/olia/olia.owl#ProperNoun",
-"http://purl.org/olia/olia.owl#Quantifier",
-"http://purl.org/olia/olia.owl#SingularQuantifier"
-],
-"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_21_27",
-"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_18_20",
-"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-"@language": "en",
-"@value": "London"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 21,
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": 27,
-"http://nlp2rdf.lod2.eu/schema/string/superString": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27"
-},
-{
-"@id": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_8_13",
-"@type": [
-"http://nlp2rdf.lod2.eu/schema/sso/Word",
-"http://nlp2rdf.lod2.eu/schema/string/OffsetBasedString"
-],
-"enhancer:confidence": 0.81553525,
-"http://nlp2rdf.lod2.eu/schema/sso/lastWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/sso/nextWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_14_17",
-"http://nlp2rdf.lod2.eu/schema/sso/oliaLink": [
-"http://purl.org/olia/olia.owl#Noun",
-"http://purl.org/olia/olia.owl#ProperNoun",
-"http://purl.org/olia/olia.owl#Quantifier",
-"http://purl.org/olia/olia.owl#SingularQuantifier"
-],
-"http://nlp2rdf.lod2.eu/schema/sso/parent": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_13",
-"http://nlp2rdf.lod2.eu/schema/sso/posTag": "NNP",
-"http://nlp2rdf.lod2.eu/schema/sso/previousWord": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_7",
-"http://nlp2rdf.lod2.eu/schema/sso/sentence": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996#offset_0_27",
-"http://nlp2rdf.lod2.eu/schema/string/anchorOf": {
-"@language": "en",
-"@value": "Freud"
-},
-"http://nlp2rdf.lod2.eu/schema/string/beginIndex": 8,
-"http://nlp2rdf.lod2.eu/schema/string/endIndex": 13
-},
-{
-"@id": "urn:enhancement-30d348c4-2a71-de10-2df6-d1268d41f01f",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:EntityAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.554Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-"dc:relation": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
-"enhancer:confidence": 1.0,
-"enhancer:entity-label": {
-"@language": "en",
-"@value": "London"
-},
-"enhancer:entity-reference": "http://dbpedia.org/resource/London",
-"enhancer:entity-type": [
-"dbp-ont:Place",
-"dbp-ont:PopulatedPlace",
-"dbp-ont:Settlement",
-"schema:Place",
-"http://www.opengis.net/gml/_Feature",
-"owl:Thing"
-],
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
-},
-{
-"@id": "urn:enhancement-369e5df8-440a-030a-308b-feee79fba56e",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:TextAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.547Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine",
-"dc:language": "en",
-"dc:type": "dc:LinguisticSystem",
-"enhancer:confidence": 0.8571409,
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
-},
-{
-"@id": "urn:enhancement-62735be2-2baa-d4f6-0dfc-7eb34d1b6506",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:TextAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.554Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-"dc:type": "dbp-ont:Person",
-"enhancer:confidence": 1.0,
-"enhancer:end": 13,
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996",
-"enhancer:selected-text": {
-"@language": "en",
-"@value": "Sigmund Freud"
-},
-"enhancer:selection-context": {
-"@language": "en",
-"@value": "Sigmund Freud was in London"
-},
-"enhancer:start": 0
-},
-{
-"@id": "urn:enhancement-7480c2e7-d1c9-1c33-57e0-09b55aeeebcc",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:EntityAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.554Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-"dc:relation": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
-"enhancer:confidence": 0.6666667,
-"enhancer:entity-label": {
-"@language": "en",
-"@value": "London ON"
-},
-"enhancer:entity-reference": "http://dbpedia.org/resource/London,_Ontario",
-"enhancer:entity-type": [
-"dbp-ont:City",
-"dbp-ont:Place",
-"dbp-ont:PopulatedPlace",
-"dbp-ont:Settlement",
-"schema:City",
-"schema:Place",
-"http://www.opengis.net/gml/_Feature",
-"owl:Thing"
-],
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
-},
-{
-"@id": "urn:enhancement-774ef05f-1d7e-ec34-9da7-1142b90fad60",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:EntityAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.554Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-"dc:relation": "urn:enhancement-62735be2-2baa-d4f6-0dfc-7eb34d1b6506",
-"enhancer:confidence": 1.0,
-"enhancer:entity-label": {
-"@language": "en",
-"@value": "Sigmund Freud"
-},
-"enhancer:entity-reference": "http://dbpedia.org/resource/Sigmund_Freud",
-"enhancer:entity-type": [
-"dbp-ont:Agent",
-"dbp-ont:Person",
-"dbp-ont:Scientist",
-"schema:Person",
-"owl:Thing",
-"foaf:Person"
-],
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
-},
-{
-"@id": "urn:enhancement-7830c15c-e9bc-ce8b-3de0-a81214324289",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:EntityAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.554Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-"dc:relation": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
-"enhancer:confidence": 0.54545456,
-"enhancer:entity-label": {
-"@language": "en",
-"@value": "CSKA London"
-},
-"enhancer:entity-reference": "http://dbpedia.org/resource/Chelsea_F.C.",
-"enhancer:entity-type": [
-"dbp-ont:Agent",
-"dbp-ont:Organisation",
-"dbp-ont:SoccerClub",
-"dbp-ont:SportsTeam",
-"schema:Organization",
-"schema:SportsTeam",
-"owl:Thing"
-],
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
-},
-{
-"@id": "urn:enhancement-791f47d8-f1bd-839d-1c60-11d83993c8aa",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:TextAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.548Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine",
-"dc:language": "de",
-"dc:type": "dc:LinguisticSystem",
-"enhancer:confidence": 0.14285882,
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996"
-},
-{
-"@id": "urn:enhancement-f183c569-bfe5-cc0b-a250-289eb32a5a86",
-"@type": [
-"enhancer:Enhancement",
-"enhancer:TextAnnotation"
-],
-"dc:created": "2018-02-02T09:03:33.554Z",
-"dc:creator": "org.apache.stanbol.enhancer.engines.lucenefstlinking.FstLinkingEngine",
-"dc:type": "dbp-ont:Place",
-"enhancer:confidence": 1.0,
-"enhancer:end": 27,
-"enhancer:extracted-from": "urn:content-item-sha1-9135c2db0c511932c00179c5d3c92d7245647996",
-"enhancer:selected-text": {
-"@language": "en",
-"@value": "London"
-},
-"enhancer:selection-context": {
-"@language": "en",
-"@value": "Sigmund Freud was in London"
-},
-"enhancer:start": 21
-}
-]
-}
+[ {
+  "@id" : "http://dbpedia.org/resource/Air_France",
+  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Organisation", "http://schema.org/Organization", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Air France (formally Société Air France, S.A. ), stylised as AIRFRANCE, is the French flag carrier headquartered in Tremblay-en-France, (north of Paris), and is one of the world's largest airlines. It is a subsidiary of the Air France-KLM Group and a founding member of the SkyTeam global airline alliance.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air France",
+    "@language" : "de"
+  }, {
+    "@value" : "Air France",
+    "@language" : "en"
+  }, {
+    "@value" : "Air France",
+    "@language" : "es"
+  }, {
+    "@value" : "Air France",
+    "@language" : "fr"
+  }, {
+    "@value" : "Air France",
+    "@language" : "it"
+  }, {
+    "@value" : "Air France",
+    "@language" : "pt"
+  }, {
+    "@value" : "Air France",
+    "@language" : "ru"
+  }, {
+    "@value" : "Air France",
+    "@language" : "tr"
+  }, {
+    "@value" : "אייר פראנס",
+    "@language" : "he"
+  }, {
+    "@value" : "الخطوط الجوية الفرنسية",
+    "@language" : "ar"
+  }, {
+    "@value" : "法國航空",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/4/44/Air_France_Logo.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/200px-Air_France_Logo.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Amsterdam",
+  "@type" : [ "http://dbpedia.org/ontology/City", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/City", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Amsterdam is the largest city and the capital of the Netherlands. The city's status as the capital of the nation is governed by the constitution. Amsterdam has a population of 790,654 within city limits, an urban population of 1,209,419 and a metropolitan population of 2,289,762. The city is located in the province of North Holland in the west of the country. It comprises the northern part of the Randstad, one of the larger conurbations in Europe, with a population of approximately 7 million.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Amsterdam",
+    "@language" : "de"
+  }, {
+    "@value" : "Amsterdam",
+    "@language" : "en"
+  }, {
+    "@value" : "Amsterdam",
+    "@language" : "fr"
+  }, {
+    "@value" : "Amsterdam",
+    "@language" : "it"
+  }, {
+    "@value" : "Amsterdam",
+    "@language" : "tr"
+  }, {
+    "@value" : "Amsterdão",
+    "@language" : "pt"
+  }, {
+    "@value" : "Ámsterdam",
+    "@language" : "es"
+  }, {
+    "@value" : "Амстердам",
+    "@language" : "ru"
+  }, {
+    "@value" : "אמסטרדם",
+    "@language" : "he"
+  }, {
+    "@value" : "أمستردام",
+    "@language" : "ar"
+  }, {
+    "@value" : "阿姆斯特丹",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "52.373055",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "4.8922224",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/6a/Sights_in_Amsterdam2.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sights_in_Amsterdam2.jpg/200px-Sights_in_Amsterdam2.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Amsterdam_Airport_Schiphol",
+  "@type" : [ "http://dbpedia.org/ontology/Airport", "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Infrastructure", "http://dbpedia.org/ontology/Place", "http://schema.org/Airport", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Amsterdam Airport Schiphol is the Netherlands' main international airport, located 20 minutes southwest of Amsterdam, in the municipality of Haarlemmermeer. The airport's official English name, Amsterdam Airport Schiphol, reflects the original Dutch word order (Luchthaven Schiphol). The airport used to have the IATA code of SPL, which has fallen into disuse and has been replaced by AMS.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aeroporto de Amsterdão Schiphol",
+    "@language" : "pt"
+  }, {
+    "@value" : "Aeroporto di Amsterdam-Schiphol",
+    "@language" : "it"
+  }, {
+    "@value" : "Aeropuerto de Ámsterdam-Schiphol",
+    "@language" : "es"
+  }, {
+    "@value" : "Amsterdam Airport Schiphol",
+    "@language" : "en"
+  }, {
+    "@value" : "Amsterdam Schiphol Havalimanı",
+    "@language" : "tr"
+  }, {
+    "@value" : "Aéroport d'Amsterdam-Schiphol",
+    "@language" : "fr"
+  }, {
+    "@value" : "Flughafen Schiphol",
+    "@language" : "de"
+  }, {
+    "@value" : "Схипхол",
+    "@language" : "ru"
+  }, {
+    "@value" : "נמל התעופה סכיפהול",
+    "@language" : "he"
+  }, {
+    "@value" : "مطار سخيبول أمستردام",
+    "@language" : "ar"
+  }, {
+    "@value" : "阿姆斯特丹史基浦機場",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "52.308056",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "4.764167",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/b/bb/Schiphol_logo.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Schiphol_logo.svg/200px-Schiphol_logo.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Amsterdam_Arena",
+  "@type" : [ "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Building", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/Stadium", "http://schema.org/Place", "http://schema.org/StadiumOrArena", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Amsterdam Arena (often stylized as Amsterdam ArenA) is a stadium in Amsterdam, Netherlands. It is the largest stadium in the country and it was built from 1993 to 1996 at a cost of €140 million, and was officially opened on 14 August 1996. It has been used for association football, American football, concerts, and other events. The stadium has a retractable roof combined with a grass surface.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Amsterdam ArenA",
+    "@language" : "fr"
+  }, {
+    "@value" : "Amsterdam ArenA",
+    "@language" : "it"
+  }, {
+    "@value" : "Amsterdam ArenA",
+    "@language" : "pt"
+  }, {
+    "@value" : "Amsterdam ArenA",
+    "@language" : "tr"
+  }, {
+    "@value" : "Amsterdam Arena",
+    "@language" : "de"
+  }, {
+    "@value" : "Amsterdam Arena",
+    "@language" : "en"
+  }, {
+    "@value" : "Ámsterdam Arena",
+    "@language" : "es"
+  }, {
+    "@value" : "Амстердам АренА",
+    "@language" : "ru"
+  }, {
+    "@value" : "אמסטרדם ארנה",
+    "@language" : "he"
+  }, {
+    "@value" : "ملعب أمستردام أرينا",
+    "@language" : "ar"
+  }, {
+    "@value" : "阿姆斯特丹球場",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "52.314167",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "4.9419446",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/f/fa/Amsterdam_Arena_logo.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Amsterdam_Arena_logo.svg/200px-Amsterdam_Arena_logo.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/British_Airways",
+  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Organisation", "http://schema.org/Organization", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "British Airways (BA) is the flag carrier airline of the United Kingdom, based in Waterside, near its main hub at London Heathrow Airport. British Airways is the largest airline in the UK based on fleet size, international flights and international destinations and second largest measured by passengers carried, behind easyJet.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "British Airways",
+    "@language" : "de"
+  }, {
+    "@value" : "British Airways",
+    "@language" : "en"
+  }, {
+    "@value" : "British Airways",
+    "@language" : "es"
+  }, {
+    "@value" : "British Airways",
+    "@language" : "fr"
+  }, {
+    "@value" : "British Airways",
+    "@language" : "it"
+  }, {
+    "@value" : "British Airways",
+    "@language" : "pt"
+  }, {
+    "@value" : "British Airways",
+    "@language" : "ru"
+  }, {
+    "@value" : "British Airways",
+    "@language" : "tr"
+  }, {
+    "@value" : "בריטיש איירווייז",
+    "@language" : "he"
+  }, {
+    "@value" : "الخطوط الجوية البريطانية",
+    "@language" : "ar"
+  }, {
+    "@value" : "英國航空",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/4/42/British_Airways_Logo.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/4/42/British_Airways_Logo.svg/200px-British_Airways_Logo.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Council_of_Europe",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Council of Europe (French: Conseil de l'Europe) is an international organization promoting co-operation between all countries of Europe in the areas of legal standards, human rights, democratic development, the rule of law and cultural co-operation. It was founded in 1949, has 47 member states with some 800 million citizens, and is an entirely separate body from the European Union (EU), which has only 27 member states. Unlike the EU, the Council of Europe cannot make binding laws.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Avrupa Konseyi",
+    "@language" : "tr"
+  }, {
+    "@value" : "Conseil de l'Europe",
+    "@language" : "fr"
+  }, {
+    "@value" : "Consejo de Europa",
+    "@language" : "es"
+  }, {
+    "@value" : "Conselho da Europa",
+    "@language" : "pt"
+  }, {
+    "@value" : "Consiglio d'Europa",
+    "@language" : "it"
+  }, {
+    "@value" : "Council of Europe",
+    "@language" : "en"
+  }, {
+    "@value" : "Europarat",
+    "@language" : "de"
+  }, {
+    "@value" : "Совет Европы",
+    "@language" : "ru"
+  }, {
+    "@value" : "מועצת אירופה",
+    "@language" : "he"
+  }, {
+    "@value" : "مجلس أوروبا",
+    "@language" : "ar"
+  }, {
+    "@value" : "欧洲委员会",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/200px-Flag_of_Europe.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Europe",
+  "@type" : [ "http://dbpedia.org/ontology/Continent", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Continent", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Europe is, by convention, one of the world's seven continents. Comprising the westernmost peninsula of Eurasia, Europe is generally 'divided' from Asia to its east by the watershed divides of the Ural and Caucasus Mountains, the Ural River, the Caspian and Black Seas, and the waterways connecting the Black and Aegean Seas.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Avrupa",
+    "@language" : "tr"
+  }, {
+    "@value" : "Europa",
+    "@language" : "de"
+  }, {
+    "@value" : "Europa",
+    "@language" : "es"
+  }, {
+    "@value" : "Europa",
+    "@language" : "it"
+  }, {
+    "@value" : "Europa",
+    "@language" : "pt"
+  }, {
+    "@value" : "Europe",
+    "@language" : "en"
+  }, {
+    "@value" : "Europe",
+    "@language" : "fr"
+  }, {
+    "@value" : "Европа",
+    "@language" : "ru"
+  }, {
+    "@value" : "אירופה",
+    "@language" : "he"
+  }, {
+    "@value" : "أوروبا",
+    "@language" : "ar"
+  }, {
+    "@value" : "欧洲",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/d/de/Europe_orthographic_Caucasus_Urals_boundary.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Europe_orthographic_Caucasus_Urals_boundary.svg/200px-Europe_orthographic_Caucasus_Urals_boundary.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Iran",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Iran, officially the Islamic Republic of Iran, is a country in Southern and Western Asia. The name \"Iran\", which in Persian means \"Land of the Aryans\", has been in use natively since the Sassanian era. It came into use internationally in 1935, before which the country was known to the Western world as Persia. Both \"Persia\" and \"Iran\" are used interchangeably in cultural contexts; however, \"Iran\" is the name used officially in political contexts.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Iran",
+    "@language" : "de"
+  }, {
+    "@value" : "Iran",
+    "@language" : "en"
+  }, {
+    "@value" : "Iran",
+    "@language" : "fr"
+  }, {
+    "@value" : "Iran",
+    "@language" : "it"
+  }, {
+    "@value" : "Irán",
+    "@language" : "es"
+  }, {
+    "@value" : "Irão",
+    "@language" : "pt"
+  }, {
+    "@value" : "İran",
+    "@language" : "tr"
+  }, {
+    "@value" : "Иран",
+    "@language" : "ru"
+  }, {
+    "@value" : "איראן",
+    "@language" : "he"
+  }, {
+    "@value" : "إيران",
+    "@language" : "ar"
+  }, {
+    "@value" : "伊朗",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "32.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "35.683334",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "51.416668",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "53.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/200px-Flag_of_Iran.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/KLM",
+  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Organisation", "http://schema.org/Organization", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Koninklijke Luchtvaart Maatschappij N.V. , operating under the name KLM Royal Dutch Airlines, is the flag carrier airline of the Netherlands and is part of Air France-KLM. KLM's headquarters is in Amstelveen near its hub at Amsterdam Airport Schiphol. KLM operates worldwide scheduled passenger and cargo services to more than 90 destinations. It is the oldest airline in the world still operating under its original name. As of 31 March 2010 (2010 -03-31), it has 31,787 employees.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "KLM",
+    "@language" : "en"
+  }, {
+    "@value" : "KLM",
+    "@language" : "he"
+  }, {
+    "@value" : "KLM",
+    "@language" : "it"
+  }, {
+    "@value" : "KLM",
+    "@language" : "pt"
+  }, {
+    "@value" : "KLM",
+    "@language" : "ru"
+  }, {
+    "@value" : "KLM",
+    "@language" : "tr"
+  }, {
+    "@value" : "KLM Royal Dutch Airlines",
+    "@language" : "de"
+  }, {
+    "@value" : "KLM Royal Dutch Airlines",
+    "@language" : "es"
+  }, {
+    "@value" : "KLM Royal Dutch Airlines",
+    "@language" : "fr"
+  }, {
+    "@value" : "الخطوط الجوية الملكية الهولندية",
+    "@language" : "ar"
+  }, {
+    "@value" : "荷蘭皇家航空",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/c7/KLM_logo.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/KLM_logo.svg/200px-KLM_logo.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Organization_for_Security_and_Co-operation_in_Europe",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Organization for Security and Co-operation in Europe (OSCE) is the world's largest security-oriented intergovernmental organization. Its mandate includes issues such as arms control and the promotion of human rights, freedom of the press and fair elections. It has 550 headquarters staff and about 2300 field staff. The OSCE is an ad hoc organization under the United Nations Charter (Chap.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Avrupa Güvenlik ve İşbirliği Teşkilatı",
+    "@language" : "tr"
+  }, {
+    "@value" : "Organisation für Sicherheit und Zusammenarbeit in Europa",
+    "@language" : "de"
+  }, {
+    "@value" : "Organisation pour la sécurité et la coopération en Europe",
+    "@language" : "fr"
+  }, {
+    "@value" : "Organización para la Seguridad y la Cooperación en Europa",
+    "@language" : "es"
+  }, {
+    "@value" : "Organization for Security and Co-operation in Europe",
+    "@language" : "en"
+  }, {
+    "@value" : "Organização para a Segurança e Cooperação na Europa",
+    "@language" : "pt"
+  }, {
+    "@value" : "Organizzazione per la Sicurezza e la Cooperazione in Europa",
+    "@language" : "it"
+  }, {
+    "@value" : "Организация по безопасности и сотрудничеству в Европе",
+    "@language" : "ru"
+  }, {
+    "@value" : "הארגון לביטחון ולשיתוף פעולה באירופה",
+    "@language" : "he"
+  }, {
+    "@value" : "منظمة الأمن والتعاون في أوروبا",
+    "@language" : "ar"
+  }, {
+    "@value" : "歐洲安全與合作組織",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/3/34/OSCE_logo.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/OSCE_logo.svg/200px-OSCE_logo.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paris",
+  "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Paris is the capital and largest city of France. It is situated on the river Seine, in northern France, at the heart of the Île-de-France region (or Paris Region, French: Région parisienne). As of January 2008 the city of Paris, within its administrative limits largely unchanged since 1860, has an estimated population of 2,211,297 and a metropolitan population of 12,089,098, and is one of the most populated metropolitan areas in Europe.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Parigi",
+    "@language" : "it"
+  }, {
+    "@value" : "Paris",
+    "@language" : "de"
+  }, {
+    "@value" : "Paris",
+    "@language" : "en"
+  }, {
+    "@value" : "Paris",
+    "@language" : "fr"
+  }, {
+    "@value" : "Paris",
+    "@language" : "pt"
+  }, {
+    "@value" : "Paris",
+    "@language" : "tr"
+  }, {
+    "@value" : "París",
+    "@language" : "es"
+  }, {
+    "@value" : "Париж",
+    "@language" : "ru"
+  }, {
+    "@value" : "פריז",
+    "@language" : "he"
+  }, {
+    "@value" : "باريس",
+    "@language" : "ar"
+  }, {
+    "@value" : "巴黎",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "48.8567",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "2.3508",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/200px-Paris_-_Eiffelturm_und_Marsfeld2.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paris_Commune",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Paris Commune or Fourth French Revolution was a government that briefly ruled Paris from March 18 (more formally, from March 28) to May 28, 1871. It existed before the split between anarchists and Marxists had taken place, and it is hailed by both groups as the first assumption of power by the working class during the Industrial Revolution. Debates over the policies and outcome of the Commune contributed to the break between those two political groups.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Commune de Paris (1871)",
+    "@language" : "fr"
+  }, {
+    "@value" : "Comuna de Paris",
+    "@language" : "pt"
+  }, {
+    "@value" : "Comuna de París",
+    "@language" : "es"
+  }, {
+    "@value" : "Comune di Parigi (1871)",
+    "@language" : "it"
+  }, {
+    "@value" : "Paris Commune",
+    "@language" : "en"
+  }, {
+    "@value" : "Paris Komünü",
+    "@language" : "tr"
+  }, {
+    "@value" : "Pariser Kommune",
+    "@language" : "de"
+  }, {
+    "@value" : "Парижская коммуна",
+    "@language" : "ru"
+  }, {
+    "@value" : "הקומונה הפריזאית",
+    "@language" : "he"
+  }, {
+    "@value" : "كومونة باريس",
+    "@language" : "ar"
+  }, {
+    "@value" : "巴黎公社",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/200px-Flag_of_France.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paris_M%C3%A9tro",
+  "@type" : [ "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Infrastructure", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PublicTransitSystem", "http://dbpedia.org/ontology/RouteOfTransportation", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Paris Métro or Métropolitain (French: Métro de Paris) is the rapid transit metro system in Paris, France. It has become a symbol of the city, noted for its density within the city limits and its uniform architecture influenced by Art Nouveau. The network's sixteen lines are mostly underground and run to 214 km (133 mi) in length. There are 301 stations (384 stops), of which 62 facilitate transfer to another line.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Metro de París",
+    "@language" : "es"
+  }, {
+    "@value" : "Metropolitana di Parigi",
+    "@language" : "it"
+  }, {
+    "@value" : "Metropolitano de Paris",
+    "@language" : "pt"
+  }, {
+    "@value" : "Métro Paris",
+    "@language" : "de"
+  }, {
+    "@value" : "Métro de Paris",
+    "@language" : "fr"
+  }, {
+    "@value" : "Paris Métro",
+    "@language" : "en"
+  }, {
+    "@value" : "Paris metrosu",
+    "@language" : "tr"
+  }, {
+    "@value" : "Парижский метрополитен",
+    "@language" : "ru"
+  }, {
+    "@value" : "הרכבת התחתית של פריז",
+    "@language" : "he"
+  }, {
+    "@value" : "مترو باريس",
+    "@language" : "ar"
+  }, {
+    "@value" : "巴黎地鐵",
+    "@language" : "zh"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/66/Paris_Metro_Sign.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Paris_Metro_Sign.jpg/200px-Paris_Metro_Sign.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Tehran",
+  "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tehran, sometimes spelled Teheran, is the capital of Iran and Tehran Province. With an estimated population of 8,429,807; it is also Iran's largest urban area and city, the largest city in Western Asia, one of the largest in Southern Asia, and the 19th-largest city globally. In the 20th century, Tehran was subject to mass-migration of people from all around Iran. The city is home to many historic mosques, churches, synagogues and Zoroastrian fire temples.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tahran",
+    "@language" : "tr"
+  }, {
+    "@value" : "Teerã",
+    "@language" : "pt"
+  }, {
+    "@value" : "Teheran",
+    "@language" : "de"
+  }, {
+    "@value" : "Teheran",
+    "@language" : "it"
+  }, {
+    "@value" : "Teherán",
+    "@language" : "es"
+  }, {
+    "@value" : "Tehran",
+    "@language" : "en"
+  }, {
+    "@value" : "Téhéran",
+    "@language" : "fr"
+  }, {
+    "@value" : "Тегеран",
+    "@language" : "ru"
+  }, {
+    "@value" : "טהראן",
+    "@language" : "he"
+  }, {
+    "@value" : "طهران",
+    "@language" : "ar"
+  }, {
+    "@value" : "德黑兰",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "35.69611",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "51.423054",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/2/25/4758976353_tehran_b.jpg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/4758976353_tehran_b.jpg/200px-4758976353_tehran_b.jpg"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Tehran_Province",
+  "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tehran Province is one of the 31 provinces of Iran. It covers on area of 18,909 square kilometers and is located to the north of the central plateau of Iran. Tehran Province borders Māzandarān Province in the north, Qom Province in the south, Semnān Province in the east, and Qazvīn Province in the west. The metropolis of Tehran is the capital city of the province and of Iran. As of June 2005, this province includes 13 townships, 43 municipalities, and 1358 villages.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Province de Téhéran",
+    "@language" : "fr"
+  }, {
+    "@value" : "Provincia de Teherán",
+    "@language" : "es"
+  }, {
+    "@value" : "Regione di Teheran",
+    "@language" : "it"
+  }, {
+    "@value" : "Tahran Eyaleti",
+    "@language" : "tr"
+  }, {
+    "@value" : "Teerão (província)",
+    "@language" : "pt"
+  }, {
+    "@value" : "Teheran (Provinz)",
+    "@language" : "de"
+  }, {
+    "@value" : "Tehran Province",
+    "@language" : "en"
+  }, {
+    "@value" : "Тегеран (остан)",
+    "@language" : "ru"
+  }, {
+    "@value" : "מחוז טהראן",
+    "@language" : "he"
+  }, {
+    "@value" : "طهران (محافظة)",
+    "@language" : "ar"
+  }, {
+    "@value" : "德黑蘭省",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "35.7117",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "51.407",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/c2/Locator_map_Iran_Tehran_Province.png"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Locator_map_Iran_Tehran_Province.png/200px-Locator_map_Iran_Tehran_Province.png"
+  } ]
+}, {
+  "@id" : "urn:enhancement-00ea03e7-f00f-a19a-a676-9de3e3917640",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Amsterdam",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Amsterdam"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/City"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/City"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-16ca4fa8-ed5a-5530-c873-62f944886d2e",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.18040355128983532",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Council of Europe",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Council_of_Europe"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-1a89e01a-b745-a981-1290-b7299db194b5",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.2695332220599443",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Tehran Province",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Tehran_Province"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-a6188662-239c-6266-2375-fefb68059f90"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-1f6d42be-89b0-c5e4-e780-983a207fb73e",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "British Airways",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/British_Airways"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Agent"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Airline"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Company"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Organisation"
+  }, {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-3ab2e24c-12b1-5513-4507-8c94aa24f37c"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-2c79b0df-4791-c882-5c9e-6e674491c0e9",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "KLM",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/KLM"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Agent"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Airline"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Company"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Organisation"
+  }, {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-b7813e1e-c146-404c-77f6-92c331d50baf"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-3ab2e24c-12b1-5513-4507-8c94aa24f37c",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.49502856773417475",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "145",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "British Airways",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.\n\nThat's just two years after relaunching their services when international sanctions were eased.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "130",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.305Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Organisation"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-464b3fc2-b484-7bd4-514a-29e7cee08cab",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.149326402127156",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Paris Commune",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Paris_Commune"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-51bc67c6-7c0f-348c-a9bb-e1632cb07fbc",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9999969827857982",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.286Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.langdetect.LanguageDetectionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/language" : [ {
+    "@value" : "en"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://purl.org/dc/terms/LinguisticSystem"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-614d84b6-4a9f-69e1-5638-fc8e534f6cd4",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.5873763350065253",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "399",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Air France",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "389",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.305Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Organisation"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-6cb1a7ee-d540-0958-4358-41650d91c2c8",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9922206929173278",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "63",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Iran",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "59",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.310Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-83685122-91c4-dee3-1667-653b560ae9bd",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Tehran",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Tehran"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-a6188662-239c-6266-2375-fefb68059f90"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-85556664-5bd5-1dfb-e5fb-78e5e51e26b7",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.30463546425657556",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Amsterdam Arena",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Amsterdam_Arena"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Building"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Stadium"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://schema.org/StadiumOrArena"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-94982c7d-8ffa-5903-cd2f-3f57f4f2424f",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.2042835216594651",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Paris Métro",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Paris_M%C3%A9tro"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Infrastructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PublicTransitSystem"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/RouteOfTransportation"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.329Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-a00f91d7-2e21-b194-4793-2118176e96c3",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Europe",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Europe"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Continent"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Continent"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-a07dc0be-451c-e8d2-b9eb-28322be2c165",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.15140800274639865",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Amsterdam Airport Schiphol",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Amsterdam_Airport_Schiphol"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Airport"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Infrastructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://schema.org/Airport"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-a6188662-239c-6266-2375-fefb68059f90",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9862850159387508",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "186",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Tehran",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.\n\nThat's just two years after relaunching their services when international sanctions were eased.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "180",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.310Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-b7813e1e-c146-404c-77f6-92c331d50baf",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9868259519947365",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "321",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "KLM",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "318",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.305Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Organisation"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.7424578438681418",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "364",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Amsterdam",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "355",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.310Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9593388577020623",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "14",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Europe",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "8",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.310Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-d906dfe1-555e-0aec-b8fb-e5a398d80a87",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Iran",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Iran"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-6cb1a7ee-d540-0958-4358-41650d91c2c8"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-da28a10b-15da-0029-28e8-5aa8b72fe7e1",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Air France",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Air_France"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Agent"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Airline"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Company"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Organisation"
+  }, {
+    "@id" : "http://schema.org/Organization"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.329Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-614d84b6-4a9f-69e1-5638-fc8e534f6cd4"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-e0a7e09e-c3ee-aee1-6d57-aa36e6f55bbb",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.03077482128389458",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Organization for Security and Co-operation in Europe",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Organization_for_Security_and_Co-operation_in_Europe"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.330Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9898106039910912",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "427",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Paris",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "422",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.310Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-f4d80ef0-54de-3ba5-9262-3dfa9b1d4e31",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Paris",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Paris"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:25:33.329Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+} ]
