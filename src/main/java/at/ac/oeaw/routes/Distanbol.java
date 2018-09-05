@@ -101,7 +101,7 @@ public class Distanbol {
 
                 Element viewablesHTML = doc.getElementById("viewables");
 
-                StringBuilder entitiesListSB = new StringBuilder();
+                StringBuilder entitiesOverviewSB = new StringBuilder();
 
                 Element script = doc.getElementById("script");
 
@@ -131,15 +131,30 @@ public class Distanbol {
 
                         Enhancement enhancement = new Enhancement(node);
 
-                        if (enhancement.getConfidence() == 1.0) {
+                        if (enhancement.getConfidence() > 0.5) {
                             enhancements.add(enhancement);
                         }
-
 
                     }
 
 
                 }
+
+                //todo structure this so it doesnt come up in the middle of everything like right now
+                //this is for the first list with anchors
+                entitiesOverviewSB.append("<table>");
+                entitiesOverviewSB.append("<thead>");
+                entitiesOverviewSB.append("<tr>");
+
+                entitiesOverviewSB.append("<th>Name</th>");
+                entitiesOverviewSB.append("<th>Confidence</th>");
+                entitiesOverviewSB.append("<th>Context</th>");
+                entitiesOverviewSB.append("<th>Types</th>");
+
+                entitiesOverviewSB.append("</tr>");
+
+                entitiesOverviewSB.append("</thead>");
+                entitiesOverviewSB.append("<tbody>");
 
                 for (Viewable viewable : viewables) {
                     for (Enhancement enhancement : enhancements) {
@@ -163,27 +178,46 @@ public class Distanbol {
                                 viewablesHTML.append(labelHTML);
                             }
 
-                            //this is for the first list with anchors
-                            entitiesListSB.append("<li><a href='#" + id + "'>").append(label).append("</a></li>");
-
                             String comment = viewable.getComment();
                             if (comment != null) {
                                 String commentHTML = String.format(templateText, "Comment:", comment);
                                 viewablesHTML.append(commentHTML);
                             }
 
+
+
+                            //todo structure this so it doesnt come up in the middle of everything like right now
+                            entitiesOverviewSB.append("<tr>");
+
+                            //name
+                            entitiesOverviewSB.append("<td><a href='#" + id + "'>").append(label).append("</a></td>");
+                            //confidence
+                            entitiesOverviewSB.append("<td>").append(enhancement.getConfidence()).append("</td>");
+                            //context
+                            entitiesOverviewSB.append("<td>").append("TODO").append("</td>");
+                            //types
+                            //types are in the following loop
+
                             ArrayList<String> types = viewable.getTypes();
                             if ((types != null) && (!types.isEmpty())) {
 
                                 StringBuilder sb = new StringBuilder();
                                 for (String type : types) {
-                                    sb.append("<li>").append(type).append("</li>");
+                                    //<a href='" + sb.toString() + "'>"+sb.toString()+"<a>
+                                    sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
                                 }
 
-                                String typesHTML = "<div><b>Types:</b><ul>" + sb.toString() + "</ul></div>";
+                                String typesHTML = "<ul>" + sb.toString() + "</ul>";
 
-                                viewablesHTML.append(typesHTML);
+                                viewablesHTML.append("<div><b>Types:</b>"+typesHTML+"</div");
+                                entitiesOverviewSB.append("<td>").append(typesHTML).append("</td>");
+
+                            }else{
+                                entitiesOverviewSB.append("This entity has no known types.");
                             }
+
+                            entitiesOverviewSB.append("</tr>");
+
 
 
                             if (viewable.getDepiction() != null) {
@@ -201,12 +235,17 @@ public class Distanbol {
 
                 }
 
+                entitiesOverviewSB.append("</tbody>");
 
-                String entitiesListHTML = "<br><div><h2>Entities List:</h2><ul>" + entitiesListSB + "</ul></div>";
+                entitiesOverviewSB.append("</table>");
+
+
+                //this is the overview in the beginning of the page
+                String entitiesListHTML = "<br><div><h2>Entities List:</h2><ul>" + entitiesOverviewSB + "</ul></div>";
                 rawJsonHTML.append(entitiesListHTML);
 
                 //this is to remove the last <hr> element
-                viewablesHTML.children().last().remove();
+                viewablesHTML.children().last().remove();//todo maybe put infront with boolean or something
 
                 return Response.accepted().entity(doc.html()).type("text/html").build();
             } else {
