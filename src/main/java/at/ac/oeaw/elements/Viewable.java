@@ -1,9 +1,12 @@
 package at.ac.oeaw.elements;
 
+import at.ac.oeaw.elements.enhancements.EntityEnhancement;
+import at.ac.oeaw.elements.enhancements.TextEnhancement;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class Viewable
 {
@@ -15,16 +18,9 @@ public class Viewable
     private String latitude;
     private String longitude;
 
-    public Viewable(String id, ArrayList<String> types, String depiction, String comment, String label, String latitude, String longitude)
-    {
-        this.id = id;
-        this.types = types;
-        this.depiction = depiction;
-        this.comment = comment;
-        this.label = label;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
+
+    private EntityEnhancement entityEnhancement;//todo set it
+    private List<TextEnhancement> textEnhancements = new ArrayList<>();
 
     public Viewable(JsonNode node) {
         String id = node.get("@id").asText();
@@ -149,5 +145,21 @@ public class Viewable
     public void setLongitude(String longitude)
     {
         this.longitude = longitude;
+    }
+
+    public EntityEnhancement getEntityEnhancement() {
+        return entityEnhancement;
+    }
+
+    public void setEntityEnhancement(EntityEnhancement entityEnhancement) {
+        this.entityEnhancement = entityEnhancement;
+    }
+
+    public void addTextEnhancement(TextEnhancement textEnhancement){
+        textEnhancements.add(textEnhancement);
+    }
+
+    public List<TextEnhancement> getTextEnhancements() {
+        return textEnhancements;
     }
 }

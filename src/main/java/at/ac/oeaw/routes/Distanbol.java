@@ -1,7 +1,8 @@
 package at.ac.oeaw.routes;
 
-import at.ac.oeaw.elements.Enhancement;
+import at.ac.oeaw.elements.enhancements.EntityEnhancement;
 import at.ac.oeaw.elements.Viewable;
+import at.ac.oeaw.elements.enhancements.TextEnhancement;
 import at.ac.oeaw.helpers.FileReader;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,6 +30,9 @@ import java.util.Iterator;
 @Path("/")
 public class Distanbol {
     private static final Logger logger = Logger.getLogger(Distanbol.class);
+
+    public final double CONFIDENCE_THRESHOLD = 0.7;
+
     @Context
     ServletContext servletContext;
 
@@ -106,138 +110,169 @@ public class Distanbol {
                 Element script = doc.getElementById("script");
 
                 ArrayList<Viewable> viewables = new ArrayList<>();
-                ArrayList<Enhancement> enhancements = new ArrayList<>();
+                ArrayList<EntityEnhancement> entityEnhancements = new ArrayList<>();
+                ArrayList<TextEnhancement> textEnhancements = new ArrayList<>();
+
+                //create an object for each node and save them into respective lists
                 while (iterator.hasNext()) {
                     JsonNode node = iterator.next();
 
-                    //there are two types of nodes: viewables and enhancements. Viewables are entities to display, enhancements contain confidence information.
-                    boolean viewableBool = true;
+                    //there are three types of nodes: viewables, entity enhancements and text enhancements.
+                    //Viewables are entities to display.
+                    //Entity enhancements contain confidence information
+                    //Text enhancements contain context information.
 
                     ArrayNode typesNode = (ArrayNode) node.get("@type");
                     if (typesNode != null) {
-                        for (JsonNode typeNode : typesNode) {
-                            if (typeNode.asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
-                                viewableBool = false;
+                        if (typesNode.size() == 2 && typesNode.get(0).asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
+                            if (typesNode.get(1).asText().equals("http://fise.iks-project.eu/ontology/TextAnnotation")) {
+                                TextEnhancement textEnhancement = new TextEnhancement(node);
+                                textEnhancements.add(textEnhancement);
+                            } else if (typesNode.get(1).asText().equals("http://fise.iks-project.eu/ontology/EntityAnnotation")) {
+                                EntityEnhancement entityEnhancement = new EntityEnhancement(node);
+                                //only take entity enhancements that are over the threshold,
+                                if (entityEnhancement.getConfidence() > CONFIDENCE_THRESHOLD) {
+                                    entityEnhancements.add(entityEnhancement);
+                                }
+                            } else {
+                                //return 400 todo
                             }
+
+                        } else {
+                            Viewable viewable = new Viewable(node);
+                            viewables.add(viewable);
                         }
-                    }
-
-
-                    if (viewableBool) {
-                        Viewable viewable = new Viewable(node);
-                        viewables.add(viewable);
 
                     } else {
-
-                        Enhancement enhancement = new Enhancement(node);
-
-                        if (enhancement.getConfidence() > 0.5) {
-                            enhancements.add(enhancement);
-                        }
-
+                        //return 400 todo
                     }
-
 
                 }
 
-                //todo structure this so it doesnt come up in the middle of everything like right now
-                //this is for the first list with anchors
-                entitiesOverviewSB.append("<table>");
-                entitiesOverviewSB.append("<thead>");
-                entitiesOverviewSB.append("<tr>");
 
-                entitiesOverviewSB.append("<th>Name</th>");
-                entitiesOverviewSB.append("<th>Confidence</th>");
-                entitiesOverviewSB.append("<th>Context</th>");
-                entitiesOverviewSB.append("<th>Types</th>");
+                ArrayList<Viewable> finalViewables = new ArrayList<>();
 
-                entitiesOverviewSB.append("</tr>");
+                //Each viewable has exactly one matching entityEnhancement.
+                //Each entityEnhancement can have one or more textEnhancements.
 
-                entitiesOverviewSB.append("</thead>");
-                entitiesOverviewSB.append("<tbody>");
+                //entityEnhancements list is already filtered above to take confidence higher than threshold
 
                 for (Viewable viewable : viewables) {
-                    for (Enhancement enhancement : enhancements) {
 
-                        if (viewable.getId().equals(enhancement.getReference())) {
+                    for (EntityEnhancement entityEnhancement : entityEnhancements) {
 
+                        if (viewable.getId().equals(entityEnhancement.getReference())) {
 
-                            String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
+                            viewable.setEntityEnhancement(entityEnhancement);
+                            for (TextEnhancement textEnhancement : textEnhancements) {
 
-                            String id = viewable.getId();
-                            if (id != null) {
-                                String idHTML = String.format(templateIDText, id, "Id:", id);
-                                viewablesHTML.append(idHTML);
-                            }
-
-                            String templateText = "<div><b>%s</b>%s</div>";
-
-                            String label = viewable.getLabel();
-                            if (label != null) {
-                                String labelHTML = String.format(templateText, "Label:", label);
-                                viewablesHTML.append(labelHTML);
-                            }
-
-                            String comment = viewable.getComment();
-                            if (comment != null) {
-                                String commentHTML = String.format(templateText, "Comment:", comment);
-                                viewablesHTML.append(commentHTML);
-                            }
-
-
-
-                            //todo structure this so it doesnt come up in the middle of everything like right now
-                            entitiesOverviewSB.append("<tr>");
-
-                            //name
-                            entitiesOverviewSB.append("<td><a href='#" + id + "'>").append(label).append("</a></td>");
-                            //confidence
-                            entitiesOverviewSB.append("<td>").append(enhancement.getConfidence()).append("</td>");
-                            //context
-                            entitiesOverviewSB.append("<td>").append("TODO").append("</td>");
-                            //types
-                            //types are in the following loop
-
-                            ArrayList<String> types = viewable.getTypes();
-                            if ((types != null) && (!types.isEmpty())) {
-
-                                StringBuilder sb = new StringBuilder();
-                                for (String type : types) {
-                                    //<a href='" + sb.toString() + "'>"+sb.toString()+"<a>
-                                    sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
+                                if (entityEnhancement.getRelations().contains(textEnhancement.getId())) {
+                                    viewable.addTextEnhancement(textEnhancement);
                                 }
-
-                                String typesHTML = "<ul>" + sb.toString() + "</ul>";
-
-                                viewablesHTML.append("<div><b>Types:</b>"+typesHTML+"</div");
-                                entitiesOverviewSB.append("<td>").append(typesHTML).append("</td>");
-
-                            }else{
-                                entitiesOverviewSB.append("This entity has no known types.");
                             }
 
-                            entitiesOverviewSB.append("</tr>");
+                            finalViewables.add(viewable);
 
-
-
-                            if (viewable.getDepiction() != null) {
-                                String depiction = String.format("<div><b>depiction:</b><div><img src=\"%s\"></img></div></div>", viewable.getDepiction());
-                                viewablesHTML.append(depiction);
-                            }
-
-                            if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
-                                script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
-                            }
-                            viewablesHTML.append("<hr>");
                         }
 
                     }
-
                 }
 
-                entitiesOverviewSB.append("</tbody>");
+                if (finalViewables.size() == 0) {
+                    //todo return 200 or 400 saying "no entities were found with higher than threshold confidence level"
+                } else {
 
-                entitiesOverviewSB.append("</table>");
+
+                    //todo structure this so it doesnt come up in the middle of everything like right now
+                    //this is for the first list with anchors
+                    entitiesOverviewSB.append("<table>");
+                    entitiesOverviewSB.append("<thead>");
+                    entitiesOverviewSB.append("<tr>");
+
+                    entitiesOverviewSB.append("<th>Name</th>");
+                    entitiesOverviewSB.append("<th>Confidence</th>");
+                    entitiesOverviewSB.append("<th>Context</th>");
+                    entitiesOverviewSB.append("<th>Types</th>");
+
+                    entitiesOverviewSB.append("</tr>");
+
+                    entitiesOverviewSB.append("</thead>");
+                    entitiesOverviewSB.append("<tbody>");
+
+
+                    for (Viewable viewable : finalViewables) {
+
+                        String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
+
+                        String id = viewable.getId();
+                        if (id != null) {
+                            String idHTML = String.format(templateIDText, id, "Id:", id);
+                            viewablesHTML.append(idHTML);
+                        }
+
+                        String templateText = "<div><b>%s</b>%s</div>";
+
+                        String label = viewable.getLabel();
+                        if (label != null) {
+                            String labelHTML = String.format(templateText, "Label:", label);
+                            viewablesHTML.append(labelHTML);
+                        }
+
+                        String comment = viewable.getComment();
+                        if (comment != null) {
+                            String commentHTML = String.format(templateText, "Comment:", comment);
+                            viewablesHTML.append(commentHTML);
+                        }
+
+
+                        //todo structure this so it doesnt come up in the middle of everything like right now
+                        entitiesOverviewSB.append("<tr>");
+
+                        //name
+                        entitiesOverviewSB.append("<td><a href='#").append(id).append("'>").append(label).append("</a></td>");
+                        //confidence
+                        entitiesOverviewSB.append("<td>").append(viewable.getEntityEnhancement().getConfidence()).append("</td>");
+                        //context
+                        entitiesOverviewSB.append("<td>").append(viewable.getTextEnhancements().get(0).getContext()).append("</td>");
+                        //types
+                        //types are in the following loop
+
+                        ArrayList<String> types = viewable.getTypes();
+                        if ((types != null) && (!types.isEmpty())) {
+
+                            StringBuilder sb = new StringBuilder();
+                            for (String type : types) {
+                                //<a href='" + sb.toString() + "'>"+sb.toString()+"<a>
+                                sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
+                            }
+
+                            String typesHTML = "<ul>" + sb.toString() + "</ul>";
+
+                            viewablesHTML.append("<div><b>Types:</b>" + typesHTML + "</div");
+                            entitiesOverviewSB.append("<td>").append(typesHTML).append("</td>");
+
+                        } else {
+                            entitiesOverviewSB.append("This entity has no known types.");
+                        }
+
+                        entitiesOverviewSB.append("</tr>");
+
+
+                        if (viewable.getDepiction() != null) {
+                            String depiction = String.format("<div><b>depiction:</b><div><img src=\"%s\"></img></div></div>", viewable.getDepiction());
+                            viewablesHTML.append(depiction);
+                        }
+
+                        if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
+                            script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
+                        }
+                        viewablesHTML.append("<hr>");
+                    }
+
+                    entitiesOverviewSB.append("</tbody>");
+
+                    entitiesOverviewSB.append("</table>");
+                }
 
 
                 //this is the overview in the beginning of the page
@@ -245,7 +280,7 @@ public class Distanbol {
                 rawJsonHTML.append(entitiesListHTML);
 
                 //this is to remove the last <hr> element
-                viewablesHTML.children().last().remove();//todo maybe put infront with boolean or something
+                viewablesHTML.children().last().remove();//todo maybe put in front of loop with boolean or something
 
                 return Response.accepted().entity(doc.html()).type("text/html").build();
             } else {
