@@ -9,12 +9,12 @@ import java.util.List;
 public class EntityEnhancement {
 
     private String reference;
-    private double confidence;
+    private Double confidence;
     private List<String> relations = new ArrayList<>();
 
     public EntityEnhancement(JsonNode node) {
         String reference;
-        double confidence = 0.0;
+        Double confidence = 0.0;
 
         ArrayNode referenceNode = (ArrayNode) node.get("http://fise.iks-project.eu/ontology/entity-reference");
         if (referenceNode != null) {
@@ -44,11 +44,11 @@ public class EntityEnhancement {
 
     }
 
-    public double getConfidence() {
+    public Double getConfidence() {
         return confidence;
     }
 
-    public void setConfidence(double confidence) {
+    public void setConfidence(Double confidence) {
         this.confidence = confidence;
     }
 

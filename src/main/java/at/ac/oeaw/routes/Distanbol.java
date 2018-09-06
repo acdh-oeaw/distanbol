@@ -31,7 +31,7 @@ import java.util.Iterator;
 public class Distanbol {
     private static final Logger logger = Logger.getLogger(Distanbol.class);
 
-    public final double CONFIDENCE_THRESHOLD = 0.7;
+    public final Double CONFIDENCE_THRESHOLD = 0.7;
 
     @Context
     ServletContext servletContext;
@@ -49,6 +49,9 @@ public class Distanbol {
                 return Response.serverError().build();
             }
         }
+
+        //todo
+        //extract the url requesting into a helper class
 
         String[] schemes = {"http", "https"};
         UrlValidator urlValidator = new UrlValidator(schemes, 8L);
@@ -99,13 +102,7 @@ public class Distanbol {
             if (jsonNode.isArray()) {
                 Iterator<JsonNode> iterator = jsonNode.elements();
 
-                Element rawJsonHTML = doc.getElementById("rawJson");
-
-                rawJsonHTML.append("Stanbol JSON input: <a href=\"" + URL + "\">" + URL + "</a>");
-
                 Element viewablesHTML = doc.getElementById("viewables");
-
-                StringBuilder entitiesOverviewSB = new StringBuilder();
 
                 Element script = doc.getElementById("script");
 
@@ -125,17 +122,21 @@ public class Distanbol {
                     ArrayNode typesNode = (ArrayNode) node.get("@type");
                     if (typesNode != null) {
                         if (typesNode.size() == 2 && typesNode.get(0).asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
-                            if (typesNode.get(1).asText().equals("http://fise.iks-project.eu/ontology/TextAnnotation")) {
-                                TextEnhancement textEnhancement = new TextEnhancement(node);
-                                textEnhancements.add(textEnhancement);
-                            } else if (typesNode.get(1).asText().equals("http://fise.iks-project.eu/ontology/EntityAnnotation")) {
-                                EntityEnhancement entityEnhancement = new EntityEnhancement(node);
-                                //only take entity enhancements that are over the threshold,
-                                if (entityEnhancement.getConfidence() > CONFIDENCE_THRESHOLD) {
-                                    entityEnhancements.add(entityEnhancement);
-                                }
-                            } else {
-                                //return 400 todo
+
+                            switch (typesNode.get(1).asText()) {
+                                case "http://fise.iks-project.eu/ontology/TextAnnotation":
+                                    TextEnhancement textEnhancement = new TextEnhancement(node);
+                                    textEnhancements.add(textEnhancement);
+                                    break;
+                                case "http://fise.iks-project.eu/ontology/EntityAnnotation":
+                                    EntityEnhancement entityEnhancement = new EntityEnhancement(node);
+                                    //only take entity enhancements that are over the threshold,
+                                    if (entityEnhancement.getConfidence() > CONFIDENCE_THRESHOLD) {
+                                        entityEnhancements.add(entityEnhancement);
+                                    }
+                                    break;
+                                default:
+                                    return Response.status(400).entity("The given Stanbol output is not valid.").build();
                             }
 
                         } else {
@@ -144,7 +145,9 @@ public class Distanbol {
                         }
 
                     } else {
-                        //return 400 todo
+                        //node has no type, it means it is a viewable
+                        Viewable viewable = new Viewable(node);
+                        viewables.add(viewable);
                     }
 
                 }
@@ -179,36 +182,33 @@ public class Distanbol {
                 }
 
                 if (finalViewables.size() == 0) {
-                    //todo return 200 or 400 saying "no entities were found with higher than threshold confidence level"
+                    return Response.status(400).entity("There are no entities above the given threshold: "+CONFIDENCE_THRESHOLD).build();
                 } else {
 
 
-                    //todo structure this so it doesnt come up in the middle of everything like right now
-                    //this is for the first list with anchors
-                    entitiesOverviewSB.append("<table>");
-                    entitiesOverviewSB.append("<thead>");
-                    entitiesOverviewSB.append("<tr>");
+                    StringBuilder entitiesTableSb = new StringBuilder();
 
-                    entitiesOverviewSB.append("<th>Name</th>");
-                    entitiesOverviewSB.append("<th>Confidence</th>");
-                    entitiesOverviewSB.append("<th>Context</th>");
-                    entitiesOverviewSB.append("<th>Types</th>");
+                    appendTableInit(entitiesTableSb);
 
-                    entitiesOverviewSB.append("</tr>");
-
-                    entitiesOverviewSB.append("</thead>");
-                    entitiesOverviewSB.append("<tbody>");
-
+                    boolean firstElement = true;
 
                     for (Viewable viewable : finalViewables) {
 
-                        String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
+                        //to have a small space between elements
+                        if (firstElement) {
+                            firstElement = false;
+                        } else {
+                            viewablesHTML.append("<hr>");
+                        }
 
+
+                        String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
                         String id = viewable.getId();
                         if (id != null) {
                             String idHTML = String.format(templateIDText, id, "Id:", id);
                             viewablesHTML.append(idHTML);
                         }
+
 
                         String templateText = "<div><b>%s</b>%s</div>";
 
@@ -224,39 +224,34 @@ public class Distanbol {
                             viewablesHTML.append(commentHTML);
                         }
 
+                        Double confidence = viewable.getEntityEnhancement().getConfidence();
+                        if (confidence != null) {
+                            String confidenceHTML = String.format(templateText, "Confidence:", confidence);
+                            viewablesHTML.append(confidenceHTML);
+                        }
 
-                        //todo structure this so it doesnt come up in the middle of everything like right now
-                        entitiesOverviewSB.append("<tr>");
+                        String context = viewable.getTextEnhancements().get(0).getContext();
+                        if (context != null) {
+                            String contextHTML = String.format(templateText, "Context:", context);
+                            viewablesHTML.append(contextHTML);
+                        }
 
-                        //name
-                        entitiesOverviewSB.append("<td><a href='#").append(id).append("'>").append(label).append("</a></td>");
-                        //confidence
-                        entitiesOverviewSB.append("<td>").append(viewable.getEntityEnhancement().getConfidence()).append("</td>");
-                        //context
-                        entitiesOverviewSB.append("<td>").append(viewable.getTextEnhancements().get(0).getContext()).append("</td>");
-                        //types
-                        //types are in the following loop
-
+                        String typesHTML;
                         ArrayList<String> types = viewable.getTypes();
                         if ((types != null) && (!types.isEmpty())) {
 
                             StringBuilder sb = new StringBuilder();
                             for (String type : types) {
-                                //<a href='" + sb.toString() + "'>"+sb.toString()+"<a>
                                 sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
                             }
 
-                            String typesHTML = "<ul>" + sb.toString() + "</ul>";
+                            typesHTML = "<ul>" + sb.toString() + "</ul>";
 
                             viewablesHTML.append("<div><b>Types:</b>" + typesHTML + "</div");
-                            entitiesOverviewSB.append("<td>").append(typesHTML).append("</td>");
 
                         } else {
-                            entitiesOverviewSB.append("This entity has no known types.");
+                            typesHTML = "This entity has no known types.";
                         }
-
-                        entitiesOverviewSB.append("</tr>");
-
 
                         if (viewable.getDepiction() != null) {
                             String depiction = String.format("<div><b>depiction:</b><div><img src=\"%s\"></img></div></div>", viewable.getDepiction());
@@ -266,23 +261,24 @@ public class Distanbol {
                         if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
                             script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
                         }
-                        viewablesHTML.append("<hr>");
+
+                        appendTableElement(entitiesTableSb, id, label, confidence, context, typesHTML);
+
                     }
 
-                    entitiesOverviewSB.append("</tbody>");
+                    //start of the page:
+                    //1)stanbol json output(our input) link
+                    //2)overview table
+                    //3)each element in a list
+                    appendTableEnd(entitiesTableSb);
+                    Element rawJsonHTML = doc.getElementById("rawJson");
+                    rawJsonHTML.append("Stanbol JSON input: <a href=\"" + URL + "\">" + URL + "</a>");
+                    rawJsonHTML.append(entitiesTableSb.toString());
 
-                    entitiesOverviewSB.append("</table>");
+                    return Response.accepted().entity(doc.html()).type("text/html").build();
                 }
 
 
-                //this is the overview in the beginning of the page
-                String entitiesListHTML = "<br><div><h2>Entities List:</h2><ul>" + entitiesOverviewSB + "</ul></div>";
-                rawJsonHTML.append(entitiesListHTML);
-
-                //this is to remove the last <hr> element
-                viewablesHTML.children().last().remove();//todo maybe put in front of loop with boolean or something
-
-                return Response.accepted().entity(doc.html()).type("text/html").build();
             } else {
                 return Response.status(400).entity("The given Stanbol output is not valid.").build();
             }
@@ -293,5 +289,47 @@ public class Distanbol {
         }
 
         return Response.serverError().entity("Can't read input json file.").build();
+    }
+
+    private void appendTableInit(StringBuilder entitiesTableSb) {
+
+        entitiesTableSb.append("<table>");
+        entitiesTableSb.append("<thead>");
+        entitiesTableSb.append("<tr>");
+
+        entitiesTableSb.append("<th>Name</th>");
+        entitiesTableSb.append("<th>Confidence</th>");
+        entitiesTableSb.append("<th>Context</th>");
+        entitiesTableSb.append("<th>Types</th>");
+
+        entitiesTableSb.append("</tr>");
+
+        entitiesTableSb.append("</thead>");
+        entitiesTableSb.append("<tbody>");
+    }
+
+    private void appendTableElement(StringBuilder entitiesTableSb, String id, String label, Double confidence, String context, String types) {
+        entitiesTableSb.append("<tr>");
+
+        //name
+        entitiesTableSb.append("<td><a href='#").append(id).append("'>").append(label).append("</a></td>");
+        //confidence
+        entitiesTableSb.append("<td>").append(confidence).append("</td>");
+        //context
+        entitiesTableSb.append("<td>").append(context).append("</td>");
+        //types
+        entitiesTableSb.append("<td>").append(types).append("</td>");
+
+
+        entitiesTableSb.append("</tr>");
+
+    }
+
+    private void appendTableEnd(StringBuilder entitiesTableSb) {
+        entitiesTableSb.append("</tbody>");
+        entitiesTableSb.append("</table>");
+
+        entitiesTableSb.insert(0, "<br><div><h2>Entities List:</h2>");
+        entitiesTableSb.append("</div>");
     }
 }

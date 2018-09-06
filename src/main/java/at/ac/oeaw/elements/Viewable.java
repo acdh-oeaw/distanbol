@@ -19,7 +19,7 @@ public class Viewable
     private String longitude;
 
 
-    private EntityEnhancement entityEnhancement;//todo set it
+    private EntityEnhancement entityEnhancement;
     private List<TextEnhancement> textEnhancements = new ArrayList<>();
 
     public Viewable(JsonNode node) {
