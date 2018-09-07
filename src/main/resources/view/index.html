@@ -8,36 +8,83 @@
 
 <div>
     <h1>DISTANBOL</h1>
-    Put your Stanbol json output URL as a query:
-    <pre><code>https://distanbol.acdh.oeaw.ac.at?URL={URL of your Stanbol output in json}</code></pre>
-    <br>
-    <b>Examples:</b>
-    <br>
-    <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json">
-        https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json
-    </a>
-    <br>
-    <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json">
-        https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json
-    </a>
-    <br>
-    <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json">
-        https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json
-    </a>
-    <br>
-    <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json">
-        https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json
-    </a>
-    <br>
-    <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json">
-        https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json
-    </a>
-    <br>
-    <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json">
-        https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json
-    </a>
+    Distanbol accepts two parameters as query parameters:<br>
+    <b>URL:</b> This is the URL to the Stanbol output json.<br>
+    <b>Confidence(Optional):</b> This is the minimum confidence threshold. The results will have a confidence of greater
+    than this
+    number. The default value is 0.7.<br>
 
+    You can either:
+    <ul>
+        <li>
+            Put your Stanbol json output URL as a query:
+            <h3>
+                <pre><code>https://distanbol.acdh.oeaw.ac.at?URL={URL of your Stanbol output in json}&confidence={minimum confidence threshold}</code></pre>
+            </h3>
+            <br>
+        </li>
+        <li>
+            Or use this form:
+            <div>
+                <form action="/Distanbol" method="GET">
+                    <b>URL:</b> <input name="URL"/>
+                    <b>Confidence(Optional):</b> <input name="confidence"/>
+                    <input type="submit" value="submit"/>
+                </form>
+            </div>
+        </li>
+    </ul>
+    <br>
+    <b>Examples with default Confidence(0.7):</b>
+    <br>
+    <ul>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json
+            </a>
+        </li>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json
+            </a>
+        </li>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json
+            </a>
+        </li>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json
+            </a>
+        </li>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json
+            </a>
+        </li>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json
+            </a>
+        </li>
+    </ul>
+    <br>
+    <b>Examples with confidence as parameter(same example, different confidence):</b>
+    <ul>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5
+            </a>
+        </li>
+        <li>
+            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7">
+                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7
+            </a>
+        </li>
+    </ul>
 </div>
+
 
 </body>
 </html>
