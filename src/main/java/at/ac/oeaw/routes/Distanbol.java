@@ -4,23 +4,17 @@ import at.ac.oeaw.elements.enhancements.EntityEnhancement;
 import at.ac.oeaw.elements.Viewable;
 import at.ac.oeaw.elements.enhancements.TextEnhancement;
 import at.ac.oeaw.helpers.FileReader;
+import at.ac.oeaw.helpers.RequestHandler;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import org.apache.commons.validator.routines.UrlValidator;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import javax.servlet.ServletContext;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Invocation;
-import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
@@ -31,14 +25,17 @@ import java.util.Iterator;
 public class Distanbol {
     private static final Logger logger = Logger.getLogger(Distanbol.class);
 
-    public final Double CONFIDENCE_THRESHOLD = 0.7;
+    //default
+    public Double CONFIDENCE_THRESHOLD = 0.7;
+
+    //todo put examples showing the difference of different confidence levels
 
     @Context
     ServletContext servletContext;
 
     @GET
     @Path("/")
-    public Response convert(@QueryParam("URL") String URL) {
+    public Response convert(@QueryParam("URL") String URL, @QueryParam("confidence") String confidence) {
 
         if (URL == null) {
             try {
@@ -50,47 +47,26 @@ public class Distanbol {
             }
         }
 
-        //todo
-        //extract the url requesting into a helper class
-
-        String[] schemes = {"http", "https"};
-        UrlValidator urlValidator = new UrlValidator(schemes, 8L);
-
-        String input = URL;
-        if ((!URL.startsWith("http://")) && (!URL.startsWith("https://"))) {
-            URL = "http://" + URL;
+        Response response;
+        try {
+            response = RequestHandler.getJSON(URL);
+        } catch (BadRequestException e) {
+            return Response.status(400).entity(e.getMessage()).build();
+        }catch(ProcessingException e){
+            return Response.status(504).entity("The request to the URL provided exceeded the timout: "+RequestHandler.TIMEOUT).build();
         }
 
-        if (!urlValidator.isValid(URL)) {
-            return Response.status(400).entity("The given URL: '" + input + "' is not valid.").build();
+        if(confidence!=null){
+            CONFIDENCE_THRESHOLD = Double.parseDouble(confidence);
+        }
+        if(CONFIDENCE_THRESHOLD<0.0 || CONFIDENCE_THRESHOLD >1.0){
+            return Response.status(400).entity("Confidence(double) must be between 0 and 1").build();
         }
 
-        Client client = ClientBuilder.newClient();
-        WebTarget webTarget = client.target(URL);
 
-        Invocation.Builder invocationBuilder = webTarget.request("application/json");
-        Response response = invocationBuilder.get();
-
-        if (response.getStatus() == 302) {
-            URL = response.getHeaderString("Location");
-            if (!urlValidator.isValid(URL)) {
-                return Response.status(400).entity("The given URL: '" + input + "' is not valid.").build();
-            }
-            webTarget = client.target(URL);
-
-            invocationBuilder = webTarget.request("application/json");
-            response = invocationBuilder.get();
-        }
-        if (response.getStatus() == 302) {
-            return Response.status(400).entity("Distanbol only allows one redirect when accessing the given URL input").build();
-        }
-
-        String contentType = response.getHeaderString("Content-Type");
-        if ((!contentType.equals("application/json")) && (!contentType.equals("application/ld+json"))) {
-            return Response.status(400).entity("The given URL: '" + input + "' doesn't point to a json or jsonld file.").build();
-        }
 
         String json = response.readEntity(String.class);
+
         try {
             String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/view.html"));
             Document doc = Jsoup.parse(html);
@@ -131,7 +107,7 @@ public class Distanbol {
                                 case "http://fise.iks-project.eu/ontology/EntityAnnotation":
                                     EntityEnhancement entityEnhancement = new EntityEnhancement(node);
                                     //only take entity enhancements that are over the threshold,
-                                    if (entityEnhancement.getConfidence() > CONFIDENCE_THRESHOLD) {
+                                    if (entityEnhancement.getConfidence() >= CONFIDENCE_THRESHOLD) {
                                         entityEnhancements.add(entityEnhancement);
                                     }
                                     break;
@@ -182,7 +158,7 @@ public class Distanbol {
                 }
 
                 if (finalViewables.size() == 0) {
-                    return Response.status(400).entity("There are no entities above the given threshold: "+CONFIDENCE_THRESHOLD).build();
+                    return Response.status(400).entity("There are no entities above the given threshold: " + CONFIDENCE_THRESHOLD).build();
                 } else {
 
 
@@ -224,9 +200,9 @@ public class Distanbol {
                             viewablesHTML.append(commentHTML);
                         }
 
-                        Double confidence = viewable.getEntityEnhancement().getConfidence();
-                        if (confidence != null) {
-                            String confidenceHTML = String.format(templateText, "Confidence:", confidence);
+                        Double entityConfidence = viewable.getEntityEnhancement().getConfidence();
+                        if (entityConfidence != null) {
+                            String confidenceHTML = String.format(templateText, "Confidence:", entityConfidence);
                             viewablesHTML.append(confidenceHTML);
                         }
 
@@ -262,7 +238,7 @@ public class Distanbol {
                             script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
                         }
 
-                        appendTableElement(entitiesTableSb, id, label, confidence, context, typesHTML);
+                        appendTableElement(entitiesTableSb, id, label, entityConfidence, context, typesHTML);
 
                     }
 
