@@ -243,26 +243,33 @@ public class Distanbol {
                         typesHTML = "This entity has no known types.";
                     }
 
-                    //show thumbnail on the page and link to full image
-                    String depictionThumbnail;
-                    if (viewable.getDepictionThumbnail() != null) {
-                        if (viewable.getDepiction() != null) {
-                            String depictionFormat = "<div><b>depiction(<a href='%s'>full image<a>):</b><div><img src='%s'></img></div></div>";
-                            depictionThumbnail = String.format(depictionFormat, viewable.getDepiction(), viewable.getDepictionThumbnail());
-                        } else {
-                            String depictionFormat = "<div><b>depiction:</b><div><img src='%s'></img></div></div>";
-                            depictionThumbnail = String.format(depictionFormat, viewable.getDepictionThumbnail());
-                        }
-
-                    } else {
-                        if (viewable.getDepiction() != null) {
-                            depictionThumbnail = "No thumbnail available: <a href='" + viewable.getDepiction() + "'>Full Image</a>";
-                        } else {
-                            depictionThumbnail = "No thumbnail available";
-                        }
-
+                    if(viewable.getDepictionThumbnail()!=null){
+                        String depictionFormat = "<div><b>depiction(<a href='%s'>full image<a>):</b><div><img src='%s'></img></div></div>";
+                        String depictionThumbnail = String.format(depictionFormat, viewable.getDepiction(), viewable.getDepictionThumbnail());
+                        viewablesHTML.append(depictionThumbnail);
                     }
-                    viewablesHTML.append(depictionThumbnail);
+
+
+//                    //show thumbnail on the page and link to full image
+//                    String depictionThumbnail;
+//                    if (viewable.getDepictionThumbnail() != null) {
+//                        if (viewable.getDepiction() != null) {
+//                            String depictionFormat = "<div><b>depiction(<a href='%s'>full image<a>):</b><div><img src='%s'></img></div></div>";
+//                            depictionThumbnail = String.format(depictionFormat, viewable.getDepiction(), viewable.getDepictionThumbnail());
+//                        } else {
+//                            String depictionFormat = "<div><b>depiction:</b><div><img src='%s'></img></div></div>";
+//                            depictionThumbnail = String.format(depictionFormat, viewable.getDepictionThumbnail());
+//                        }
+//
+//                    } else {
+//                        if (viewable.getDepiction() != null) {
+//                            depictionThumbnail = "No thumbnail available: <a href='" + viewable.getDepiction() + "'>Full Image</a>";
+//                        } else {
+//                            depictionThumbnail = "No thumbnail available";
+//                        }
+//
+//                    }
+//                    viewablesHTML.append(depictionThumbnail);
 
 
                     if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {

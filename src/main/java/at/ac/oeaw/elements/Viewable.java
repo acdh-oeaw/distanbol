@@ -43,13 +43,13 @@ public class Viewable {
         String depiction = depictionNode == null ? null : (depictionNode.get(0) == null ? null : depictionNode.get(0).get("@id").asText());
         String depictionThumbnail = depictionNode == null ? null : (depictionNode.get(1) == null ? null : depictionNode.get(1).get("@id").asText());
 
-        if (depiction != null && !RequestHandler.imageExists(depiction)) {
-            depiction = null;
-        }
-
-        if (depictionThumbnail != null && !RequestHandler.imageExists(depictionThumbnail)) {
-            depictionThumbnail = null;
-        }
+//        if (depiction != null && !RequestHandler.imageExists(depiction)) {
+//            depiction = null;
+//        }
+//
+//        if (depictionThumbnail != null && !RequestHandler.imageExists(depictionThumbnail)) {
+//            depictionThumbnail = null;
+//        }
         
 
         String longitude = null;
