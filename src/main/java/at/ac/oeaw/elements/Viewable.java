@@ -2,17 +2,18 @@ package at.ac.oeaw.elements;
 
 import at.ac.oeaw.elements.enhancements.EntityEnhancement;
 import at.ac.oeaw.elements.enhancements.TextEnhancement;
+import at.ac.oeaw.helpers.RequestHandler;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Viewable
-{
+public class Viewable {
     private String id;
     private ArrayList<String> types;
     private String depiction;
+    private String depictionThumbnail;
     private String comment;
     private String label;
     private String latitude;
@@ -35,8 +36,21 @@ public class Viewable
             }
         }
 
+
+        //there are always two links to the same image to wikimedia.
+        //First one is full and second one is a thumbnail. So I take the second one.
         JsonNode depictionNode = node.get("http://xmlns.com/foaf/0.1/depiction");
         String depiction = depictionNode == null ? null : (depictionNode.get(0) == null ? null : depictionNode.get(0).get("@id").asText());
+        String depictionThumbnail = depictionNode == null ? null : (depictionNode.get(1) == null ? null : depictionNode.get(1).get("@id").asText());
+
+        if (depiction != null && !RequestHandler.imageExists(depiction)) {
+            depiction = null;
+        }
+
+        if (depictionThumbnail != null && !RequestHandler.imageExists(depictionThumbnail)) {
+            depictionThumbnail = null;
+        }
+        
 
         String longitude = null;
         JsonNode longitudeNode = node.get("http://www.w3.org/2003/01/geo/wgs84_pos#long");
@@ -71,79 +85,66 @@ public class Viewable
         this.id = id;
         this.types = types;
         this.depiction = depiction;
+        this.depictionThumbnail = depictionThumbnail;
         this.comment = comment;
         this.label = label;
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    public String getComment()
-    {
+    public String getComment() {
         return this.comment;
     }
 
-    public void setComment(String comment)
-    {
+    public void setComment(String comment) {
         this.comment = comment;
     }
 
-    public String getDepiction()
-    {
+    public String getDepiction() {
         return this.depiction;
     }
 
-    public void setDepiction(String depiction)
-    {
+    public void setDepiction(String depiction) {
         this.depiction = depiction;
     }
 
-    public ArrayList<String> getTypes()
-    {
+    public ArrayList<String> getTypes() {
         return this.types;
     }
 
-    public void setTypes(ArrayList<String> types)
-    {
+    public void setTypes(ArrayList<String> types) {
         this.types = types;
     }
 
-    public String getId()
-    {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(String id)
-    {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getLabel()
-    {
+    public String getLabel() {
         return this.label;
     }
 
-    public void setLabel(String label)
-    {
+    public void setLabel(String label) {
         this.label = label;
     }
 
-    public String getLatitude()
-    {
+    public String getLatitude() {
         return this.latitude;
     }
 
-    public void setLatitude(String latitude)
-    {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude()
-    {
+    public String getLongitude() {
         return this.longitude;
     }
 
-    public void setLongitude(String longitude)
-    {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
@@ -155,11 +156,19 @@ public class Viewable
         this.entityEnhancement = entityEnhancement;
     }
 
-    public void addTextEnhancement(TextEnhancement textEnhancement){
+    public void addTextEnhancement(TextEnhancement textEnhancement) {
         textEnhancements.add(textEnhancement);
     }
 
     public List<TextEnhancement> getTextEnhancements() {
         return textEnhancements;
+    }
+
+    public String getDepictionThumbnail() {
+        return depictionThumbnail;
+    }
+
+    public void setDepictionThumbnail(String depictionThumbnail) {
+        this.depictionThumbnail = depictionThumbnail;
     }
 }

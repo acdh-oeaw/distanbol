@@ -5,6 +5,7 @@ import org.glassfish.jersey.apache.connector.ApacheConnectorProvider;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
 
+import javax.imageio.ImageIO;
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.ProcessingException;
 import javax.ws.rs.client.Client;
@@ -12,6 +13,10 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
+import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.URL;
 
 public class RequestHandler {
 
@@ -40,8 +45,13 @@ public class RequestHandler {
         clientConfig.connectorProvider(new ApacheConnectorProvider());//this is for allowing redirects
         Client client = ClientBuilder.newClient(clientConfig);
         WebTarget webTarget = client.target(URL).property(ClientProperties.CONNECT_TIMEOUT, TIMEOUT).property(ClientProperties.READ_TIMEOUT, TIMEOUT);
+        Invocation.Builder invocationBuilder;
+        if(accept==null){
+            invocationBuilder = webTarget.request();
+        }else{
+            invocationBuilder = webTarget.request(accept);
+        }
 
-        Invocation.Builder invocationBuilder = webTarget.request(accept);
         return invocationBuilder.get();
     }
 
@@ -60,4 +70,17 @@ public class RequestHandler {
         return URL;
     }
 
+    public static boolean imageExists(String depictionURL) {
+        try {
+            Response response = get(depictionURL,null);
+            int status = response.getStatus();
+            if(status==200 || status==304){
+                return response.getHeaderString("content-type").startsWith("image/");
+            }
+
+            return false;
+        } catch (ProcessingException e) {
+            return false;
+        }
+    }
 }

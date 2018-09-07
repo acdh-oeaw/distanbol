@@ -27,6 +27,7 @@ public class Distanbol {
 
     //default
     public Double CONFIDENCE_THRESHOLD = 0.7;
+    private ObjectMapper mapper = new ObjectMapper();
 
     //todo put examples showing the difference of different confidence levels
 
@@ -52,219 +53,243 @@ public class Distanbol {
             response = RequestHandler.getJSON(URL);
         } catch (BadRequestException e) {
             return Response.status(400).entity(e.getMessage()).build();
-        }catch(ProcessingException e){
-            return Response.status(504).entity("The request to the URL provided exceeded the timout: "+RequestHandler.TIMEOUT).build();
+        } catch (ProcessingException e) {
+            return Response.status(504).entity("The request to the URL provided exceeded the timout: " + RequestHandler.TIMEOUT).build();
         }
 
-        if(confidence!=null){
+        if (confidence != null) {
             CONFIDENCE_THRESHOLD = Double.parseDouble(confidence);
         }
-        if(CONFIDENCE_THRESHOLD<0.0 || CONFIDENCE_THRESHOLD >1.0){
+        if (CONFIDENCE_THRESHOLD < 0.0 || CONFIDENCE_THRESHOLD > 1.0) {
             return Response.status(400).entity("Confidence(double) must be between 0 and 1").build();
         }
 
 
-
         String json = response.readEntity(String.class);
+        return processStanbolJSONtoHTML(URL, CONFIDENCE_THRESHOLD, json);
 
+    }
+
+    private Response processStanbolJSONtoHTML(String URL, Double confidence, String json) {
+
+        Document doc;
         try {
             String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/view.html"));
-            Document doc = Jsoup.parse(html);
+            doc = Jsoup.parse(html);
+        } catch (IOException e) {
+            return Response.serverError().entity("Something went wrong.").build();
+        }
 
-            ObjectMapper mapper = new ObjectMapper();
 
-            JsonNode jsonNode = mapper.readTree(json);
+        JsonNode jsonNode;
+        try {
+            jsonNode = mapper.readTree(json);
+        } catch (IOException e) {
+            return Response.status(400).entity("Given json file is not valid.").build();
+        }
 
-            if (jsonNode.isArray()) {
-                Iterator<JsonNode> iterator = jsonNode.elements();
 
-                Element viewablesHTML = doc.getElementById("viewables");
+        if (jsonNode.isArray()) {
+            Iterator<JsonNode> iterator = jsonNode.elements();
 
-                Element script = doc.getElementById("script");
+            Element viewablesHTML = doc.getElementById("viewables");
 
-                ArrayList<Viewable> viewables = new ArrayList<>();
-                ArrayList<EntityEnhancement> entityEnhancements = new ArrayList<>();
-                ArrayList<TextEnhancement> textEnhancements = new ArrayList<>();
+            Element script = doc.getElementById("script");
 
-                //create an object for each node and save them into respective lists
-                while (iterator.hasNext()) {
-                    JsonNode node = iterator.next();
+            ArrayList<Viewable> viewables = new ArrayList<>();
+            ArrayList<EntityEnhancement> entityEnhancements = new ArrayList<>();
+            ArrayList<TextEnhancement> textEnhancements = new ArrayList<>();
 
-                    //there are three types of nodes: viewables, entity enhancements and text enhancements.
-                    //Viewables are entities to display.
-                    //Entity enhancements contain confidence information
-                    //Text enhancements contain context information.
+            //create an object for each node and save them into respective lists
+            while (iterator.hasNext()) {
+                JsonNode node = iterator.next();
 
-                    ArrayNode typesNode = (ArrayNode) node.get("@type");
-                    if (typesNode != null) {
-                        if (typesNode.size() == 2 && typesNode.get(0).asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
+                //there are three types of nodes: viewables, entity enhancements and text enhancements.
+                //Viewables are entities to display.
+                //Entity enhancements contain confidence information
+                //Text enhancements contain context information.
 
-                            switch (typesNode.get(1).asText()) {
-                                case "http://fise.iks-project.eu/ontology/TextAnnotation":
-                                    TextEnhancement textEnhancement = new TextEnhancement(node);
-                                    textEnhancements.add(textEnhancement);
-                                    break;
-                                case "http://fise.iks-project.eu/ontology/EntityAnnotation":
-                                    EntityEnhancement entityEnhancement = new EntityEnhancement(node);
-                                    //only take entity enhancements that are over the threshold,
-                                    if (entityEnhancement.getConfidence() >= CONFIDENCE_THRESHOLD) {
-                                        entityEnhancements.add(entityEnhancement);
-                                    }
-                                    break;
-                                default:
-                                    return Response.status(400).entity("The given Stanbol output is not valid.").build();
-                            }
+                ArrayNode typesNode = (ArrayNode) node.get("@type");
+                if (typesNode != null) {
+                    if (typesNode.size() == 2 && typesNode.get(0).asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
 
-                        } else {
-                            Viewable viewable = new Viewable(node);
-                            viewables.add(viewable);
+                        switch (typesNode.get(1).asText()) {
+                            case "http://fise.iks-project.eu/ontology/TextAnnotation":
+                                TextEnhancement textEnhancement = new TextEnhancement(node);
+                                textEnhancements.add(textEnhancement);
+                                break;
+                            case "http://fise.iks-project.eu/ontology/EntityAnnotation":
+                                EntityEnhancement entityEnhancement = new EntityEnhancement(node);
+                                //only take entity enhancements that are over the threshold,
+                                if (entityEnhancement.getConfidence() >= CONFIDENCE_THRESHOLD) {
+                                    entityEnhancements.add(entityEnhancement);
+                                }
+                                break;
+                            default:
+                                return Response.status(400).entity("The given Stanbol output is not valid.").build();
                         }
 
                     } else {
-                        //node has no type, it means it is a viewable
                         Viewable viewable = new Viewable(node);
                         viewables.add(viewable);
                     }
 
-                }
-
-
-                ArrayList<Viewable> finalViewables = new ArrayList<>();
-
-                //Each viewable has exactly one matching entityEnhancement.
-                //Each entityEnhancement can have one or more textEnhancements.
-
-                //entityEnhancements list is already filtered above to take confidence higher than threshold
-
-                for (Viewable viewable : viewables) {
-
-                    for (EntityEnhancement entityEnhancement : entityEnhancements) {
-
-                        if (viewable.getId().equals(entityEnhancement.getReference())) {
-
-                            viewable.setEntityEnhancement(entityEnhancement);
-                            for (TextEnhancement textEnhancement : textEnhancements) {
-
-                                if (entityEnhancement.getRelations().contains(textEnhancement.getId())) {
-                                    viewable.addTextEnhancement(textEnhancement);
-                                }
-                            }
-
-                            finalViewables.add(viewable);
-
-                        }
-
-                    }
-                }
-
-                if (finalViewables.size() == 0) {
-                    return Response.status(400).entity("There are no entities above the given threshold: " + CONFIDENCE_THRESHOLD).build();
                 } else {
-
-
-                    StringBuilder entitiesTableSb = new StringBuilder();
-
-                    appendTableInit(entitiesTableSb);
-
-                    boolean firstElement = true;
-
-                    for (Viewable viewable : finalViewables) {
-
-                        //to have a small space between elements
-                        if (firstElement) {
-                            firstElement = false;
-                        } else {
-                            viewablesHTML.append("<hr>");
-                        }
-
-
-                        String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
-                        String id = viewable.getId();
-                        if (id != null) {
-                            String idHTML = String.format(templateIDText, id, "Id:", id);
-                            viewablesHTML.append(idHTML);
-                        }
-
-
-                        String templateText = "<div><b>%s</b>%s</div>";
-
-                        String label = viewable.getLabel();
-                        if (label != null) {
-                            String labelHTML = String.format(templateText, "Label:", label);
-                            viewablesHTML.append(labelHTML);
-                        }
-
-                        String comment = viewable.getComment();
-                        if (comment != null) {
-                            String commentHTML = String.format(templateText, "Comment:", comment);
-                            viewablesHTML.append(commentHTML);
-                        }
-
-                        Double entityConfidence = viewable.getEntityEnhancement().getConfidence();
-                        if (entityConfidence != null) {
-                            String confidenceHTML = String.format(templateText, "Confidence:", entityConfidence);
-                            viewablesHTML.append(confidenceHTML);
-                        }
-
-                        String context = viewable.getTextEnhancements().get(0).getContext();
-                        if (context != null) {
-                            String contextHTML = String.format(templateText, "Context:", context);
-                            viewablesHTML.append(contextHTML);
-                        }
-
-                        String typesHTML;
-                        ArrayList<String> types = viewable.getTypes();
-                        if ((types != null) && (!types.isEmpty())) {
-
-                            StringBuilder sb = new StringBuilder();
-                            for (String type : types) {
-                                sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
-                            }
-
-                            typesHTML = "<ul>" + sb.toString() + "</ul>";
-
-                            viewablesHTML.append("<div><b>Types:</b>" + typesHTML + "</div");
-
-                        } else {
-                            typesHTML = "This entity has no known types.";
-                        }
-
-                        if (viewable.getDepiction() != null) {
-                            String depiction = String.format("<div><b>depiction:</b><div><img src=\"%s\"></img></div></div>", viewable.getDepiction());
-                            viewablesHTML.append(depiction);
-                        }
-
-                        if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
-                            script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
-                        }
-
-                        appendTableElement(entitiesTableSb, id, label, entityConfidence, context, typesHTML);
-
-                    }
-
-                    //start of the page:
-                    //1)stanbol json output(our input) link
-                    //2)overview table
-                    //3)each element in a list
-                    appendTableEnd(entitiesTableSb);
-                    Element rawJsonHTML = doc.getElementById("rawJson");
-                    rawJsonHTML.append("Stanbol JSON input: <a href=\"" + URL + "\">" + URL + "</a>");
-                    rawJsonHTML.append(entitiesTableSb.toString());
-
-                    return Response.accepted().entity(doc.html()).type("text/html").build();
+                    //node has no type, it means it is a viewable
+                    Viewable viewable = new Viewable(node);
+                    viewables.add(viewable);
                 }
 
-
-            } else {
-                return Response.status(400).entity("The given Stanbol output is not valid.").build();
             }
 
 
-        } catch (IOException e) {
-            logger.error("Can't read input json file: " + e.getMessage());
+            ArrayList<Viewable> finalViewables = new ArrayList<>();
+
+            //Each viewable has exactly one matching entityEnhancement.
+            //Each entityEnhancement can have one or more textEnhancements.
+
+            //entityEnhancements list is already filtered above to take confidence higher than threshold
+
+            for (Viewable viewable : viewables) {
+
+                for (EntityEnhancement entityEnhancement : entityEnhancements) {
+
+                    if (viewable.getId().equals(entityEnhancement.getReference())) {
+
+                        viewable.setEntityEnhancement(entityEnhancement);
+                        for (TextEnhancement textEnhancement : textEnhancements) {
+
+                            if (entityEnhancement.getRelations().contains(textEnhancement.getId())) {
+                                viewable.addTextEnhancement(textEnhancement);
+                            }
+                        }
+
+                        finalViewables.add(viewable);
+
+                    }
+
+                }
+            }
+
+            if (finalViewables.size() == 0) {
+                return Response.status(400).entity("There are no entities above the given threshold: " + CONFIDENCE_THRESHOLD).build();
+            } else {
+
+
+                StringBuilder entitiesTableSb = new StringBuilder();
+
+                appendTableInit(entitiesTableSb);
+
+                boolean firstElement = true;
+
+                for (Viewable viewable : finalViewables) {
+
+                    //to have a small space between elements
+                    if (firstElement) {
+                        firstElement = false;
+                    } else {
+                        viewablesHTML.append("<hr>");
+                    }
+
+
+                    String templateIDText = "<div><A name='%s'><b>%s</b>%s</A></div>";
+                    String id = viewable.getId();
+                    if (id != null) {
+                        String idHTML = String.format(templateIDText, id, "Id:", id);
+                        viewablesHTML.append(idHTML);
+                    }
+
+
+                    String templateText = "<div><b>%s</b>%s</div>";
+
+                    String label = viewable.getLabel();
+                    if (label != null) {
+                        String labelHTML = String.format(templateText, "Label:", label);
+                        viewablesHTML.append(labelHTML);
+                    }
+
+                    String comment = viewable.getComment();
+                    if (comment != null) {
+                        String commentHTML = String.format(templateText, "Comment:", comment);
+                        viewablesHTML.append(commentHTML);
+                    }
+
+                    Double entityConfidence = viewable.getEntityEnhancement().getConfidence();
+                    if (entityConfidence != null) {
+                        String confidenceHTML = String.format(templateText, "Confidence:", entityConfidence);
+                        viewablesHTML.append(confidenceHTML);
+                    }
+
+                    String context = viewable.getTextEnhancements().get(0).getContext();
+                    if (context != null) {
+                        String contextHTML = String.format(templateText, "Context:", context);
+                        viewablesHTML.append(contextHTML);
+                    }
+
+                    String typesHTML;
+                    ArrayList<String> types = viewable.getTypes();
+                    if ((types != null) && (!types.isEmpty())) {
+
+                        StringBuilder sb = new StringBuilder();
+                        for (String type : types) {
+                            sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
+                        }
+
+                        typesHTML = "<ul>" + sb.toString() + "</ul>";
+
+                        viewablesHTML.append("<div><b>Types:</b>" + typesHTML + "</div");
+
+                    } else {
+                        typesHTML = "This entity has no known types.";
+                    }
+
+                    //show thumbnail on the page and link to full image
+                    String depictionThumbnail;
+                    if (viewable.getDepictionThumbnail() != null) {
+                        if (viewable.getDepiction() != null) {
+                            String depictionFormat = "<div><b>depiction(<a href='%s'>full image<a>):</b><div><img src='%s'></img></div></div>";
+                            depictionThumbnail = String.format(depictionFormat, viewable.getDepiction(), viewable.getDepictionThumbnail());
+                        } else {
+                            String depictionFormat = "<div><b>depiction:</b><div><img src='%s'></img></div></div>";
+                            depictionThumbnail = String.format(depictionFormat, viewable.getDepictionThumbnail());
+                        }
+
+                    } else {
+                        if (viewable.getDepiction() != null) {
+                            depictionThumbnail = "No thumbnail available: <a href='" + viewable.getDepiction() + "'>Full Image</a>";
+                        } else {
+                            depictionThumbnail = "No thumbnail available";
+                        }
+
+                    }
+                    viewablesHTML.append(depictionThumbnail);
+
+
+                    if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
+                        script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
+                    }
+
+                    appendTableElement(entitiesTableSb, id, label, entityConfidence, context, typesHTML);
+
+                }
+
+                //start of the page:
+                //1)stanbol json output(our input) link
+                //2)overview table
+                //3)each element in a list
+                appendTableEnd(entitiesTableSb);
+                Element rawJsonHTML = doc.getElementById("rawJson");
+                rawJsonHTML.append("Stanbol JSON input: <a href=\"" + URL + "\">" + URL + "</a>");
+                rawJsonHTML.append(entitiesTableSb.toString());
+
+                return Response.accepted().entity(doc.html()).type("text/html").build();
+            }
+
+
+        } else {
+            return Response.status(400).entity("The given Stanbol output is not valid.").build();
         }
 
-        return Response.serverError().entity("Can't read input json file.").build();
     }
 
     private void appendTableInit(StringBuilder entitiesTableSb) {
