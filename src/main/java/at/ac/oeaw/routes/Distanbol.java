@@ -58,7 +58,12 @@ public class Distanbol {
         }
 
         if (confidence != null) {
-            CONFIDENCE_THRESHOLD = Double.parseDouble(confidence);
+            try{
+                CONFIDENCE_THRESHOLD = Double.parseDouble(confidence);
+            }catch(NumberFormatException e){
+                //it means an empty string is provided, do nothing and leave the default value
+            }
+
         }
         if (CONFIDENCE_THRESHOLD < 0.0 || CONFIDENCE_THRESHOLD > 1.0) {
             return Response.status(400).entity("Confidence(double) must be between 0 and 1").build();
