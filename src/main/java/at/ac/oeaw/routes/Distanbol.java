@@ -65,6 +65,8 @@ public class Distanbol {
         }
 
 
+
+
         String json = response.readEntity(String.class);
         return processStanbolJSONtoHTML(URL, CONFIDENCE_THRESHOLD, json);
 
@@ -87,6 +89,12 @@ public class Distanbol {
         } catch (IOException e) {
             return Response.status(400).entity("Given json file is not valid.").build();
         }
+
+        Element urlInput = doc.getElementById("URLInput");
+        urlInput.attr("value",URL);
+
+        Element confidenceInput = doc.getElementById("confidenceInput");
+        confidenceInput.attr("value",String.valueOf(CONFIDENCE_THRESHOLD));
 
 
         if (jsonNode.isArray()) {
@@ -280,14 +288,16 @@ public class Distanbol {
 
                 }
 
+                Element rawJsonHTML = doc.getElementById("rawJson");
+                rawJsonHTML.append("Stanbol JSON input: <a href=\"" + URL + "\">" + URL + "</a>");
+
                 //start of the page:
                 //1)stanbol json output(our input) link
                 //2)overview table
                 //3)each element in a list
                 appendTableEnd(entitiesTableSb);
-                Element rawJsonHTML = doc.getElementById("rawJson");
-                rawJsonHTML.append("Stanbol JSON input: <a href=\"" + URL + "\">" + URL + "</a>");
-                rawJsonHTML.append(entitiesTableSb.toString());
+                Element formHTML = doc.getElementById("form");
+                formHTML.append(entitiesTableSb.toString());
 
                 return Response.accepted().entity(doc.html()).type("text/html").build();
             }
