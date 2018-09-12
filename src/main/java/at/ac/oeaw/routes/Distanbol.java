@@ -35,12 +35,40 @@ public class Distanbol {
     ServletContext servletContext;
 
     @GET
+    @Path("/view/{filepath}")
+    public Response handleView(@PathParam("filepath") String filePath) {
+
+
+        try {
+            if (!filePath.endsWith(".css") && !filePath.endsWith(".js")) {
+                return Response.status(404).entity("Requested file doesn't exist.").build();
+            }
+
+            String file = null;
+            if (filePath.endsWith(".js")) {
+                file = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/javascript/" + filePath));
+                return Response.status(200).entity(file).type("application/javascript").build();
+            } else if (filePath.endsWith(".css")){
+                file = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/css/" + filePath));
+                return Response.status(200).entity(file).type("text/css").build();
+            }else {
+                return Response.status(404).entity("Requested file doesn't exist.").build();
+            }
+
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+            return Response.status(404).entity("Requested file doesn't exist.").build();
+        }
+
+    }
+
+    @GET
     @Path("/")
     public Response convert(@QueryParam("URL") String URL, @QueryParam("confidence") String confidence) {
 
         if (URL == null) {
             try {
-                String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/index.html"));
+                String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/html/index.html"));
                 return Response.status(200).entity(html).type("text/html").build();
             } catch (IOException e) {
                 logger.error("Can't read index html file");
@@ -58,9 +86,9 @@ public class Distanbol {
         }
 
         if (confidence != null) {
-            try{
+            try {
                 CONFIDENCE_THRESHOLD = Double.parseDouble(confidence);
-            }catch(NumberFormatException e){
+            } catch (NumberFormatException e) {
                 //it means an empty string is provided, do nothing and leave the default value
             }
 
@@ -68,8 +96,6 @@ public class Distanbol {
         if (CONFIDENCE_THRESHOLD < 0.0 || CONFIDENCE_THRESHOLD > 1.0) {
             return Response.status(400).entity("Confidence(double) must be between 0 and 1").build();
         }
-
-
 
 
         String json = response.readEntity(String.class);
@@ -81,7 +107,7 @@ public class Distanbol {
 
         Document doc;
         try {
-            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/view.html"));
+            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/html/view.html"));
             doc = Jsoup.parse(html);
         } catch (IOException e) {
             return Response.serverError().entity("Something went wrong.").build();
@@ -96,10 +122,10 @@ public class Distanbol {
         }
 
         Element urlInput = doc.getElementById("URLInput");
-        urlInput.attr("value",URL);
+        urlInput.attr("value", URL);
 
         Element confidenceInput = doc.getElementById("confidenceInput");
-        confidenceInput.attr("value",String.valueOf(CONFIDENCE_THRESHOLD));
+        confidenceInput.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
 
 
         if (jsonNode.isArray()) {
@@ -256,7 +282,7 @@ public class Distanbol {
                         typesHTML = "This entity has no known types.";
                     }
 
-                    if(viewable.getDepictionThumbnail()!=null){
+                    if (viewable.getDepictionThumbnail() != null) {
                         String depictionFormat = "<div><b>depiction(<a href='%s'>full image<a>):</b><div><img src='%s'></img></div></div>";
                         String depictionThumbnail = String.format(depictionFormat, viewable.getDepiction(), viewable.getDepictionThumbnail());
                         viewablesHTML.append(depictionThumbnail);
