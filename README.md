@@ -6,6 +6,7 @@ Distanbol accepts two parameters as query parameters:
 **URL:** The URL to the Stanbol output Json file.
 
 **Confidence(Optional):** The minimum confidence threshold determined by Stanbol. The results will have a confidence of greater than this number. The default value is 0.7.
+
 You can either:
  - Put your Stanbol json output URL as a query:
  
