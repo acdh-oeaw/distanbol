@@ -1,0 +1,12 @@
+.map {
+    height: 70%;
+    width: 50%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+coordinate, long, lat  {
+    display: none;
+}

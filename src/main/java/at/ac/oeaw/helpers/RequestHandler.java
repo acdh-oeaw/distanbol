@@ -13,16 +13,13 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
-import java.awt.image.BufferedImage;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.URL;
 
 public class RequestHandler {
 
     public static final int TIMEOUT = 2500;
 
     public static Response getJSON(String URL) throws BadRequestException {
+        URL = URL.trim();
         validateURL(URL);
 
         Response response = get(URL, "application/json");

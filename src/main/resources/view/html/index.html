@@ -1,91 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
     <title>Distanbol</title>
+
+    <!-- Fundament core CSS -->
+    <link href="/view/fundament/css/fundament.min.css" rel="stylesheet">
+
+    <link href="/view/css/distanbol.css" rel="stylesheet">
+
 </head>
-<body>
 
-<div>
-    <h1>DISTANBOL</h1>
-    Distanbol accepts two parameters as query parameters:<br>
-    <b>URL:</b> The URL to the Stanbol output Json file.<br>
-    <b>Confidence(Optional):</b> The minimum confidence threshold determined by Stanbol. The results will have a confidence of greater
-    than this
-    number. The default value is 0.7.<br>
+<body class="contained fixed-nav">
 
-    You can either:
-    <ul>
-        <li>
-            Put your Stanbol json output URL as a query:
-            <h3>
-                <pre><code>https://distanbol.acdh.oeaw.ac.at?URL={URL of your Stanbol output in json}&confidence={minimum confidence threshold}</code></pre>
-            </h3>
-            <br>
-        </li>
-        <li>
-            Or use this form:
-            <div>
-                <!--<form action="/Distanbol" method="GET"> this is for localhost-->
-                <form action="/" method="GET">
-                    <b>URL:</b> <input name="URL"/>
-                    <b>Confidence(Optional):</b> <input name="confidence"/>
-                    <input type="submit" value="submit"/>
-                </form>
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white box-shadow">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            Distanbol
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!--this part is for the navigation bar, which we dont have right now-->
+            <!--<ul class="navbar-nav mr-auto">-->
+            <!--<li class="nav-item active">-->
+            <!--<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>-->
+            <!--</li>-->
+            <!--</ul>-->
+
+            <div class="navbar-icons">
+                <a href="https://github.com/acdh-oeaw/Distanbol" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
-        </li>
-    </ul>
-    <br>
-    <b>Examples with default Confidence(0.7):</b>
-    <br>
-    <ul>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json
-            </a>
-        </li>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json
-            </a>
-        </li>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json
-            </a>
-        </li>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json
-            </a>
-        </li>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json
-            </a>
-        </li>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json
-            </a>
-        </li>
-    </ul>
-    <br>
-    <b>Examples with confidence as parameter(same example, different confidence):</b>
-    <ul>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5
-            </a>
-        </li>
-        <li>
-            <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7">
-                https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7
-            </a>
-        </li>
-    </ul>
-</div>
 
+        </div>
+    </div>
+</nav>
 
+<!--<div id="search-overlay">-->
+<!--<div class="container">-->
+<!--<div id="search-overlay-cancel"><i class="fas fa-times"></i></div>-->
+<!--<form id="search-overlay-form" role="search" method="get" action="">-->
+<!--<a href="#" id="search-overlay-submit"><i class="fas fa-search"></i></a>-->
+<!--<input type="search" name="fullTextSearch" id="search-overlay-input" value="" placeholder="Search..." autocomplete="off">-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+
+<main>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!--<div class="container-fluid">-->
+    <!--<div class="jumbotron" style="background-image: url(/view/fundament/vendor/images/intro_bg.jpg);">-->
+    <!--<div class="container">-->
+    <!--<h1>Hello, world! Ich heiße Distanbol.</h1>-->
+    <!--<p>Application Description</p>-->
+    <!--<a class="btn btn-main btn-outline-primary btn-sm" href="#" role="button">Read More</a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="container">
+        <!--<div class="row">-->
+
+        <!--<div class="col-md-12">-->
+        <!--<h3 class="row-heading pb-2 mb-3 border-bottom"><i class="fas fa-plug"></i> Get Started</h3>-->
+        <!--</div>-->
+
+        <!--</div>-->
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card mb-4 box-shadow">
+
+                    <!--<h1>DISTANBOL</h1>-->
+                    <div>
+                        Distanbol accepts two parameters as query parameters:<br>
+                        <b>URL:</b> The URL to the Stanbol output Json file.<br>
+                        <b>Confidence(Optional):</b> The minimum confidence threshold determined by Stanbol.
+                        The results will have a confidence of greater than this number. The default value is 0.7.
+                    </div>
+                    <div>
+                        You can either:
+                        <ul>
+                            <li>
+                                Put your Stanbol json output URL as a query:
+
+                                <pre><code>https://distanbol.acdh.oeaw.ac.at?URL={URL of your Stanbol output in json}&confidence={minimum confidence threshold}</code></pre>
+
+                            </li>
+                            <li>
+                                Or use this form:
+                                <div>
+                                    <form action="/" method="GET">
+                                        <div>
+                                            <label for="URL">URL:</label>
+                                            <input id="URL" name="URL"/>
+                                            <label for="confidence">Confidence(Optional):</label>
+                                            <input id="confidence" name="confidence"/>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <b>Examples with default Confidence(0.7):</b>
+                        <br>
+                        <ul>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example.json
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json
+                                </a>
+                            </li>
+                        </ul>
+
+                        <b>Examples with confidence as parameter(same example, different confidence):</b>
+                        <ul>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7">
+                                    https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div><!-- /container -->
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="footer-sep">
+                <i class="far fa-comment"></i> CONTACT
+            </div>
+            <div class="row">
+                <div class="col-md-1 pl-0">
+                    <a href="https://www.oeaw.ac.at/acdh/acdh-home/" target="_blank" rel="noopener" aria-label="ACDH">
+                        <img src="/view/fundament/vendor/images/acdh_logo.png" alt="ACDH"
+                             title="Austrian Center for Digital Humanities">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        ACDH-ÖAW
+                        <br>
+                        Austrian Centre for Digital Humanities
+                        <br>
+                        Austrian Academy of Sciences
+                    </p>
+                    <p>
+                        Sonnenfelsgasse 19,
+                        <br>
+                        1010 Vienna
+                    </p>
+                    <p>
+                        T: +43 1 51581-2200
+                        <br>
+                        E: <a href="javascript:linkTo_UnCryptMailto('nbjmup;bdeiApfbx/bd/bu');">acdh(at)oeaw.ac.at</a>
+                    </p>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3>HELPDESK</h3>
+                    <p>ACDH runs a helpdesk offering advice for questions related to various digital humanities
+                        topics.</p>
+                    <p><a class="helpdesk-button" href="javascript:linkTo_UnCryptMailto('nbjmup;bdeiApfbx/bd/bu');">ASK
+                        US!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-imprint-bar">
+        © Copyright OEAW | <a href="https://arche.acdh.oeaw.ac.at/browser/imprint">Impressum/Imprint</a>
+    </div>
+</footer>
+<!-- Fundament core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script defer src="/view/fundament/vendor/js/fontawesome-all.min.js"></script>
+<script src="/view/fundament/vendor/js/jquery.min.js"></script>
+<script src="/view/fundament/js/fundament.min.js"></script>
 </body>
 </html>

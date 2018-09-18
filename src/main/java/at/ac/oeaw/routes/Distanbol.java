@@ -19,7 +19,9 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 @Path("/")
 public class Distanbol {
@@ -28,35 +30,26 @@ public class Distanbol {
     //default
     public Double CONFIDENCE_THRESHOLD = 0.7;
     private ObjectMapper mapper = new ObjectMapper();
-
-    //todo put examples showing the difference of different confidence levels
+    private final List<String> extensions = Arrays.asList("css","js","svg","jpg","png");//fundament has these types of files
 
     @Context
     ServletContext servletContext;
 
     @GET
-    @Path("/view/{filepath}")
+    @Path("/view/{filepath : .+}")
     public Response handleView(@PathParam("filepath") String filePath) {
 
-
+        String file = null;
         try {
-            if (!filePath.endsWith(".css") && !filePath.endsWith(".js")) {
+
+            String extension = filePath.split("\\.")[filePath.split("\\.").length-1];
+            if(!extensions.contains(extension)){
                 return Response.status(404).entity("Requested file doesn't exist.").build();
             }
 
-            String file = null;
-            if (filePath.endsWith(".js")) {
-                file = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/javascript/" + filePath));
-                return Response.status(200).entity(file).type("application/javascript").build();
-            } else if (filePath.endsWith(".css")){
-                file = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/css/" + filePath));
-                return Response.status(200).entity(file).type("text/css").build();
-            }else {
-                return Response.status(404).entity("Requested file doesn't exist.").build();
-            }
-
+            file = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/" + filePath));
+            return Response.status(200).entity(file).build();
         } catch (IOException e) {
-            logger.error(e.getMessage());
             return Response.status(404).entity("Requested file doesn't exist.").build();
         }
 
@@ -133,7 +126,7 @@ public class Distanbol {
 
             Element viewablesHTML = doc.getElementById("viewables");
 
-            Element script = doc.getElementById("script");
+            Element map = doc.getElementById("map");
 
             ArrayList<Viewable> viewables = new ArrayList<>();
             ArrayList<EntityEnhancement> entityEnhancements = new ArrayList<>();
@@ -312,7 +305,7 @@ public class Distanbol {
 
 
                     if ((viewable.getLatitude() != null) && (!viewable.getLatitude().equals("")) && (viewable.getLongitude() != null) && (!viewable.getLongitude().equals(""))) {
-                        script.appendText("addMarker(" + viewable.getLongitude() + "," + viewable.getLatitude() + ");");
+                        map.append("<coordinate><long>"+viewable.getLongitude()+"</long><lat>"+viewable.getLatitude()+"</lat></coordinate>");
                     }
 
                     appendTableElement(entitiesTableSb, id, label, entityConfidence, context, typesHTML);

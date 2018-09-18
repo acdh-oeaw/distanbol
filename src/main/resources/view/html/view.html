@@ -1,22 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Distanbol</title>
-    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
-    <style>
-      .map {
-        height: 70%;
-        width: 50%;
-      }
-      table, th, td {
-        border: 1px solid black;
-      }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
 
-    </style>
-    <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
+    <title>Distanbol</title>
+
+    <!-- Fundament core CSS -->
+    <link href="/view/fundament/css/fundament.min.css" rel="stylesheet">
+    <link href="https://openlayers.org/en/v4.6.4/css/ol.css" rel="stylesheet" >
+    <link href="/view/css/distanbol.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="contained fixed-nav">
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white box-shadow">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            Distanbol
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <!--this part is for the navigation bar, which we dont have right now-->
+            <!--<ul class="navbar-nav mr-auto">-->
+            <!--<li class="nav-item active">-->
+            <!--<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>-->
+            <!--</li>-->
+            <!--</ul>-->
+
+            <div class="navbar-icons">
+                <a href="https://github.com/acdh-oeaw/Distanbol" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!--<div id="search-overlay">-->
+<!--<div class="container">-->
+<!--<div id="search-overlay-cancel"><i class="fas fa-times"></i></div>-->
+<!--<form id="search-overlay-form" role="search" method="get" action="">-->
+<!--<a href="#" id="search-overlay-submit"><i class="fas fa-search"></i></a>-->
+<!--<input type="search" name="fullTextSearch" id="search-overlay-input" value="" placeholder="Search..." autocomplete="off">-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+
+<main>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!--<div class="container-fluid">-->
+    <!--<div class="jumbotron" style="background-image: url(/view/fundament/vendor/images/intro_bg.jpg);">-->
+    <!--<div class="container">-->
+    <!--<h1>Hello, world! Ich heiße Distanbol.</h1>-->
+    <!--<p>Application Description</p>-->
+    <!--<a class="btn btn-main btn-outline-primary btn-sm" href="#" role="button">Read More</a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="container">
+        <!--<div class="row">-->
+
+        <!--<div class="col-md-12">-->
+        <!--<h3 class="row-heading pb-2 mb-3 border-bottom"><i class="fas fa-plug"></i> Get Started</h3>-->
+        <!--</div>-->
+
+        <!--</div>-->
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card mb-4 box-shadow">
 
 <h2>Source</h2>
 <div id="rawJson"></div>
@@ -31,59 +92,74 @@
 </div>
 
 <h2>Map Locations</h2>
-<div id="map" class="map"></div>
-<script id="script" type="text/javascript">
-      const markerSource = new ol.source.Vector();
+<div id="map" class="map">
 
-      var markerStyle = new ol.style.Style({
-        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-          anchor: [0.5, 46],
-          anchorXUnits: 'fraction',
-          anchorYUnits: 'pixels',
-          opacity: 0.75,
-          src: 'https://openlayers.org/en/v4.6.4/examples/data/icon.png'
-        }))
-      });
+</div>
 
-      let map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM(),
-          }),
-          new ol.layer.Vector({
-            source: markerSource,
-            style: markerStyle,
-          }),
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([6.661594, 50.433237]),
-          zoom: 1.5,
-        })
-      });
-
-
-      function addMarker(lon, lat) {
-        console.log(lat);
-        console.log(lon);
-
-        var iconFeatures = [];
-
-        var iconFeature = new ol.Feature({
-          geometry: new ol.geom.Point(ol.proj.transform([lon, lat], 'EPSG:4326',
-            'EPSG:3857'))
-        });
-
-        markerSource.addFeature(iconFeature);
-      }
-      //addMarker(0,0);
-      //addMarker(10,10);
-
-
-</script>
 
 <h2>Information</h2>
 <div id="viewables"></div>
 
+                </div>
+            </div>
+
+        </div>
+    </div><!-- /container -->
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="footer-sep">
+                <i class="far fa-comment"></i> CONTACT
+            </div>
+            <div class="row">
+                <div class="col-md-1 pl-0">
+                    <a href="https://www.oeaw.ac.at/acdh/acdh-home/" target="_blank" rel="noopener" aria-label="ACDH">
+                        <img src="/view/fundament/vendor/images/acdh_logo.png" alt="ACDH"
+                             title="Austrian Center for Digital Humanities">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        ACDH-ÖAW
+                        <br>
+                        Austrian Centre for Digital Humanities
+                        <br>
+                        Austrian Academy of Sciences
+                    </p>
+                    <p>
+                        Sonnenfelsgasse 19,
+                        <br>
+                        1010 Vienna
+                    </p>
+                    <p>
+                        T: +43 1 51581-2200
+                        <br>
+                        E: <a href="javascript:linkTo_UnCryptMailto('nbjmup;bdeiApfbx/bd/bu');">acdh(at)oeaw.ac.at</a>
+                    </p>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3>HELPDESK</h3>
+                    <p>ACDH runs a helpdesk offering advice for questions related to various digital humanities
+                        topics.</p>
+                    <p><a class="helpdesk-button" href="javascript:linkTo_UnCryptMailto('nbjmup;bdeiApfbx/bd/bu');">ASK
+                        US!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-imprint-bar">
+        © Copyright OEAW | <a href="https://arche.acdh.oeaw.ac.at/browser/imprint">Impressum/Imprint</a>
+    </div>
+</footer>
+<!-- Fundament core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script defer src="/view/fundament/vendor/js/fontawesome-all.min.js"></script>
+<script src="/view/fundament/vendor/js/jquery.min.js"></script>
+<script src="/view/fundament/js/fundament.min.js"></script>
+
+<script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+<script src="/view/javascript/distanbol.js"></script>
 </body>
 </html>
