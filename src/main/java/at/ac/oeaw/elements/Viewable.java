@@ -2,9 +2,12 @@ package at.ac.oeaw.elements;
 
 import at.ac.oeaw.elements.enhancements.EntityEnhancement;
 import at.ac.oeaw.elements.enhancements.TextEnhancement;
-import at.ac.oeaw.helpers.RequestHandler;
+import at.ac.oeaw.helpers.FileReader;
 import com.fasterxml.jackson.databind.JsonNode;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -50,7 +53,7 @@ public class Viewable {
 //        if (depictionThumbnail != null && !RequestHandler.imageExists(depictionThumbnail)) {
 //            depictionThumbnail = null;
 //        }
-        
+
 
         String longitude = null;
         JsonNode longitudeNode = node.get("http://www.w3.org/2003/01/geo/wgs84_pos#long");
@@ -90,6 +93,60 @@ public class Viewable {
         this.label = label;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public String getHTMLDepiction(String viewableTemplatePath) throws IOException {
+        Document doc = Jsoup.parse(FileReader.readFile(viewableTemplatePath));
+
+        doc.body().getElementById("id").attr("name", getId());
+        doc.body().getElementById("id").append(getId());
+        doc.body().getElementById("label").append(getLabel());
+        doc.body().getElementById("comment").append(getComment());
+        doc.body().getElementById("confidence").append(String.valueOf(getEntityEnhancement().getConfidence()));
+        doc.body().getElementById("context").append(getTextEnhancements().get(0).getContext());
+
+        doc.body().getElementById("types").append("<div><b>Types:</b>" + getTypesHTML() + "</div");
+
+        doc.body().getElementById("fullImageLink").attr("href", getDepiction());
+        doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());
+
+        if(getLongitude()!=null && getLatitude()!=null){
+            String coordinates = "<coordinate><long>"+getLongitude()+"</long><lat>"+getLatitude()+"</lat></coordinate>";
+            doc.body().getElementById("coordinates").append(coordinates);
+        }
+        return doc.html();
+    }
+
+    public String getHTMLTableRowDepiction() throws IOException{
+        StringBuilder sb = new StringBuilder();
+        sb.append("<tr>");
+
+        //name
+        sb.append("<td><a href='#").append(getId()).append("'>").append(getLabel()).append("</a></td>");
+        //confidence
+        sb.append("<td>").append(getEntityEnhancement().getConfidence()).append("</td>");
+        //context
+        sb.append("<td>").append(getTextEnhancements().get(0).getContext()).append("</td>");
+        //types
+        sb.append("<td>").append(getTypesHTML()).append("</td>");
+
+        sb.append("</tr>");
+        return sb.toString();
+    }
+
+    private String getTypesHTML(){
+        String typesHTML;
+        ArrayList<String> types = getTypes();
+        if ((types != null) && (!types.isEmpty())) {
+            StringBuilder sb = new StringBuilder();
+            for (String type : types) {
+                sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
+            }
+            typesHTML = "<ul>" + sb.toString() + "</ul>";
+        } else {
+            typesHTML = "This entity has no known types.";
+        }
+        return typesHTML;
     }
 
     public String getComment() {

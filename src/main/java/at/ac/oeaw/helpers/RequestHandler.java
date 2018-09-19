@@ -24,7 +24,6 @@ public class RequestHandler {
 
         Response response = get(URL, "application/json");
 
-
         String contentType = response.getHeaderString("Content-Type");
 
         if (contentType == null) {
@@ -56,13 +55,12 @@ public class RequestHandler {
         String[] schemes = {"http", "https"};
         UrlValidator urlValidator = new UrlValidator(schemes, 8L);
 
-        String input = URL;
         if ((!URL.startsWith("http://")) && (!URL.startsWith("https://"))) {
             URL = "http://" + URL;
         }
 
         if (!urlValidator.isValid(URL)) {
-            throw new BadRequestException("The given URL: '" + input + "' is not valid.");
+            throw new BadRequestException("The given URL: '" + URL + "' is not valid.");
         }
         return URL;
     }

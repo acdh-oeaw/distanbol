@@ -11,7 +11,7 @@
 
     <!-- Fundament core CSS -->
     <link href="/view/fundament/css/fundament.min.css" rel="stylesheet">
-    <link href="https://openlayers.org/en/v4.6.4/css/ol.css" rel="stylesheet" >
+    <link href="https://openlayers.org/en/v4.6.4/css/ol.css" rel="stylesheet">
     <link href="/view/css/distanbol.css" rel="stylesheet">
 
 </head>
@@ -79,26 +79,40 @@
             <div class="col-md-12">
                 <div class="card mb-4 box-shadow">
 
-<h2>Source</h2>
-<div id="rawJson"></div>
-<br>
-<div id="form">
-    <!--<form action="/Distanbol" method="GET"> this is for localhost-->
-    <form action="/" method="GET">
-        <b>URL:</b> <input id="URLInput" name="URL"/>
-        <b>Confidence(Optional):</b> <input id="confidenceInput" name="confidence"/>
-        <input type="submit" value="submit"/>
-    </form>
-</div>
+                    <h2>Source</h2>
+                    <div id="rawJson"></div>
+                    <br>
+                    <div id="form">
+                        <!--<form action="/Convert" method="GET"> this is for localhost-->
+                        <form action="/convert" method="GET">
+                            <b>URL:</b> <input id="URLInput" name="URL"/>
+                            <b>Confidence(Optional):</b> <input id="confidenceInput" name="confidence"/>
+                            <input type="submit" value="submit"/>
+                        </form>
+                    </div>
 
-<h2>Map Locations</h2>
-<div id="map" class="map">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Confidence</th>
+                            <th>Context</th>
+                            <th>Types</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        <!--Here comes the table elements-->
+                        </tbody>
+                    </table>
 
-</div>
+                    <h2>Map Locations</h2>
+                    <div id="map" class="map">
+
+                    </div>
 
 
-<h2>Information</h2>
-<div id="viewables"></div>
+                    <h2>Information</h2>
+                    <div id="viewables"></div>
 
                 </div>
             </div>

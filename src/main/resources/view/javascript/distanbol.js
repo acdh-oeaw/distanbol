@@ -23,14 +23,14 @@
     ],
     view: new ol.View({
       center: ol.proj.fromLonLat([6.661594, 50.433237]),
-      zoom: 1.5,
+      zoom: 1.7,
     })
   });
 
 
   function addMarker(lon, lat) {
-    console.log(lat);
-    console.log(lon);
+//    console.log(lat);
+//    console.log(lon);
 
     var iconFeatures = [];
 
