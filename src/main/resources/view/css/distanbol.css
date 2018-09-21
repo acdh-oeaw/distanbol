@@ -10,3 +10,7 @@ table, th, td {
 coordinate, long, lat  {
     display: none;
 }
+
+.hidden {
+    display: none;
+}

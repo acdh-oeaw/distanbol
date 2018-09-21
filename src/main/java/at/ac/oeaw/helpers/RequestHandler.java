@@ -81,6 +81,7 @@ public class RequestHandler {
         */
 
         URL stanbolURL = new URL(stanbolURLString+"dbpedia-fst-linking");
+
         HttpURLConnection stanbolCon = (HttpURLConnection) stanbolURL.openConnection();
         stanbolCon.setRequestMethod("POST");
         stanbolCon.setRequestProperty("Accept", "application/json");

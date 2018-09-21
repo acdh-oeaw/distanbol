@@ -81,17 +81,29 @@
 
                     <h2>Source</h2>
                     <div id="source"></div>
-                    <div id="fulltext"><b>Source Text: </b></div>
-                    <br>
-                    <div id="form">
-                        <b>If you want to submit another example or change the confidence level:</b>
-                        <br>
-                        <form action="/convert" method="GET">
-                            <b>URL:</b> <input id="URLInput" name="URL"/>
-                            <b>Confidence(Optional):</b> <input id="confidenceInput" name="confidence"/>
-                            <input type="submit" value="submit"/>
+
+                    <div class="form-group">
+                        <form action="/convert" method="POST">
+                            <label for="textInput">Source Text: </label>
+                            <textarea class="form-control" rows="11" id="textInput" name="input"></textarea>
+                            <label for="confidenceInputTEXT">Confidence(Optional):</label>
+                            <input type="text" class="form-control" id="confidenceInputTEXT" name="confidence"/>
+                            <input type="submit" class="btn btn-primary" value="submit"/>
                         </form>
                     </div>
+
+                    <br>
+                    <!--<div class="form-group" id="form">-->
+                        <!--<b>If you want to submit another example from a URL:</b>-->
+                        <!--<br>-->
+                        <!--<form action="/convert" method="GET">-->
+                            <!--<label for="URLInput">URL:</label>-->
+                            <!--<input type="text" class="form-control" id="URLInput" name="URL"/>-->
+                            <!--<label for="confidenceInputURL">Confidence(Optional):</label>-->
+                            <!--<input type="text" class="form-control" id="confidenceInputURL" name="confidence"/>-->
+                            <!--<input type="submit" class="btn btn-primary" value="submit"/>-->
+                        <!--</form>-->
+                    <!--</div>-->
 
                     <h2>Overview</h2>
                     <table>

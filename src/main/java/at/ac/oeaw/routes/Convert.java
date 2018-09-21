@@ -33,13 +33,51 @@ public class Convert {
     ServletContext servletContext;
 
 
-//    @POST
-//    @Path("/")
-//    @Consumes("application/x-www-form-urlencoded;charset=UTF-8")
-//    public Response convertPOST(@FormParam("input") String input, @FormParam("confidence") String confidence) {
-////todo
-//
-//    }
+    @POST
+    @Path("/")
+    @Consumes("application/x-www-form-urlencoded;charset=UTF-8")
+    public Response convertPOST(@FormParam("input") String input, @FormParam("confidence") String confidence) {
+
+        if (confidence != null) {
+            try {
+                CONFIDENCE_THRESHOLD = Double.parseDouble(confidence);
+            } catch (NumberFormatException e) {
+                //it means probably an empty string is provided, do nothing and leave the default value
+            }
+
+        }
+        if (CONFIDENCE_THRESHOLD < 0.0 || CONFIDENCE_THRESHOLD > 1.0) {
+            return Response.status(400).entity("Confidence(double) must be between 0 and 1").build();
+        }
+
+
+        boolean json;
+        JsonNode jsonNode;
+        try {
+            mapper.readTree(input);
+            json = true;
+        } catch (IOException e) {
+            //this means input is regarded as plain text
+            json = false;
+        }
+
+
+        Document doc;
+        try {
+            doc = Jsoup.parse(FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/html/view.html")));
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+            return Response.serverError().entity("Something went wrong.").build();
+        }
+
+        if(json){
+            return processStanbolJSONtoHTML(doc,null,input);
+        }else{
+            return processTEXTtoHTML(doc,null,input);
+        }
+
+
+    }
 
     @GET
     @Path("/")
@@ -118,14 +156,20 @@ public class Convert {
             return Response.status(400).entity("Given json file is not valid.").build();
         }
 
-        Element urlInput = doc.getElementById("URLInput");
-        urlInput.attr("value", URL);
+        //todo if the first input was url, show url form, so the following
+        //if it was text show form with textarea
+//        Element urlInput = doc.getElementById("URLInput");
+//        urlInput.attr("value", URL == null ? "" : URL);
 
-        Element confidenceInput = doc.getElementById("confidenceInput");
-        confidenceInput.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
+//        Element confidenceInputURL = doc.getElementById("confidenceInputURL");
+//        confidenceInputURL.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
+        Element confidenceInputTEXT = doc.getElementById("confidenceInputTEXT");
+        confidenceInputTEXT.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
 
-        Element sourceHTML = doc.getElementById("source");
-        sourceHTML.append("<b>Source URL: </b> <a href=\"" + URL + "\">" + URL + "</a>");
+        if (URL != null) {
+            Element sourceHTML = doc.getElementById("source");
+            sourceHTML.append("<b>Source URL: </b> <a href=\"" + URL + "\">" + URL + "</a>");
+        }
 
         if (jsonNode.isArray()) {
             Iterator<JsonNode> iterator = jsonNode.elements();
@@ -140,11 +184,11 @@ public class Convert {
                 JsonNode node = iterator.next();
 
                 if (node.get("fulltext") != null) {
-                    Element fulltextHTML = doc.getElementById("fulltext");
+                    Element textareaHTML = doc.getElementById("textInput");
 
                     String fulltext = node.get("fulltext").asText();
 
-                    fulltextHTML.append(fulltext);
+                    textareaHTML.append(fulltext);
 
                 } else {
 
@@ -208,7 +252,10 @@ public class Convert {
                             }
                         }
 
-                        finalViewables.add(viewable);
+                        if (!finalViewables.contains(viewable)) {
+                            finalViewables.add(viewable);
+                        }
+
 
                     }
 

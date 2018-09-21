@@ -22,8 +22,8 @@
       }),
     ],
     view: new ol.View({
-      center: ol.proj.fromLonLat([6.661594, 50.433237]),
-      zoom: 1.7,
+      center: ol.proj.fromLonLat([6.661594, 43.433237]),
+      zoom: 1.81,
     })
   });
 

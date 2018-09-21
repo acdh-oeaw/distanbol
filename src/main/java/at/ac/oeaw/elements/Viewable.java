@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 public class Viewable {
     private String id;
@@ -101,7 +102,13 @@ public class Viewable {
         doc.body().getElementById("id").attr("name", getId());
         doc.body().getElementById("id").append(getId());
         doc.body().getElementById("label").append(getLabel());
-        doc.body().getElementById("comment").append(getComment());
+
+        if (getComment() != null) {
+            doc.body().getElementById("comment").append(getComment());
+        } else {
+            doc.body().getElementById("comment").attr("class", "hidden");
+        }
+
         doc.body().getElementById("confidence").append(String.valueOf(getEntityEnhancement().getConfidence()));
         doc.body().getElementById("context").append(getTextEnhancements().get(0).getContext());
 
@@ -110,14 +117,14 @@ public class Viewable {
         doc.body().getElementById("fullImageLink").attr("href", getDepiction());
         doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());
 
-        if(getLongitude()!=null && getLatitude()!=null){
-            String coordinates = "<coordinate><long>"+getLongitude()+"</long><lat>"+getLatitude()+"</lat></coordinate>";
+        if (getLongitude() != null && getLatitude() != null) {
+            String coordinates = "<coordinate><long>" + getLongitude() + "</long><lat>" + getLatitude() + "</lat></coordinate>";
             doc.body().getElementById("coordinates").append(coordinates);
         }
         return doc.html();
     }
 
-    public String getHTMLTableRowDepiction() throws IOException{
+    public String getHTMLTableRowDepiction() throws IOException {
         StringBuilder sb = new StringBuilder();
         sb.append("<tr>");
 
@@ -134,7 +141,7 @@ public class Viewable {
         return sb.toString();
     }
 
-    private String getTypesHTML(){
+    private String getTypesHTML() {
         String typesHTML;
         ArrayList<String> types = getTypes();
         if ((types != null) && (!types.isEmpty())) {
@@ -227,5 +234,29 @@ public class Viewable {
 
     public void setDepictionThumbnail(String depictionThumbnail) {
         this.depictionThumbnail = depictionThumbnail;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null) {
+            return false;
+        }
+
+        if (getClass() != o.getClass()) {
+            return false;
+        }
+
+        Viewable viewable = (Viewable) o;
+
+        return viewable.getId().equals(id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
