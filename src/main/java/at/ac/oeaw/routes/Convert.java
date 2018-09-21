@@ -70,10 +70,10 @@ public class Convert {
             return Response.serverError().entity("Something went wrong.").build();
         }
 
-        if(json){
-            return processStanbolJSONtoHTML(doc,null,input);
-        }else{
-            return processTEXTtoHTML(doc,null,input);
+        if (json) {
+            return processStanbolJSONtoHTML(doc, null, input);
+        } else {
+            return processTEXTtoHTML(doc, null, input);
         }
 
 
@@ -149,6 +149,11 @@ public class Convert {
 
 
     private Response processStanbolJSONtoHTML(Document doc, String URL, String json) {
+        boolean fromURL = true;
+        if (URL == null) {
+            fromURL = false;
+        }
+
         JsonNode jsonNode;
         try {
             jsonNode = mapper.readTree(json);
@@ -156,20 +161,32 @@ public class Convert {
             return Response.status(400).entity("Given json file is not valid.").build();
         }
 
-        //todo if the first input was url, show url form, so the following
-        //if it was text show form with textarea
-//        Element urlInput = doc.getElementById("URLInput");
-//        urlInput.attr("value", URL == null ? "" : URL);
 
-//        Element confidenceInputURL = doc.getElementById("confidenceInputURL");
-//        confidenceInputURL.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
-        Element confidenceInputTEXT = doc.getElementById("confidenceInputTEXT");
-        confidenceInputTEXT.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
+        //there are two 3 divs in the template for two cases
+        //if the input was a url, only a url form and the fulltext as just a text is displayed
+        //if the input was text, text is displayed inside a textarea form
+        if (fromURL) {
+            Element urlInput = doc.getElementById("URLInput");
+            urlInput.attr("value", URL);
 
-        if (URL != null) {
+            Element confidenceInputURL = doc.getElementById("confidenceInputURL");
+            confidenceInputURL.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
+
             Element sourceHTML = doc.getElementById("source");
             sourceHTML.append("<b>Source URL: </b> <a href=\"" + URL + "\">" + URL + "</a>");
+
+            Element textareaDiv = doc.getElementById("textForm");
+            textareaDiv.attr("class", "hidden");
+        } else {
+            Element confidenceInputTEXT = doc.getElementById("confidenceInputTEXT");
+            confidenceInputTEXT.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
+
+            Element fulltextDiv = doc.getElementById("fulltext");
+            fulltextDiv.attr("class", "hidden");
+            Element urlDiv = doc.getElementById("urlForm");
+            urlDiv.attr("class", "hidden");
         }
+
 
         if (jsonNode.isArray()) {
             Iterator<JsonNode> iterator = jsonNode.elements();
@@ -183,12 +200,21 @@ public class Convert {
             while (iterator.hasNext()) {
                 JsonNode node = iterator.next();
 
+
+                //this happens only once
                 if (node.get("fulltext") != null) {
-                    Element textareaHTML = doc.getElementById("textInput");
 
-                    String fulltext = node.get("fulltext").asText();
+                    if (fromURL) {
+                        Element fulltextHTML = doc.getElementById("fulltext");
+                        String fulltext = node.get("fulltext").asText();
 
-                    textareaHTML.append(fulltext);
+                        fulltextHTML.append(fulltext);
+                    }else{
+                        Element textInputHTML = doc.getElementById("textInput");
+                        String fulltext = node.get("fulltext").asText();
+
+                        textInputHTML.append(fulltext);
+                    }
 
                 } else {
 

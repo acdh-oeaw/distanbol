@@ -1,4 +1,5 @@
-[ {
+[ {"fulltext":"US President Donald Trump drew a sharp rebuttal from his attorney general after giving a scathing assessment of Jeff Sessions as being unable to take control of the Justice Department."},
+  {
   "@id" : "http://dbpedia.org/resource/Donald_Trump",
   "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Person", "http://schema.org/Person", "http://www.w3.org/2002/07/owl#Thing", "http://xmlns.com/foaf/0.1/Person" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {

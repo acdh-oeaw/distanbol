@@ -1,1022 +1,651 @@
-[ {
-  "@id" : "http://dbpedia.org/resource/Air_France",
-  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Organisation", "http://schema.org/Organization", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Air France (formally Société Air France, S.A. ), stylised as AIRFRANCE, is the French flag carrier headquartered in Tremblay-en-France, (north of Paris), and is one of the world's largest airlines. It is a subsidiary of the Air France-KLM Group and a founding member of the SkyTeam global airline alliance.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Air France",
-    "@language" : "de"
-  }, {
-    "@value" : "Air France",
-    "@language" : "en"
-  }, {
-    "@value" : "Air France",
-    "@language" : "es"
-  }, {
-    "@value" : "Air France",
-    "@language" : "fr"
-  }, {
-    "@value" : "Air France",
-    "@language" : "it"
-  }, {
-    "@value" : "Air France",
-    "@language" : "pt"
-  }, {
-    "@value" : "Air France",
-    "@language" : "ru"
-  }, {
-    "@value" : "Air France",
-    "@language" : "tr"
-  }, {
-    "@value" : "אייר פראנס",
-    "@language" : "he"
-  }, {
-    "@value" : "الخطوط الجوية الفرنسية",
-    "@language" : "ar"
-  }, {
-    "@value" : "法國航空",
-    "@language" : "zh"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/4/44/Air_France_Logo.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/200px-Air_France_Logo.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Amsterdam",
-  "@type" : [ "http://dbpedia.org/ontology/City", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/City", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Amsterdam is the largest city and the capital of the Netherlands. The city's status as the capital of the nation is governed by the constitution. Amsterdam has a population of 790,654 within city limits, an urban population of 1,209,419 and a metropolitan population of 2,289,762. The city is located in the province of North Holland in the west of the country. It comprises the northern part of the Randstad, one of the larger conurbations in Europe, with a population of approximately 7 million.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Amsterdam",
-    "@language" : "de"
-  }, {
-    "@value" : "Amsterdam",
-    "@language" : "en"
-  }, {
-    "@value" : "Amsterdam",
-    "@language" : "fr"
-  }, {
-    "@value" : "Amsterdam",
-    "@language" : "it"
-  }, {
-    "@value" : "Amsterdam",
-    "@language" : "tr"
-  }, {
-    "@value" : "Amsterdão",
-    "@language" : "pt"
-  }, {
-    "@value" : "Ámsterdam",
-    "@language" : "es"
-  }, {
-    "@value" : "Амстердам",
-    "@language" : "ru"
-  }, {
-    "@value" : "אמסטרדם",
-    "@language" : "he"
-  }, {
-    "@value" : "أمستردام",
-    "@language" : "ar"
-  }, {
-    "@value" : "阿姆斯特丹",
-    "@language" : "zh"
-  } ],
-  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
-    "@value" : "52.373055",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
-    "@value" : "4.8922224",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/6a/Sights_in_Amsterdam2.jpg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sights_in_Amsterdam2.jpg/200px-Sights_in_Amsterdam2.jpg"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Amsterdam_Airport_Schiphol",
-  "@type" : [ "http://dbpedia.org/ontology/Airport", "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Infrastructure", "http://dbpedia.org/ontology/Place", "http://schema.org/Airport", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Amsterdam Airport Schiphol is the Netherlands' main international airport, located 20 minutes southwest of Amsterdam, in the municipality of Haarlemmermeer. The airport's official English name, Amsterdam Airport Schiphol, reflects the original Dutch word order (Luchthaven Schiphol). The airport used to have the IATA code of SPL, which has fallen into disuse and has been replaced by AMS.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Aeroporto de Amsterdão Schiphol",
-    "@language" : "pt"
-  }, {
-    "@value" : "Aeroporto di Amsterdam-Schiphol",
-    "@language" : "it"
-  }, {
-    "@value" : "Aeropuerto de Ámsterdam-Schiphol",
-    "@language" : "es"
-  }, {
-    "@value" : "Amsterdam Airport Schiphol",
-    "@language" : "en"
-  }, {
-    "@value" : "Amsterdam Schiphol Havalimanı",
-    "@language" : "tr"
-  }, {
-    "@value" : "Aéroport d'Amsterdam-Schiphol",
-    "@language" : "fr"
-  }, {
-    "@value" : "Flughafen Schiphol",
-    "@language" : "de"
-  }, {
-    "@value" : "Схипхол",
-    "@language" : "ru"
-  }, {
-    "@value" : "נמל התעופה סכיפהול",
-    "@language" : "he"
-  }, {
-    "@value" : "مطار سخيبول أمستردام",
-    "@language" : "ar"
-  }, {
-    "@value" : "阿姆斯特丹史基浦機場",
-    "@language" : "zh"
-  } ],
-  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
-    "@value" : "52.308056",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
-    "@value" : "4.764167",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/b/bb/Schiphol_logo.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Schiphol_logo.svg/200px-Schiphol_logo.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Amsterdam_Arena",
-  "@type" : [ "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Building", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/Stadium", "http://schema.org/Place", "http://schema.org/StadiumOrArena", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Amsterdam Arena (often stylized as Amsterdam ArenA) is a stadium in Amsterdam, Netherlands. It is the largest stadium in the country and it was built from 1993 to 1996 at a cost of €140 million, and was officially opened on 14 August 1996. It has been used for association football, American football, concerts, and other events. The stadium has a retractable roof combined with a grass surface.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Amsterdam ArenA",
-    "@language" : "fr"
-  }, {
-    "@value" : "Amsterdam ArenA",
-    "@language" : "it"
-  }, {
-    "@value" : "Amsterdam ArenA",
-    "@language" : "pt"
-  }, {
-    "@value" : "Amsterdam ArenA",
-    "@language" : "tr"
-  }, {
-    "@value" : "Amsterdam Arena",
-    "@language" : "de"
-  }, {
-    "@value" : "Amsterdam Arena",
-    "@language" : "en"
-  }, {
-    "@value" : "Ámsterdam Arena",
-    "@language" : "es"
-  }, {
-    "@value" : "Амстердам АренА",
-    "@language" : "ru"
-  }, {
-    "@value" : "אמסטרדם ארנה",
-    "@language" : "he"
-  }, {
-    "@value" : "ملعب أمستردام أرينا",
-    "@language" : "ar"
-  }, {
-    "@value" : "阿姆斯特丹球場",
-    "@language" : "zh"
-  } ],
-  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
-    "@value" : "52.314167",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
-    "@value" : "4.9419446",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/f/fa/Amsterdam_Arena_logo.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Amsterdam_Arena_logo.svg/200px-Amsterdam_Arena_logo.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/British_Airways",
-  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Organisation", "http://schema.org/Organization", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "British Airways (BA) is the flag carrier airline of the United Kingdom, based in Waterside, near its main hub at London Heathrow Airport. British Airways is the largest airline in the UK based on fleet size, international flights and international destinations and second largest measured by passengers carried, behind easyJet.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "British Airways",
-    "@language" : "de"
-  }, {
-    "@value" : "British Airways",
-    "@language" : "en"
-  }, {
-    "@value" : "British Airways",
-    "@language" : "es"
-  }, {
-    "@value" : "British Airways",
-    "@language" : "fr"
-  }, {
-    "@value" : "British Airways",
-    "@language" : "it"
-  }, {
-    "@value" : "British Airways",
-    "@language" : "pt"
-  }, {
-    "@value" : "British Airways",
-    "@language" : "ru"
-  }, {
-    "@value" : "British Airways",
-    "@language" : "tr"
-  }, {
-    "@value" : "בריטיש איירווייז",
-    "@language" : "he"
-  }, {
-    "@value" : "الخطوط الجوية البريطانية",
-    "@language" : "ar"
-  }, {
-    "@value" : "英國航空",
-    "@language" : "zh"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/4/42/British_Airways_Logo.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/4/42/British_Airways_Logo.svg/200px-British_Airways_Logo.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Council_of_Europe",
-  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Council of Europe (French: Conseil de l'Europe) is an international organization promoting co-operation between all countries of Europe in the areas of legal standards, human rights, democratic development, the rule of law and cultural co-operation. It was founded in 1949, has 47 member states with some 800 million citizens, and is an entirely separate body from the European Union (EU), which has only 27 member states. Unlike the EU, the Council of Europe cannot make binding laws.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Avrupa Konseyi",
-    "@language" : "tr"
-  }, {
-    "@value" : "Conseil de l'Europe",
-    "@language" : "fr"
-  }, {
-    "@value" : "Consejo de Europa",
-    "@language" : "es"
-  }, {
-    "@value" : "Conselho da Europa",
-    "@language" : "pt"
-  }, {
-    "@value" : "Consiglio d'Europa",
-    "@language" : "it"
-  }, {
-    "@value" : "Council of Europe",
-    "@language" : "en"
-  }, {
-    "@value" : "Europarat",
-    "@language" : "de"
-  }, {
-    "@value" : "Совет Европы",
-    "@language" : "ru"
-  }, {
-    "@value" : "מועצת אירופה",
-    "@language" : "he"
-  }, {
-    "@value" : "مجلس أوروبا",
-    "@language" : "ar"
-  }, {
-    "@value" : "欧洲委员会",
-    "@language" : "zh"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/200px-Flag_of_Europe.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Europe",
-  "@type" : [ "http://dbpedia.org/ontology/Continent", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Continent", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Europe is, by convention, one of the world's seven continents. Comprising the westernmost peninsula of Eurasia, Europe is generally 'divided' from Asia to its east by the watershed divides of the Ural and Caucasus Mountains, the Ural River, the Caspian and Black Seas, and the waterways connecting the Black and Aegean Seas.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Avrupa",
-    "@language" : "tr"
-  }, {
-    "@value" : "Europa",
-    "@language" : "de"
-  }, {
-    "@value" : "Europa",
-    "@language" : "es"
-  }, {
-    "@value" : "Europa",
-    "@language" : "it"
-  }, {
-    "@value" : "Europa",
-    "@language" : "pt"
-  }, {
-    "@value" : "Europe",
-    "@language" : "en"
-  }, {
-    "@value" : "Europe",
-    "@language" : "fr"
-  }, {
-    "@value" : "Европа",
-    "@language" : "ru"
-  }, {
-    "@value" : "אירופה",
-    "@language" : "he"
-  }, {
-    "@value" : "أوروبا",
-    "@language" : "ar"
-  }, {
-    "@value" : "欧洲",
-    "@language" : "zh"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/d/de/Europe_orthographic_Caucasus_Urals_boundary.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Europe_orthographic_Caucasus_Urals_boundary.svg/200px-Europe_orthographic_Caucasus_Urals_boundary.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Iran",
+[ {"fulltext":"Vienna is a city in Austria. Istanbul is a city in Turkey. Cophenagen is a city in Denmark. Lima is a city in Peru. Riga is a city in Latvia. Beijing is a city in China."},
+  {
+  "@id" : "http://dbpedia.org/resource/Austria",
   "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Iran, officially the Islamic Republic of Iran, is a country in Southern and Western Asia. The name \"Iran\", which in Persian means \"Land of the Aryans\", has been in use natively since the Sassanian era. It came into use internationally in 1935, before which the country was known to the Western world as Persia. Both \"Persia\" and \"Iran\" are used interchangeably in cultural contexts; however, \"Iran\" is the name used officially in political contexts.",
+    "@value" : "Austria, officially the Republic of Austria, is a landlocked country of roughly 8.47 million people in Central Europe. It is bordered by the Czech Republic and Germany to the north, Hungary and Slovakia to the east, Slovenia and Italy to the south, and Switzerland and Liechtenstein to the west. The territory of Austria covers 83,855 square kilometres (32,377 sq mi) and has a temperate and alpine climate.",
     "@language" : "en"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Iran",
-    "@language" : "de"
-  }, {
-    "@value" : "Iran",
+    "@value" : "Austria",
     "@language" : "en"
   }, {
-    "@value" : "Iran",
-    "@language" : "fr"
-  }, {
-    "@value" : "Iran",
-    "@language" : "it"
-  }, {
-    "@value" : "Irán",
+    "@value" : "Austria",
     "@language" : "es"
   }, {
-    "@value" : "Irão",
-    "@language" : "pt"
+    "@value" : "Austria",
+    "@language" : "it"
   }, {
-    "@value" : "İran",
+    "@value" : "Autriche",
+    "@language" : "fr"
+  }, {
+    "@value" : "Avusturya",
     "@language" : "tr"
   }, {
-    "@value" : "Иран",
+    "@value" : "Áustria",
+    "@language" : "pt"
+  }, {
+    "@value" : "Österreich",
+    "@language" : "de"
+  }, {
+    "@value" : "Австрия",
     "@language" : "ru"
   }, {
-    "@value" : "איראן",
+    "@value" : "אוסטריה",
     "@language" : "he"
   }, {
-    "@value" : "إيران",
+    "@value" : "النمسا",
     "@language" : "ar"
   }, {
-    "@value" : "伊朗",
+    "@value" : "奥地利",
     "@language" : "zh"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
-    "@value" : "32.0",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  }, {
-    "@value" : "35.683334",
+    "@value" : "48.2",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
-    "@value" : "51.416668",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  }, {
-    "@value" : "53.0",
+    "@value" : "16.35",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg"
   }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/200px-Flag_of_Iran.svg.png"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/200px-Flag_of_Austria.svg.png"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/KLM",
-  "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Organisation", "http://schema.org/Organization", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Koninklijke Luchtvaart Maatschappij N.V. , operating under the name KLM Royal Dutch Airlines, is the flag carrier airline of the Netherlands and is part of Air France-KLM. KLM's headquarters is in Amstelveen near its hub at Amsterdam Airport Schiphol. KLM operates worldwide scheduled passenger and cargo services to more than 90 destinations. It is the oldest airline in the world still operating under its original name. As of 31 March 2010 (2010 -03-31), it has 31,787 employees.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "KLM",
-    "@language" : "en"
-  }, {
-    "@value" : "KLM",
-    "@language" : "he"
-  }, {
-    "@value" : "KLM",
-    "@language" : "it"
-  }, {
-    "@value" : "KLM",
-    "@language" : "pt"
-  }, {
-    "@value" : "KLM",
-    "@language" : "ru"
-  }, {
-    "@value" : "KLM",
-    "@language" : "tr"
-  }, {
-    "@value" : "KLM Royal Dutch Airlines",
-    "@language" : "de"
-  }, {
-    "@value" : "KLM Royal Dutch Airlines",
-    "@language" : "es"
-  }, {
-    "@value" : "KLM Royal Dutch Airlines",
-    "@language" : "fr"
-  }, {
-    "@value" : "الخطوط الجوية الملكية الهولندية",
-    "@language" : "ar"
-  }, {
-    "@value" : "荷蘭皇家航空",
-    "@language" : "zh"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/c7/KLM_logo.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/KLM_logo.svg/200px-KLM_logo.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Organization_for_Security_and_Co-operation_in_Europe",
-  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Organization for Security and Co-operation in Europe (OSCE) is the world's largest security-oriented intergovernmental organization. Its mandate includes issues such as arms control and the promotion of human rights, freedom of the press and fair elections. It has 550 headquarters staff and about 2300 field staff. The OSCE is an ad hoc organization under the United Nations Charter (Chap.",
-    "@language" : "en"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Avrupa Güvenlik ve İşbirliği Teşkilatı",
-    "@language" : "tr"
-  }, {
-    "@value" : "Organisation für Sicherheit und Zusammenarbeit in Europa",
-    "@language" : "de"
-  }, {
-    "@value" : "Organisation pour la sécurité et la coopération en Europe",
-    "@language" : "fr"
-  }, {
-    "@value" : "Organización para la Seguridad y la Cooperación en Europa",
-    "@language" : "es"
-  }, {
-    "@value" : "Organization for Security and Co-operation in Europe",
-    "@language" : "en"
-  }, {
-    "@value" : "Organização para a Segurança e Cooperação na Europa",
-    "@language" : "pt"
-  }, {
-    "@value" : "Organizzazione per la Sicurezza e la Cooperazione in Europa",
-    "@language" : "it"
-  }, {
-    "@value" : "Организация по безопасности и сотрудничеству в Европе",
-    "@language" : "ru"
-  }, {
-    "@value" : "הארגון לביטחון ולשיתוף פעולה באירופה",
-    "@language" : "he"
-  }, {
-    "@value" : "منظمة الأمن والتعاون في أوروبا",
-    "@language" : "ar"
-  }, {
-    "@value" : "歐洲安全與合作組織",
-    "@language" : "zh"
-  } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/3/34/OSCE_logo.svg"
-  }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/OSCE_logo.svg/200px-OSCE_logo.svg.png"
-  } ]
-}, {
-  "@id" : "http://dbpedia.org/resource/Paris",
+  "@id" : "http://dbpedia.org/resource/Beijing",
   "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Paris is the capital and largest city of France. It is situated on the river Seine, in northern France, at the heart of the Île-de-France region (or Paris Region, French: Région parisienne). As of January 2008 the city of Paris, within its administrative limits largely unchanged since 1860, has an estimated population of 2,211,297 and a metropolitan population of 12,089,098, and is one of the most populated metropolitan areas in Europe.",
+    "@value" : "Beijing, formerly romanized as Peking, is the capital of the People's Republic of China and one of the most populous cities in the world, with a population of 19,612,368 as of 2010. The metropolis, located in northern China, is governed as a direct-controlled municipality under the national government, with 14 urban and suburban districts and two rural counties. Beijing Municipality is surrounded by Hebei Province with the exception of neighboring Tianjin Municipality to the southeast.",
     "@language" : "en"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Parigi",
-    "@language" : "it"
-  }, {
-    "@value" : "Paris",
-    "@language" : "de"
-  }, {
-    "@value" : "Paris",
+    "@value" : "Beijing",
     "@language" : "en"
   }, {
-    "@value" : "Paris",
-    "@language" : "fr"
+    "@value" : "Pechino",
+    "@language" : "it"
   }, {
-    "@value" : "Paris",
-    "@language" : "pt"
-  }, {
-    "@value" : "Paris",
+    "@value" : "Pekin",
     "@language" : "tr"
   }, {
-    "@value" : "París",
+    "@value" : "Peking",
+    "@language" : "de"
+  }, {
+    "@value" : "Pekín",
     "@language" : "es"
   }, {
-    "@value" : "Париж",
+    "@value" : "Pequim",
+    "@language" : "pt"
+  }, {
+    "@value" : "Pékin",
+    "@language" : "fr"
+  }, {
+    "@value" : "Пекин",
     "@language" : "ru"
   }, {
-    "@value" : "פריז",
+    "@value" : "בייג'ינג",
     "@language" : "he"
   }, {
-    "@value" : "باريس",
+    "@value" : "بكين",
     "@language" : "ar"
   }, {
-    "@value" : "巴黎",
+    "@value" : "北京市",
     "@language" : "zh"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
-    "@value" : "48.8567",
+    "@value" : "39.906387",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "39.913887",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
-    "@value" : "2.3508",
+    "@value" : "116.37972",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "116.39167",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/d/dd/Beijing_montage.png"
   }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Paris_-_Eiffelturm_und_Marsfeld2.jpg/200px-Paris_-_Eiffelturm_und_Marsfeld2.jpg"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Beijing_montage.png/200px-Beijing_montage.png"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/Paris_Commune",
-  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "@id" : "http://dbpedia.org/resource/China",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Paris Commune or Fourth French Revolution was a government that briefly ruled Paris from March 18 (more formally, from March 28) to May 28, 1871. It existed before the split between anarchists and Marxists had taken place, and it is hailed by both groups as the first assumption of power by the working class during the Industrial Revolution. Debates over the policies and outcome of the Commune contributed to the break between those two political groups.",
+    "@value" : "China, officially the People's Republic of China (PRC), is the world's most-populous country, with a population of over 1.3 billion. Covering approximately 9.6 million square kilometres, the East Asian state is the world's second-largest country by land area, and the third- or fourth-largest in total area, depending on the definition of total area. The People's Republic of China is a single-party state governed by the Communist Party of China.",
     "@language" : "en"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Commune de Paris (1871)",
-    "@language" : "fr"
-  }, {
-    "@value" : "Comuna de Paris",
-    "@language" : "pt"
-  }, {
-    "@value" : "Comuna de París",
-    "@language" : "es"
-  }, {
-    "@value" : "Comune di Parigi (1871)",
-    "@language" : "it"
-  }, {
-    "@value" : "Paris Commune",
+    "@value" : "China",
     "@language" : "en"
   }, {
-    "@value" : "Paris Komünü",
-    "@language" : "tr"
+    "@value" : "Cina",
+    "@language" : "it"
   }, {
-    "@value" : "Pariser Kommune",
+    "@value" : "República Popular China",
+    "@language" : "es"
+  }, {
+    "@value" : "República Popular da China",
+    "@language" : "pt"
+  }, {
+    "@value" : "République populaire de Chine",
+    "@language" : "fr"
+  }, {
+    "@value" : "Volksrepublik China",
     "@language" : "de"
   }, {
-    "@value" : "Парижская коммуна",
+    "@value" : "Çin Halk Cumhuriyeti",
+    "@language" : "tr"
+  }, {
+    "@value" : "Китайская Народная Республика",
     "@language" : "ru"
   }, {
-    "@value" : "הקומונה הפריזאית",
+    "@value" : "הרפובליקה העממית של סין",
     "@language" : "he"
   }, {
-    "@value" : "كومونة باريس",
+    "@value" : "الصين",
     "@language" : "ar"
   }, {
-    "@value" : "巴黎公社",
+    "@value" : "中华人民共和国",
     "@language" : "zh"
   } ],
-  "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "35.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
   }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/200px-Flag_of_France.svg.png"
+    "@value" : "39.916668",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "103.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "116.38333",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People's_Republic_of_China.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/200px-Flag_of_the_People's_Republic_of_China.svg.png"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/Paris_M%C3%A9tro",
-  "@type" : [ "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Infrastructure", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PublicTransitSystem", "http://dbpedia.org/ontology/RouteOfTransportation", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "@id" : "http://dbpedia.org/resource/Denmark",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Paris Métro or Métropolitain (French: Métro de Paris) is the rapid transit metro system in Paris, France. It has become a symbol of the city, noted for its density within the city limits and its uniform architecture influenced by Art Nouveau. The network's sixteen lines are mostly underground and run to 214 km (133 mi) in length. There are 301 stations (384 stops), of which 62 facilitate transfer to another line.",
+    "@value" : "The Kingdom of Denmark is a constitutional monarchy and sovereign state consisting the country of Denmark in northern Europe and two autonomous constituent countries, the Faroe Islands in the North Atlantic and Greenland in North America. The kingdom is a unitary state with some power being devolved from Denmark proper to Greenland and the Faroe Islands; this polity is referred to as the Danish Realm.",
     "@language" : "en"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Metro de París",
-    "@language" : "es"
-  }, {
-    "@value" : "Metropolitana di Parigi",
-    "@language" : "it"
-  }, {
-    "@value" : "Metropolitano de Paris",
-    "@language" : "pt"
-  }, {
-    "@value" : "Métro Paris",
-    "@language" : "de"
-  }, {
-    "@value" : "Métro de Paris",
+    "@value" : "Danemark",
     "@language" : "fr"
   }, {
-    "@value" : "Paris Métro",
-    "@language" : "en"
+    "@value" : "Danimarca",
+    "@language" : "it"
   }, {
-    "@value" : "Paris metrosu",
+    "@value" : "Danimarka",
     "@language" : "tr"
   }, {
-    "@value" : "Парижский метрополитен",
+    "@value" : "Denmark",
+    "@language" : "en"
+  }, {
+    "@value" : "Dinamarca",
+    "@language" : "es"
+  }, {
+    "@value" : "Dinamarca",
+    "@language" : "pt"
+  }, {
+    "@value" : "Dänemark",
+    "@language" : "de"
+  }, {
+    "@value" : "Дания",
     "@language" : "ru"
   }, {
-    "@value" : "הרכבת התחתית של פריז",
+    "@value" : "דנמרק",
     "@language" : "he"
   }, {
-    "@value" : "مترو باريس",
+    "@value" : "الدنمارك",
     "@language" : "ar"
   }, {
-    "@value" : "巴黎地鐵",
+    "@value" : "丹麦",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "55.716667",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "56.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "10.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "12.566667",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/200px-Flag_of_Denmark.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Denmark%E2%80%93Norway",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Denmark–Norway is the historiographical name for a former political entity consisting of the kingdoms of Denmark and Norway, including the originally Norwegian dependencies of Iceland, Greenland and the Faroe Islands. Following the strife surrounding the break-up of its predecessor, the Kalmar Union, the two kingdoms entered into another personal union in 1536 which lasted until 1814. The corresponding adjective and demonym is Dano-Norwegian.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Danimarca-Norvegia",
+    "@language" : "it"
+  }, {
+    "@value" : "Danimarka-Norveç",
+    "@language" : "tr"
+  }, {
+    "@value" : "Denmark–Norway",
+    "@language" : "en"
+  }, {
+    "@value" : "Dänemark-Norwegen",
+    "@language" : "de"
+  }, {
+    "@value" : "Reino da Dinamarca e Noruega",
+    "@language" : "pt"
+  }, {
+    "@value" : "Reino de Dinamarca y Noruega",
+    "@language" : "es"
+  }, {
+    "@value" : "Royaume du Danemark et de Norvège",
+    "@language" : "fr"
+  }, {
+    "@value" : "Датско-норвежская уния",
+    "@language" : "ru"
+  }, {
+    "@value" : "דנמרק-נורבגיה",
+    "@language" : "he"
+  }, {
+    "@value" : "丹麥-挪威",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "55.666668",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "12.566667",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/200px-Flag_of_Denmark.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Great_Wall_of_China",
+  "@type" : [ "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Building", "http://dbpedia.org/ontology/Place", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Great Wall of China is a series of fortifications made of stone, brick, tamped earth, wood, and other materials, generally built along an east-to-west line across the historical northern borders of China in part to protect the Chinese Empire or its prototypical states against intrusions by various nomadic groups or military incursions by various warlike peoples or forces.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chinesische Mauer",
+    "@language" : "de"
+  }, {
+    "@value" : "Gran Muralla China",
+    "@language" : "es"
+  }, {
+    "@value" : "Grande Muraille",
+    "@language" : "fr"
+  }, {
+    "@value" : "Grande muraglia cinese",
+    "@language" : "it"
+  }, {
+    "@value" : "Great Wall of China",
+    "@language" : "en"
+  }, {
+    "@value" : "Muralha da China",
+    "@language" : "pt"
+  }, {
+    "@value" : "Çin Seddi",
+    "@language" : "tr"
+  }, {
+    "@value" : "Великая китайская стена",
+    "@language" : "ru"
+  }, {
+    "@value" : "החומה הגדולה של סין",
+    "@language" : "he"
+  }, {
+    "@value" : "سور الصين العظيم",
+    "@language" : "ar"
+  }, {
+    "@value" : "长城",
     "@language" : "zh"
   } ],
   "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/6/66/Paris_Metro_Sign.jpg"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/f/fa/Great_Wall_of_China_July_2006.JPG"
   }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Paris_Metro_Sign.jpg/200px-Paris_Metro_Sign.jpg"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/200px-Great_Wall_of_China_July_2006.JPG"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/Tehran",
+  "@id" : "http://dbpedia.org/resource/Latvia",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Latvia Listen/ˈlætviə/, officially the Republic of Latvia, is a country in the Baltic region of Northern Europe. It is bordered to the north by Estonia (border length 343 km), to the south by Lithuania (588 km), to the east by the Russian Federation (276 km), to the southeast by Belarus (141 km), and shares maritime borders to the west with Sweden.",
+    "@language" : "en"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Latvia",
+    "@language" : "en"
+  }, {
+    "@value" : "Letonia",
+    "@language" : "es"
+  }, {
+    "@value" : "Letonya",
+    "@language" : "tr"
+  }, {
+    "@value" : "Lettland",
+    "@language" : "de"
+  }, {
+    "@value" : "Lettonia",
+    "@language" : "it"
+  }, {
+    "@value" : "Lettonie",
+    "@language" : "fr"
+  }, {
+    "@value" : "Letónia",
+    "@language" : "pt"
+  }, {
+    "@value" : "Латвия",
+    "@language" : "ru"
+  }, {
+    "@value" : "לטביה",
+    "@language" : "he"
+  }, {
+    "@value" : "لاتفيا",
+    "@language" : "ar"
+  }, {
+    "@value" : "拉脫維亞",
+    "@language" : "zh"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "56.95",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "57.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "24.1",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  }, {
+    "@value" : "25.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/200px-Flag_of_Latvia.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Lower_Austria",
   "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Tehran, sometimes spelled Teheran, is the capital of Iran and Tehran Province. With an estimated population of 8,429,807; it is also Iran's largest urban area and city, the largest city in Western Asia, one of the largest in Southern Asia, and the 19th-largest city globally. In the 20th century, Tehran was subject to mass-migration of people from all around Iran. The city is home to many historic mosques, churches, synagogues and Zoroastrian fire temples.",
+    "@value" : "Lower Austria is the northeasternmost state of the nine states in Austria. The capital of Lower Austria since 1986 is Sankt Pölten, the most recently designated capital town in Austria. The capital of Lower Austria had formerly been Vienna, even though Vienna is not officially part of Lower Austria. With a land area of 19,186 km² and a population of 1.612 million people, it is the largest state in Austria, and in terms of population second only to the federal state of Vienna.",
     "@language" : "en"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Tahran",
+    "@value" : "Aşağı Avusturya",
     "@language" : "tr"
   }, {
-    "@value" : "Teerã",
+    "@value" : "Baixa Áustria",
     "@language" : "pt"
   }, {
-    "@value" : "Teheran",
-    "@language" : "de"
-  }, {
-    "@value" : "Teheran",
-    "@language" : "it"
-  }, {
-    "@value" : "Teherán",
+    "@value" : "Baja Austria",
     "@language" : "es"
   }, {
-    "@value" : "Tehran",
-    "@language" : "en"
+    "@value" : "Bassa Austria",
+    "@language" : "it"
   }, {
-    "@value" : "Téhéran",
+    "@value" : "Basse-Autriche",
     "@language" : "fr"
   }, {
-    "@value" : "Тегеран",
+    "@value" : "Lower Austria",
+    "@language" : "en"
+  }, {
+    "@value" : "Niederösterreich",
+    "@language" : "de"
+  }, {
+    "@value" : "Нижняя Австрия",
     "@language" : "ru"
   }, {
-    "@value" : "טהראן",
+    "@value" : "אוסטריה תחתית",
     "@language" : "he"
   }, {
-    "@value" : "طهران",
+    "@value" : "النمسا السفلى",
     "@language" : "ar"
   }, {
-    "@value" : "德黑兰",
+    "@value" : "下奧地利州",
     "@language" : "zh"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
-    "@value" : "35.69611",
+    "@value" : "48.333332",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
-    "@value" : "51.423054",
+    "@value" : "15.75",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/2/25/4758976353_tehran_b.jpg"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/7/75/Flag_of_Niederösterreich.svg"
   }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/4758976353_tehran_b.jpg/200px-4758976353_tehran_b.jpg"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Flag_of_Niederösterreich.svg/200px-Flag_of_Niederösterreich.svg.png"
   } ]
 }, {
-  "@id" : "http://dbpedia.org/resource/Tehran_Province",
-  "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "@id" : "http://dbpedia.org/resource/Peru",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Tehran Province is one of the 31 provinces of Iran. It covers on area of 18,909 square kilometers and is located to the north of the central plateau of Iran. Tehran Province borders Māzandarān Province in the north, Qom Province in the south, Semnān Province in the east, and Qazvīn Province in the west. The metropolis of Tehran is the capital city of the province and of Iran. As of June 2005, this province includes 13 townships, 43 municipalities, and 1358 villages.",
+    "@value" : "Peru Listen/pəˈruː/, officially the Republic of Peru, is a country in western South America. It is bordered on the north by Ecuador and Colombia, on the east by Brazil, on the southeast by Bolivia, on the south by Chile, and on the west by the Pacific Ocean. Peruvian territory was home to ancient cultures, spanning from the Norte Chico civilization, one of the oldest in the world, to the Inca Empire, the largest state in Pre-Columbian America.",
     "@language" : "en"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Province de Téhéran",
-    "@language" : "fr"
-  }, {
-    "@value" : "Provincia de Teherán",
-    "@language" : "es"
-  }, {
-    "@value" : "Regione di Teheran",
-    "@language" : "it"
-  }, {
-    "@value" : "Tahran Eyaleti",
-    "@language" : "tr"
-  }, {
-    "@value" : "Teerão (província)",
-    "@language" : "pt"
-  }, {
-    "@value" : "Teheran (Provinz)",
+    "@value" : "Peru",
     "@language" : "de"
   }, {
-    "@value" : "Tehran Province",
+    "@value" : "Peru",
     "@language" : "en"
   }, {
-    "@value" : "Тегеран (остан)",
+    "@value" : "Peru",
+    "@language" : "pt"
+  }, {
+    "@value" : "Peru",
+    "@language" : "tr"
+  }, {
+    "@value" : "Perù",
+    "@language" : "it"
+  }, {
+    "@value" : "Perú",
+    "@language" : "es"
+  }, {
+    "@value" : "Pérou",
+    "@language" : "fr"
+  }, {
+    "@value" : "Перу",
     "@language" : "ru"
   }, {
-    "@value" : "מחוז טהראן",
+    "@value" : "פרו",
     "@language" : "he"
   }, {
-    "@value" : "طهران (محافظة)",
+    "@value" : "بيرو",
     "@language" : "ar"
   }, {
-    "@value" : "德黑蘭省",
+    "@value" : "秘鲁",
     "@language" : "zh"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
-    "@value" : "35.7117",
+    "@value" : "-12.043333",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
-    "@value" : "51.407",
+    "@value" : "-77.028336",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://xmlns.com/foaf/0.1/depiction" : [ {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/c2/Locator_map_Iran_Tehran_Province.png"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/c/cc/Escudo_nacional_del_Perú.svg"
   }, {
-    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Locator_map_Iran_Tehran_Province.png/200px-Locator_map_Iran_Tehran_Province.png"
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Escudo_nacional_del_Perú.svg/200px-Escudo_nacional_del_Perú.svg.png"
   } ]
 }, {
-  "@id" : "urn:enhancement-00ea03e7-f00f-a19a-a676-9de3e3917640",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "1.0",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Amsterdam",
+  "@id" : "http://dbpedia.org/resource/Turkey",
+  "@type" : [ "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://schema.org/Country", "http://schema.org/Place", "http://www.opengis.net/gml/_Feature", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Turkey, known officially as the Republic of Turkey, is a Eurasian country located in Western Asia (mostly in the Anatolian peninsula) and in East Thrace in Southeastern Europe. Turkey is bordered by eight countries: Bulgaria to the northwest; Greece to the west; Georgia to the northeast; Armenia, Azerbaijan and Iran to the east; and Iraq and Syria to the southeast. The Mediterranean Sea and Cyprus are to the south; the Aegean Sea is to the west; and the Black Sea is to the north.",
     "@language" : "en"
   } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Amsterdam"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/City"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Turchia",
+    "@language" : "it"
   }, {
-    "@id" : "http://dbpedia.org/ontology/Place"
+    "@value" : "Turkey",
+    "@language" : "en"
   }, {
-    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+    "@value" : "Turquia",
+    "@language" : "pt"
   }, {
-    "@id" : "http://dbpedia.org/ontology/Settlement"
+    "@value" : "Turquie",
+    "@language" : "fr"
   }, {
-    "@id" : "http://schema.org/City"
+    "@value" : "Turquía",
+    "@language" : "es"
   }, {
-    "@id" : "http://schema.org/Place"
+    "@value" : "Türkei",
+    "@language" : "de"
   }, {
-    "@id" : "http://www.opengis.net/gml/_Feature"
+    "@value" : "Türkiye",
+    "@language" : "tr"
   }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@value" : "Турция",
+    "@language" : "ru"
+  }, {
+    "@value" : "טורקיה",
+    "@language" : "he"
+  }, {
+    "@value" : "تركيا",
+    "@language" : "ar"
+  }, {
+    "@value" : "土耳其",
+    "@language" : "zh"
   } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-16ca4fa8-ed5a-5530-c873-62f944886d2e",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.18040355128983532",
+  "http://www.w3.org/2003/01/geo/wgs84_pos#lat" : [ {
+    "@value" : "39.916668",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Council of Europe",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Council_of_Europe"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Country"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
-  }, {
-    "@id" : "http://schema.org/Country"
-  }, {
-    "@id" : "http://schema.org/Place"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-1a89e01a-b745-a981-1290-b7299db194b5",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.2695332220599443",
+  "http://www.w3.org/2003/01/geo/wgs84_pos#long" : [ {
+    "@value" : "32.833332",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Tehran Province",
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/200px-Flag_of_Turkey.svg.png"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Upper_Austria",
+  "@type" : [ "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/Settlement", "http://schema.org/Place", "http://www.w3.org/2002/07/owl#Thing" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Upper Austria is one of the nine states or Bundesländer of Austria. Its capital is Linz. Upper Austria borders on Germany and the Czech Republic, as well as on the other Austrian states of Lower Austria, Styria, and Salzburg. With an area of 11,980 km² and 1.412 million inhabitants, Upper Austria is the fourth-largest Austrian state by land area and third-largest by population.",
     "@language" : "en"
   } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Tehran_Province"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Place"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Alta Austria",
+    "@language" : "es"
   }, {
-    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+    "@value" : "Alta Austria",
+    "@language" : "it"
   }, {
-    "@id" : "http://dbpedia.org/ontology/Settlement"
+    "@value" : "Alta Áustria",
+    "@language" : "pt"
   }, {
-    "@id" : "http://schema.org/Place"
+    "@value" : "Haute-Autriche",
+    "@language" : "fr"
   }, {
-    "@id" : "http://www.opengis.net/gml/_Feature"
+    "@value" : "Oberösterreich",
+    "@language" : "de"
   }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-a6188662-239c-6266-2375-fefb68059f90"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-1f6d42be-89b0-c5e4-e780-983a207fb73e",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "1.0",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "British Airways",
+    "@value" : "Upper Austria",
     "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/British_Airways"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Agent"
   }, {
-    "@id" : "http://dbpedia.org/ontology/Airline"
+    "@value" : "Yukarı Avusturya",
+    "@language" : "tr"
   }, {
-    "@id" : "http://dbpedia.org/ontology/Company"
+    "@value" : "Верхняя Австрия",
+    "@language" : "ru"
   }, {
-    "@id" : "http://dbpedia.org/ontology/Organisation"
+    "@value" : "אוסטריה עילית",
+    "@language" : "he"
   }, {
-    "@id" : "http://schema.org/Organization"
+    "@value" : "النمسا العليا",
+    "@language" : "ar"
   }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@value" : "上奧地利",
+    "@language" : "zh"
   } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-3ab2e24c-12b1-5513-4507-8c94aa24f37c"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+  "http://xmlns.com/foaf/0.1/depiction" : [ {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_Oberösterreich.svg"
+  }, {
+    "@id" : "http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Oberösterreich.svg/200px-Flag_of_Oberösterreich.svg.png"
+  } ]
 }, {
-  "@id" : "urn:enhancement-2c79b0df-4791-c882-5c9e-6e674491c0e9",
+  "@id" : "urn:enhancement-2101a536-7234-470e-c3ea-0f74099567ac",
   "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "1.0",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "KLM",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/KLM"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Agent"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Airline"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Company"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Organisation"
-  }, {
-    "@id" : "http://schema.org/Organization"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-b7813e1e-c146-404c-77f6-92c331d50baf"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-3ab2e24c-12b1-5513-4507-8c94aa24f37c",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.49502856773417475",
+    "@value" : "0.9691949620747825",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "145",
+    "@value" : "90",
     "@type" : "http://www.w3.org/2001/XMLSchema#int"
   } ],
   "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
   } ],
   "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "British Airways",
+    "@value" : "Denmark",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.\n\nThat's just two years after relaunching their services when international sanctions were eased.",
+    "@value" : "Istanbul is a city in Turkey. Cophenagen is a city in Denmark. Lima is a city in Peru.",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "130",
+    "@value" : "83",
     "@type" : "http://www.w3.org/2001/XMLSchema#int"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.305Z",
+    "@value" : "2018-08-24T13:30:10.200Z",
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
   } ],
   "http://purl.org/dc/terms/type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Organisation"
+    "@id" : "http://dbpedia.org/ontology/Place"
   } ],
   "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
 }, {
-  "@id" : "urn:enhancement-464b3fc2-b484-7bd4-514a-29e7cee08cab",
+  "@id" : "urn:enhancement-2b6107b4-58e7-2093-1e8b-a3471459f987",
   "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.149326402127156",
+    "@value" : "1.0",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Paris Commune",
+    "@value" : "China",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Paris_Commune"
+    "@id" : "http://dbpedia.org/resource/China"
   } ],
   "http://fise.iks-project.eu/ontology/entity-type" : [ {
     "@id" : "http://dbpedia.org/ontology/Country"
@@ -1029,36 +658,289 @@
   }, {
     "@id" : "http://schema.org/Place"
   }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
+    "@value" : "2018-08-24T13:30:10.212Z",
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
   } ],
   "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b"
+    "@id" : "urn:enhancement-c23ad3b2-89b9-aa59-39fd-8cda5db28909"
   } ],
   "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
     "@value" : "dbpedia"
   } ],
   "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
 }, {
-  "@id" : "urn:enhancement-51bc67c6-7c0f-348c-a9bb-e1632cb07fbc",
+  "@id" : "urn:enhancement-3c8b123b-55d6-a70a-59eb-a8e333339591",
   "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.9999969827857982",
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Turkey",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Turkey"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.212Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-950b3cce-9ac1-d6fe-e16e-3f2cefe06a05"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-44b23638-fb26-9379-c3e1-161bdb42e7b0",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.08724648472220208",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Great Wall of China",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Great_Wall_of_China"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Building"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.212Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-c23ad3b2-89b9-aa59-39fd-8cda5db28909"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-5525f7a7-40de-4306-f3e7-e7ad279cae12",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Austria",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Austria"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.212Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-6e4dbeb6-1d65-b0a9-49aa-0bf7250c1888"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-5a63143c-6e8f-071b-d393-8d5f60bfa8a0",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "1.0",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Beijing",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Beijing"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.213Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-eb18165e-8bb3-4543-5d54-c0eed9e07610"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-5e8378da-39d8-986c-acca-d82feebedec9",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.27708226869911806",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Upper Austria",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Upper_Austria"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Settlement"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.212Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-6e4dbeb6-1d65-b0a9-49aa-0bf7250c1888"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-6e4dbeb6-1d65-b0a9-49aa-0bf7250c1888",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9818418818863173",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "27",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Austria",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Vienna is a city in Austria. Istanbul is a city in Turkey.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "20",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.200Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-7b391ceb-15cb-5c0f-39e4-3701d8c1b5d8",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9999947565099725",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.286Z",
+    "@value" : "2018-08-24T13:30:10.188Z",
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
@@ -1072,458 +954,17 @@
   } ],
   "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
 }, {
-  "@id" : "urn:enhancement-614d84b6-4a9f-69e1-5638-fc8e534f6cd4",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.5873763350065253",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "399",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "Air France",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "389",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.305Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
-  } ],
-  "http://purl.org/dc/terms/type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Organisation"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-6cb1a7ee-d540-0958-4358-41650d91c2c8",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.9922206929173278",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "63",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "Iran",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "59",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.310Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
-  } ],
-  "http://purl.org/dc/terms/type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-83685122-91c4-dee3-1667-653b560ae9bd",
+  "@id" : "urn:enhancement-8b3db419-211d-c152-d713-c08bede15f4a",
   "http://fise.iks-project.eu/ontology/confidence" : [ {
     "@value" : "1.0",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Tehran",
+    "@value" : "Peru",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Tehran"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Settlement"
-  }, {
-    "@id" : "http://schema.org/Place"
-  }, {
-    "@id" : "http://www.opengis.net/gml/_Feature"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-a6188662-239c-6266-2375-fefb68059f90"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-85556664-5bd5-1dfb-e5fb-78e5e51e26b7",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.30463546425657556",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Amsterdam Arena",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Amsterdam_Arena"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Building"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Stadium"
-  }, {
-    "@id" : "http://schema.org/Place"
-  }, {
-    "@id" : "http://schema.org/StadiumOrArena"
-  }, {
-    "@id" : "http://www.opengis.net/gml/_Feature"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-94982c7d-8ffa-5903-cd2f-3f57f4f2424f",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.2042835216594651",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Paris Métro",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Paris_M%C3%A9tro"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Infrastructure"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/PublicTransitSystem"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/RouteOfTransportation"
-  }, {
-    "@id" : "http://schema.org/Place"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.329Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-a00f91d7-2e21-b194-4793-2118176e96c3",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "1.0",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Europe",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Europe"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Continent"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
-  }, {
-    "@id" : "http://schema.org/Continent"
-  }, {
-    "@id" : "http://schema.org/Place"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-a07dc0be-451c-e8d2-b9eb-28322be2c165",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.15140800274639865",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Amsterdam Airport Schiphol",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Amsterdam_Airport_Schiphol"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Airport"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/ArchitecturalStructure"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Infrastructure"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  }, {
-    "@id" : "http://schema.org/Airport"
-  }, {
-    "@id" : "http://schema.org/Place"
-  }, {
-    "@id" : "http://www.opengis.net/gml/_Feature"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-a6188662-239c-6266-2375-fefb68059f90",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.9862850159387508",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "186",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "Tehran",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.\n\nThat's just two years after relaunching their services when international sanctions were eased.",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "180",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.310Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
-  } ],
-  "http://purl.org/dc/terms/type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-b7813e1e-c146-404c-77f6-92c331d50baf",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.9868259519947365",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "321",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "KLM",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "318",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.305Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
-  } ],
-  "http://purl.org/dc/terms/type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Organisation"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-cc49f821-e8cb-66f1-bdfb-986bbfe7cd47",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.7424578438681418",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "364",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "Amsterdam",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "355",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.310Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
-  } ],
-  "http://purl.org/dc/terms/type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.9593388577020623",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "14",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "Europe",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "Some of Europe's biggest airlines are scrapping flights to Iran from September, stating the route was \"not commercially viable.\"\n\nBritish Airways will operate its last flight from Tehran on September 23rd.",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "8",
-    "@type" : "http://www.w3.org/2001/XMLSchema#int"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.310Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
-  } ],
-  "http://purl.org/dc/terms/type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Place"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-d906dfe1-555e-0aec-b8fb-e5a398d80a87",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "1.0",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Iran",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Iran"
+    "@id" : "http://dbpedia.org/resource/Peru"
   } ],
   "http://fise.iks-project.eu/ontology/entity-type" : [ {
     "@id" : "http://dbpedia.org/ontology/Country"
@@ -1541,77 +982,142 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
+    "@value" : "2018-08-24T13:30:10.212Z",
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
   } ],
   "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-6cb1a7ee-d540-0958-4358-41650d91c2c8"
+    "@id" : "urn:enhancement-9f435d59-2f53-d9df-edae-dbebd31dc41b"
   } ],
   "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
     "@value" : "dbpedia"
   } ],
   "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
 }, {
-  "@id" : "urn:enhancement-da28a10b-15da-0029-28e8-5aa8b72fe7e1",
+  "@id" : "urn:enhancement-950b3cce-9ac1-d6fe-e16e-3f2cefe06a05",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9980343377594171",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "57",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Turkey",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Vienna is a city in Austria. Istanbul is a city in Turkey. Cophenagen is a city in Denmark.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "51",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.200Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-9e8323a4-819b-6d7e-8b04-91b6fe3c94d0",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9666116555801386",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "140",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Latvia",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Lima is a city in Peru. Riga is a city in Latvia. Beijing is a city in China.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "134",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.200Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-9f435d59-2f53-d9df-edae-dbebd31dc41b",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.9881899318690662",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "114",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Peru",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Cophenagen is a city in Denmark. Lima is a city in Peru. Riga is a city in Latvia.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "110",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.200Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-b76c070c-c256-907e-3266-eb5c6914b03a",
   "http://fise.iks-project.eu/ontology/confidence" : [ {
     "@value" : "1.0",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Air France",
+    "@value" : "Latvia",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Air_France"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-type" : [ {
-    "@id" : "http://dbpedia.org/ontology/Agent"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Airline"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Company"
-  }, {
-    "@id" : "http://dbpedia.org/ontology/Organisation"
-  }, {
-    "@id" : "http://schema.org/Organization"
-  }, {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.329Z",
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
-  } ],
-  "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-614d84b6-4a9f-69e1-5638-fc8e534f6cd4"
-  } ],
-  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
-    "@value" : "dbpedia"
-  } ],
-  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
-}, {
-  "@id" : "urn:enhancement-e0a7e09e-c3ee-aee1-6d57-aa36e6f55bbb",
-  "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.03077482128389458",
-    "@type" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Organization for Security and Co-operation in Europe",
-    "@language" : "en"
-  } ],
-  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Organization_for_Security_and_Co-operation_in_Europe"
+    "@id" : "http://dbpedia.org/resource/Latvia"
   } ],
   "http://fise.iks-project.eu/ontology/entity-type" : [ {
     "@id" : "http://dbpedia.org/ontology/Country"
@@ -1624,52 +1130,54 @@
   }, {
     "@id" : "http://schema.org/Place"
   }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.330Z",
+    "@value" : "2018-08-24T13:30:10.212Z",
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
   } ],
   "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-d7e4f764-2068-d632-ba3b-60d2e0071fdc"
+    "@id" : "urn:enhancement-9e8323a4-819b-6d7e-8b04-91b6fe3c94d0"
   } ],
   "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
     "@value" : "dbpedia"
   } ],
   "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
 }, {
-  "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b",
+  "@id" : "urn:enhancement-c23ad3b2-89b9-aa59-39fd-8cda5db28909",
   "http://fise.iks-project.eu/ontology/confidence" : [ {
-    "@value" : "0.9898106039910912",
+    "@value" : "0.9967755922726012",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://fise.iks-project.eu/ontology/end" : [ {
-    "@value" : "427",
+    "@value" : "168",
     "@type" : "http://www.w3.org/2001/XMLSchema#int"
   } ],
   "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
   } ],
   "http://fise.iks-project.eu/ontology/selected-text" : [ {
-    "@value" : "Paris",
+    "@value" : "China",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/selection-context" : [ {
-    "@value" : "That's just two years after relaunching their services when international sanctions were eased.\n\nDutch carrier KLM will also stop flying there from Amsterdam on September 24, whilst Air France will end flights from Paris on September 18.",
+    "@value" : "Riga is a city in Latvia. Beijing is a city in China.",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/start" : [ {
-    "@value" : "422",
+    "@value" : "163",
     "@type" : "http://www.w3.org/2001/XMLSchema#int"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.310Z",
+    "@value" : "2018-08-24T13:30:10.200Z",
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
@@ -1680,17 +1188,143 @@
   } ],
   "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
 }, {
-  "@id" : "urn:enhancement-f4d80ef0-54de-3ba5-9262-3dfa9b1d4e31",
+  "@id" : "urn:enhancement-eb18165e-8bb3-4543-5d54-c0eed9e07610",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.7801561385567007",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/end" : [ {
+    "@value" : "149",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://fise.iks-project.eu/ontology/selected-text" : [ {
+    "@value" : "Beijing",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/selection-context" : [ {
+    "@value" : "Riga is a city in Latvia. Beijing is a city in China.",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/start" : [ {
+    "@value" : "142",
+    "@type" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.200Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.opennlp.impl.NamedEntityExtractionEnhancementEngine"
+  } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/TextAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-f2cdd528-1def-ce69-eccd-b8d30d9addcc",
   "http://fise.iks-project.eu/ontology/confidence" : [ {
     "@value" : "1.0",
     "@type" : "http://www.w3.org/2001/XMLSchema#double"
   } ],
   "http://fise.iks-project.eu/ontology/entity-label" : [ {
-    "@value" : "Paris",
+    "@value" : "Denmark",
     "@language" : "en"
   } ],
   "http://fise.iks-project.eu/ontology/entity-reference" : [ {
-    "@id" : "http://dbpedia.org/resource/Paris"
+    "@id" : "http://dbpedia.org/resource/Denmark"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.212Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-2101a536-7234-470e-c3ea-0f74099567ac"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-f51aa2c6-ffd4-219f-f29b-dd5b713f976d",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.18587038595968655",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Denmark–Norway",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Denmark%E2%80%93Norway"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-type" : [ {
+    "@id" : "http://dbpedia.org/ontology/Country"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/Place"
+  }, {
+    "@id" : "http://dbpedia.org/ontology/PopulatedPlace"
+  }, {
+    "@id" : "http://schema.org/Country"
+  }, {
+    "@id" : "http://schema.org/Place"
+  }, {
+    "@id" : "http://www.opengis.net/gml/_Feature"
+  }, {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://fise.iks-project.eu/ontology/extracted-from" : [ {
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2018-08-24T13:30:10.212Z",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
+  } ],
+  "http://purl.org/dc/terms/relation" : [ {
+    "@id" : "urn:enhancement-2101a536-7234-470e-c3ea-0f74099567ac"
+  } ],
+  "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
+    "@value" : "dbpedia"
+  } ],
+  "@type" : [ "http://fise.iks-project.eu/ontology/Enhancement", "http://fise.iks-project.eu/ontology/EntityAnnotation" ]
+}, {
+  "@id" : "urn:enhancement-f9ffec61-a883-5e24-5cb0-dc4aedd009d7",
+  "http://fise.iks-project.eu/ontology/confidence" : [ {
+    "@value" : "0.312739675198574",
+    "@type" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-label" : [ {
+    "@value" : "Lower Austria",
+    "@language" : "en"
+  } ],
+  "http://fise.iks-project.eu/ontology/entity-reference" : [ {
+    "@id" : "http://dbpedia.org/resource/Lower_Austria"
   } ],
   "http://fise.iks-project.eu/ontology/entity-type" : [ {
     "@id" : "http://dbpedia.org/ontology/Place"
@@ -1706,17 +1340,17 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://fise.iks-project.eu/ontology/extracted-from" : [ {
-    "@id" : "urn:content-item-sha1-eedd6e3b1a341b7132ec4505e1b87ad9fddcc036"
+    "@id" : "urn:content-item-sha1-a62985063594a94c43aef77d79dda30090d4b927"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2018-08-24T13:25:33.329Z",
+    "@value" : "2018-08-24T13:30:10.212Z",
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "org.apache.stanbol.enhancer.engines.entitytagging.impl.NamedEntityTaggingEngine"
   } ],
   "http://purl.org/dc/terms/relation" : [ {
-    "@id" : "urn:enhancement-ee9c4c3d-c667-c2d2-11f5-a918c378bf7b"
+    "@id" : "urn:enhancement-6e4dbeb6-1d65-b0a9-49aa-0bf7250c1888"
   } ],
   "http://stanbol.apache.org/ontology/entityhub/entityhub#site" : [ {
     "@value" : "dbpedia"

@@ -1,4 +1,5 @@
-[ {
+[ {"fulltext":"When Michael Jordan was at the peak of his powers as an NBA superstar, his Chicago Bulls teams were mowing down the competition, winning six NBA titles and setting a record for wins in a season that was broken by the Golden State Warriors two seasons ago."},
+  {
   "@id" : "http://dbpedia.org/resource/Michael_Jordan",
   "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Athlete", "http://dbpedia.org/ontology/BasketballPlayer", "http://dbpedia.org/ontology/Person", "http://schema.org/Person", "http://www.w3.org/2002/07/owl#Thing", "http://xmlns.com/foaf/0.1/Person" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {

@@ -1,4 +1,5 @@
-[ {
+[ {"fulltext":"The Stanbol enhancer can detect famous cities such as Paris and people such as Bob Marley."},
+  {
   "@id" : "http://dbpedia.org/resource/Bob_Marley",
   "@type" : [ "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Artist", "http://dbpedia.org/ontology/MusicalArtist", "http://dbpedia.org/ontology/Person", "http://schema.org/MusicGroup", "http://schema.org/Person", "http://www.w3.org/2002/07/owl#Thing", "http://xmlns.com/foaf/0.1/Person" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {

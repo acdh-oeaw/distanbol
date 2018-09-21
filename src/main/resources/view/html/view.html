@@ -18,7 +18,7 @@
 <body class="contained fixed-nav">
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white box-shadow">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             Distanbol
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -82,28 +82,32 @@
                     <h2>Source</h2>
                     <div id="source"></div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="textForm">
                         <form action="/convert" method="POST">
                             <label for="textInput">Source Text: </label>
-                            <textarea class="form-control" rows="11" id="textInput" name="input"></textarea>
+                            <textarea class="form-control" rows="9" id="textInput" name="input"></textarea>
                             <label for="confidenceInputTEXT">Confidence(Optional):</label>
                             <input type="text" class="form-control" id="confidenceInputTEXT" name="confidence"/>
                             <input type="submit" class="btn btn-primary" value="submit"/>
                         </form>
                     </div>
 
+                    <div id="fulltext">
+                        <b>Source Text: </b>
+                    </div>
+
                     <br>
-                    <!--<div class="form-group" id="form">-->
-                        <!--<b>If you want to submit another example from a URL:</b>-->
-                        <!--<br>-->
-                        <!--<form action="/convert" method="GET">-->
-                            <!--<label for="URLInput">URL:</label>-->
-                            <!--<input type="text" class="form-control" id="URLInput" name="URL"/>-->
-                            <!--<label for="confidenceInputURL">Confidence(Optional):</label>-->
-                            <!--<input type="text" class="form-control" id="confidenceInputURL" name="confidence"/>-->
-                            <!--<input type="submit" class="btn btn-primary" value="submit"/>-->
-                        <!--</form>-->
-                    <!--</div>-->
+                    <div class="form-group" id="urlForm">
+                        <b>If you want to submit another example from a URL:</b>
+                        <br>
+                        <form action="/convert" method="GET">
+                            <label for="URLInput">URL:</label>
+                            <input type="text" class="form-control" id="URLInput" name="URL"/>
+                            <label for="confidenceInputURL">Confidence(Optional):</label>
+                            <input type="text" class="form-control" id="confidenceInputURL" name="confidence"/>
+                            <input type="submit" class="btn btn-primary" value="submit"/>
+                        </form>
+                    </div>
 
                     <h2>Overview</h2>
                     <table>
