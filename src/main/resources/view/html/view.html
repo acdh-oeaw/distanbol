@@ -80,10 +80,12 @@
                 <div class="card mb-4 box-shadow">
 
                     <h2>Source</h2>
-                    <div id="rawJson"></div>
+                    <div id="source"></div>
+                    <div id="fulltext"><b>Source Text: </b></div>
                     <br>
                     <div id="form">
-                        <!--<form action="/Convert" method="GET"> this is for localhost-->
+                        <b>If you want to submit another example or change the confidence level:</b>
+                        <br>
                         <form action="/convert" method="GET">
                             <b>URL:</b> <input id="URLInput" name="URL"/>
                             <b>Confidence(Optional):</b> <input id="confidenceInput" name="confidence"/>
@@ -91,6 +93,7 @@
                         </form>
                     </div>
 
+                    <h2>Overview</h2>
                     <table>
                         <thead>
                         <tr>
@@ -107,9 +110,8 @@
 
                     <h2>Map Locations</h2>
                     <div id="map" class="map">
-
                     </div>
-
+                    <br>
 
                     <h2>Information</h2>
                     <div id="viewables"></div>

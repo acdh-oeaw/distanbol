@@ -23,10 +23,10 @@ public class Index {
     public Response index() {
 
         try {
-            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/html/Index.html"));
+            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/html/index.html"));
             return Response.status(200).entity(html).type("text/html").build();
         } catch (IOException e) {
-            logger.error("Can't read Index html file");
+            logger.error("Can't read index.html file: "+e.getMessage());
             return Response.serverError().build();
         }
 

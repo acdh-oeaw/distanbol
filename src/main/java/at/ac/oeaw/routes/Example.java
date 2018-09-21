@@ -24,14 +24,28 @@ public class Example {
     @GET
     @Path("/{exampleName}.json")
     @Produces({"application/json"})
-    public Response getExamples(@PathParam("exampleName") String exampleName) {
+    public Response getExamplesJson(@PathParam("exampleName") String exampleName) {
         try {
-            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/examples/" + exampleName + ".json"));
+            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/examples/json/" + exampleName + ".json"));
 
             return Response.accepted().entity(html).type("application/json").build();
         } catch (IOException e) {
-            logger.error("Can't read Example file, no such file probably");
+            logger.error("Can't read Example file: "+ e.getMessage());
         }
         return Response.status(404).entity("{\"error\":\"There is no such file with the name: " + exampleName + ".json.\"}").build();
+    }
+
+    @GET
+    @Path("/{exampleName}.txt")
+    @Produces({"text/plain"})
+    public Response getExamplesText(@PathParam("exampleName") String exampleName) {
+        try {
+            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/examples/text/" + exampleName + ".txt"));
+
+            return Response.accepted().entity(html).type("text/plain").build();
+        } catch (IOException e) {
+            logger.error("Can't read Example file: "+ e.getMessage());
+        }
+        return Response.status(404).entity("{\"error\":\"There is no such file with the name: " + exampleName + ".txt.\"}").build();
     }
 }

@@ -33,23 +33,27 @@ public class Convert {
     ServletContext servletContext;
 
 
+//    @POST
+//    @Path("/")
+//    @Consumes("application/x-www-form-urlencoded;charset=UTF-8")
+//    public Response convertPOST(@FormParam("input") String input, @FormParam("confidence") String confidence) {
+////todo
+//
+//    }
+
     @GET
     @Path("/")
-    public Response convertJson(@QueryParam("URL") String URL, @QueryParam("confidence") String confidence) {
-
-        //todo determine if its a text file or if its a json
-        //todo if its a text file, send to stanbol
-
-        //todo add fulltext
+    public Response convertGET(@QueryParam("URL") String URL, @QueryParam("confidence") String confidence) {
 
         Response response;
         try {
-            response = RequestHandler.getJSON(URL);
+            response = RequestHandler.get(URL, null);
         } catch (BadRequestException e) {
             return Response.status(400).entity(e.getMessage()).build();
         } catch (ProcessingException e) {
             return Response.status(504).entity("The request to the URL provided exceeded the timout: " + RequestHandler.TIMEOUT).build();
         }
+
 
         if (confidence != null) {
             try {
@@ -63,22 +67,50 @@ public class Convert {
             return Response.status(400).entity("Confidence(double) must be between 0 and 1").build();
         }
 
-        String json = response.readEntity(String.class);
-        return processStanbolJSONtoHTML(URL, json);
-
-    }
-
-    private Response processStanbolJSONtoHTML(String URL, String json) {
 
         Document doc;
         try {
-            String html = FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/html/view.html"));
-            doc = Jsoup.parse(html);
+            doc = Jsoup.parse(FileReader.readFile(this.servletContext.getRealPath("/WEB-INF/classes/view/html/view.html")));
         } catch (IOException e) {
+            logger.error(e.getMessage());
             return Response.serverError().entity("Something went wrong.").build();
         }
 
 
+        //Content-Type is built like this: Content-Type := type "/" subtype *[";" parameter]
+        //so what interests us comes before ';'
+        //sometimes there are no parameters but this split method should cover it
+        String contentType = response.getHeaderString("Content-Type").split(";")[0];
+
+        if (contentType == null) {
+            throw new BadRequestException("The given URL: '" + URL + "' doesn't have a content-type field in its response headers. Distanbol expects either an text/plain for fulltext or an application/json for stanbol output as the Content-Type.");
+        } else if (contentType.equals("application/json") || contentType.equals("application/ld+json")) {
+            String json = response.readEntity(String.class);
+            return processStanbolJSONtoHTML(doc, URL, json);
+        } else if (contentType.equals("text/plain")) {
+            String fulltext = response.readEntity(String.class);
+            return processTEXTtoHTML(doc, URL, fulltext);
+        } else {
+            return Response.status(400).entity("The given URL: '" + URL + "' doesn't point to a text, json or jsonld file. Distanbol expects either an text/plain for fulltext or an application/json for stanbol output as the Content-Type.").build();
+        }
+
+
+    }
+
+    private Response processTEXTtoHTML(Document doc, String URL, String fulltext) {
+
+        try {
+            String stanbolJson = RequestHandler.postToStanbol(fulltext);
+            return processStanbolJSONtoHTML(doc, URL, stanbolJson);
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+            return Response.serverError().entity("Something went wrong.").build();
+        }
+
+    }
+
+
+    private Response processStanbolJSONtoHTML(Document doc, String URL, String json) {
         JsonNode jsonNode;
         try {
             jsonNode = mapper.readTree(json);
@@ -92,13 +124,12 @@ public class Convert {
         Element confidenceInput = doc.getElementById("confidenceInput");
         confidenceInput.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
 
-        Element rawJsonHTML = doc.getElementById("rawJson");
-        rawJsonHTML.append("Stanbol JSON input: <a href=\"" + URL + "\">" + URL + "</a>");
+        Element sourceHTML = doc.getElementById("source");
+        sourceHTML.append("<b>Source URL: </b> <a href=\"" + URL + "\">" + URL + "</a>");
 
         if (jsonNode.isArray()) {
             Iterator<JsonNode> iterator = jsonNode.elements();
 
-            Element viewablesHTML = doc.getElementById("viewables");
 
             ArrayList<Viewable> viewables = new ArrayList<>();
             ArrayList<EntityEnhancement> entityEnhancements = new ArrayList<>();
@@ -108,40 +139,50 @@ public class Convert {
             while (iterator.hasNext()) {
                 JsonNode node = iterator.next();
 
-                //there are three types of nodes: viewables, entity enhancements and text enhancements.
-                //Viewables are entities to display.
-                //Entity enhancements contain confidence information
-                //Text enhancements contain context information.
+                if (node.get("fulltext") != null) {
+                    Element fulltextHTML = doc.getElementById("fulltext");
 
-                ArrayNode typesNode = (ArrayNode) node.get("@type");
-                if (typesNode != null) {
-                    if (typesNode.size() == 2 && typesNode.get(0).asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
+                    String fulltext = node.get("fulltext").asText();
 
-                        switch (typesNode.get(1).asText()) {
-                            case "http://fise.iks-project.eu/ontology/TextAnnotation":
-                                TextEnhancement textEnhancement = new TextEnhancement(node);
-                                textEnhancements.add(textEnhancement);
-                                break;
-                            case "http://fise.iks-project.eu/ontology/EntityAnnotation":
-                                EntityEnhancement entityEnhancement = new EntityEnhancement(node);
-                                //only take entity enhancements that are over the threshold,
-                                if (entityEnhancement.getConfidence() >= CONFIDENCE_THRESHOLD) {
-                                    entityEnhancements.add(entityEnhancement);
-                                }
-                                break;
-                            default:
-                                return Response.status(400).entity("The given Stanbol output is not valid.").build();
+                    fulltextHTML.append(fulltext);
+
+                } else {
+
+                    //there are three types of nodes: viewables, entity enhancements and text enhancements.
+                    //Viewables are entities to display.
+                    //Entity enhancements contain confidence information
+                    //Text enhancements contain context information.
+
+                    ArrayNode typesNode = (ArrayNode) node.get("@type");
+                    if (typesNode != null) {
+                        if (typesNode.size() == 2 && typesNode.get(0).asText().equals("http://fise.iks-project.eu/ontology/Enhancement")) {
+
+                            switch (typesNode.get(1).asText()) {
+                                case "http://fise.iks-project.eu/ontology/TextAnnotation":
+                                    TextEnhancement textEnhancement = new TextEnhancement(node);
+                                    textEnhancements.add(textEnhancement);
+                                    break;
+                                case "http://fise.iks-project.eu/ontology/EntityAnnotation":
+                                    EntityEnhancement entityEnhancement = new EntityEnhancement(node);
+                                    //only take entity enhancements that are over the threshold,
+                                    if (entityEnhancement.getConfidence() >= CONFIDENCE_THRESHOLD) {
+                                        entityEnhancements.add(entityEnhancement);
+                                    }
+                                    break;
+                                default:
+                                    return Response.status(400).entity("The given Stanbol output is not valid.").build();
+                            }
+
+                        } else {
+                            Viewable viewable = new Viewable(node);
+                            viewables.add(viewable);
                         }
 
                     } else {
+                        //node has no type, it means it is a viewable
                         Viewable viewable = new Viewable(node);
                         viewables.add(viewable);
                     }
-
-                } else {
-                    //node has no type, it means it is a viewable
-                    Viewable viewable = new Viewable(node);
-                    viewables.add(viewable);
                 }
 
             }
@@ -177,6 +218,8 @@ public class Convert {
             if (finalViewables.size() == 0) {
                 return Response.status(400).entity("There are no entities above the given threshold: " + CONFIDENCE_THRESHOLD).build();
             } else {
+                Element viewablesHTML = doc.getElementById("viewables");
+
                 Element formHTML = doc.getElementById("tableBody");
                 boolean firstElement = true;
 
@@ -195,6 +238,7 @@ public class Convert {
 
                         formHTML.append(viewable.getHTMLTableRowDepiction());
                     } catch (IOException e) {
+                        logger.error(e.getMessage());
                         return Response.serverError().entity("Something went wrong.").build();
                     }
 
