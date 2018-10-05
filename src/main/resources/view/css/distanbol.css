@@ -14,3 +14,7 @@ coordinate, long, lat  {
 .hidden {
     display: none;
 }
+
+.yellowText {
+    background-color:yellow;
+}

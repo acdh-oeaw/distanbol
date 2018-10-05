@@ -109,10 +109,10 @@ public class Viewable {
             doc.body().getElementById("comment").attr("class", "hidden");
         }
 
-        doc.body().getElementById("confidence").append(String.valueOf(getEntityEnhancement().getConfidence()));
-        doc.body().getElementById("context").append(getTextEnhancements().get(0).getContext());
+        doc.body().getElementById("confidence").append(String.valueOf(getConfidence()));
+        doc.body().getElementById("context").append(getContext());
 
-        doc.body().getElementById("types").append("<div><b>Types:</b>" + getTypesHTML() + "</div");
+        doc.body().getElementById("types").append(getTypesHTML());
 
         doc.body().getElementById("fullImageLink").attr("href", getDepiction());
         doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());
@@ -131,9 +131,9 @@ public class Viewable {
         //name
         sb.append("<td><a href='#").append(getId()).append("'>").append(getLabel()).append("</a></td>");
         //confidence
-        sb.append("<td>").append(getEntityEnhancement().getConfidence()).append("</td>");
+        sb.append("<td>").append(getConfidence()).append("</td>");
         //context
-        sb.append("<td>").append(getTextEnhancements().get(0).getContext()).append("</td>");
+        sb.append("<td>").append(getContext()).append("</td>");
         //types
         sb.append("<td>").append(getTypesHTML()).append("</td>");
 
@@ -146,10 +146,18 @@ public class Viewable {
         ArrayList<String> types = getTypes();
         if ((types != null) && (!types.isEmpty())) {
             StringBuilder sb = new StringBuilder();
+            boolean first = true;
             for (String type : types) {
-                sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
+                if (!first) {
+                    sb.append(", ");
+                } else {
+                    first = false;
+                }
+                String[] typeSplit = type.split("/");
+                String typeLabel = typeSplit[typeSplit.length - 1];
+                sb.append("<a href='").append(type).append("'>").append(typeLabel).append("</a>");
             }
-            typesHTML = "<ul>" + sb.toString() + "</ul>";
+            typesHTML = sb.toString();
         } else {
             typesHTML = "This entity has no known types.";
         }
@@ -216,6 +224,10 @@ public class Viewable {
         return entityEnhancement;
     }
 
+    public double getConfidence(){
+        return getEntityEnhancement().getConfidence();
+    }
+
     public void setEntityEnhancement(EntityEnhancement entityEnhancement) {
         this.entityEnhancement = entityEnhancement;
     }
@@ -226,6 +238,12 @@ public class Viewable {
 
     public List<TextEnhancement> getTextEnhancements() {
         return textEnhancements;
+    }
+
+    public String getContext(){
+        String context = getTextEnhancements().get(0).getContext();
+        context = context.replace(getLabel(),"<span class='yellowText'>"+getLabel()+"</span>");
+        return context;
     }
 
     public String getDepictionThumbnail() {
