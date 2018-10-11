@@ -224,7 +224,7 @@ public class Viewable {
         return entityEnhancement;
     }
 
-    public double getConfidence(){
+    public double getConfidence() {
         return getEntityEnhancement().getConfidence();
     }
 
@@ -240,9 +240,16 @@ public class Viewable {
         return textEnhancements;
     }
 
-    public String getContext(){
-        String context = getTextEnhancements().get(0).getContext();
-        context = context.replace(getLabel(),"<span class='yellowText'>"+getLabel()+"</span>");
+    public String getContext() {
+        TextEnhancement enhancement = getTextEnhancements().get(0);
+
+        String selectedText = enhancement.getSelectedText();
+        String context = enhancement.getContext();
+
+        if(selectedText!=null){
+            context = context.replaceAll("\\b"+selectedText+"\\b","<span class='yellowText'>" + selectedText + "</span>");
+        }
+
         return context;
     }
 
