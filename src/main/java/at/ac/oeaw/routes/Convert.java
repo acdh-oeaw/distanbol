@@ -36,7 +36,7 @@ public class Convert {
     @POST
     @Path("/")
     @Consumes("application/x-www-form-urlencoded;charset=UTF-8")
-    public Response convertPOST(@FormParam("input") String input, @FormParam("confidence") String confidence) {
+    public Response convertPOST(@FormParam("input") String input, @FormParam("confidence") String confidence, @FormParam("chain") String chain) {
 
         if (confidence != null) {
             try {
@@ -73,7 +73,7 @@ public class Convert {
         if (json) {
             return processStanbolJSONtoHTML(doc, null, input);
         } else {
-            return processTEXTtoHTML(doc, null, input);
+            return processTEXTtoHTML(doc, null, input, chain);
         }
 
 
@@ -81,7 +81,7 @@ public class Convert {
 
     @GET
     @Path("/")
-    public Response convertGET(@QueryParam("URL") String URL, @QueryParam("confidence") String confidence) {
+    public Response convertGET(@QueryParam("URL") String URL, @QueryParam("confidence") String confidence, @QueryParam("chain") String chain) {
 
         Response response;
         try {
@@ -127,7 +127,7 @@ public class Convert {
             return processStanbolJSONtoHTML(doc, URL, json);
         } else if (contentType.equals("text/plain")) {
             String fulltext = response.readEntity(String.class);
-            return processTEXTtoHTML(doc, URL, fulltext);
+            return processTEXTtoHTML(doc, URL, fulltext, chain);
         } else {
             return Response.status(400).entity("The given URL: '" + URL + "' doesn't point to a text, json or jsonld file. Distanbol expects either an text/plain for fulltext or an application/json for stanbol output as the Content-Type.").build();
         }
@@ -135,10 +135,10 @@ public class Convert {
 
     }
 
-    private Response processTEXTtoHTML(Document doc, String URL, String fulltext) {
+    private Response processTEXTtoHTML(Document doc, String URL, String fulltext, String chainInput) {
 
         try {
-            String stanbolJson = RequestHandler.postToStanbol(fulltext);
+            String stanbolJson = RequestHandler.postToStanbol(fulltext, chainInput);
             return processStanbolJSONtoHTML(doc, URL, stanbolJson);
         } catch (IOException e) {
             logger.error(e.getMessage());

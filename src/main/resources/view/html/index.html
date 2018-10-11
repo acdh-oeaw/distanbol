@@ -88,6 +88,13 @@
                             <textarea class="form-control" rows="9" id="textInput" name="input">Arthur Schnitzler was born at Praterstrasse 16, Leopoldstadt, Vienna, capital of the Austrian Empire (as of 1867, part of the dual monarchy of Austria-Hungary). He was the son of a prominent Hungarian laryngologist, Johann Schnitzler (1835–1893), and Luise Markbreiter (1838–1911), a daughter of the Viennese doctor Philipp Markbreiter. His parents were both from Jewish families. In 1879 Schnitzler began studying medicine at the University of Vienna and in 1885 he received his doctorate of medicine. He began work at Vienna's General Hospital (German: Allgemeines Krankenhaus der Stadt Wien), but ultimately abandoned the practice of medicine in favour of writing. On 26 August 1903, Schnitzler married Olga Gussmann (1882–1970), a 21-year-old aspiring actress and singer who came from a Jewish middle-class family. They had a son, Heinrich (1902–1982), born on 9 August 1902. In 1909 they had a daughter, Lili, who committed suicide in 1928. The Schnitzlers separated in 1921. Schnitzler died on 21 October 1931, in Vienna, of a brain hemorrhage. In 1938, following the Anschluss, his son Heinrich went to the United States and did not return to Austria until 1959; he is the father of the Austrian musician and conservationist Michael Schnitzler, born in 1944 in Berkeley, California, who moved to Vienna with his parents in 1959.</textarea>
                             <label for="confidenceTEXT">Confidence(Optional):</label>
                             <input type="text" class="form-control" id="confidenceTEXT" name="confidence"/>
+                            <label for="chainTEXT">Chain(Optional):</label>
+                            <select id="chainTEXT" name="chain" class="form-control">
+                                <option value="default">Default</option>
+                                <option value="countries">Countries</option>
+                                <option value="cities">Cities</option>
+                                <option value="locations">Locations</option>
+                            </select>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
@@ -116,6 +123,13 @@
                                             <label for="confidenceURL">Confidence(Optional):</label>
                                             <input type="text" class="form-control" id="confidenceURL"
                                                    name="confidence"/>
+                                            <label for="chainURL">Chain(Optional):</label>
+                                            <select id="chainURL" name="chain" class="form-control">
+                                                <option value="default">Default</option>
+                                                <option value="countries">Countries</option>
+                                                <option value="cities">Cities</option>
+                                                <option value="locations">Locations</option>
+                                            </select>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </form>

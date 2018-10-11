@@ -61,27 +61,29 @@ public class RequestHandler {
     }
 
 
-    public static String postToStanbol(String fulltext) throws IOException {
+    public static String postToStanbol(String fulltext, String chainInput) throws IOException {
 
-        /*
-        //todo find out what the different chains are
-        switch(args[1]) {
-			case "COUNTRIES":
-				stanbolURLString += "geoNames_PCLI";
-				break;
-			case "CITIES":
-				stanbolURLString += "geoNames_PPLC";
-				break;
-			case "LOCATIONS":
-				stanbolURLString += "geoNames_SPAsubset";
-				break;
-			default:
-				stanbolURLString += "dbpedia-fst-linking";
-}
-        */
+        String chain;
 
-        URL stanbolURL = new URL(stanbolURLString+"dbpedia-fst-linking");
+        switch (chainInput) {
+            case "countries":
+                chain = "geoNames_PCLI";
+                break;
+            case "cities":
+                chain = "geoNames_PPLC";
+                break;
+            case "locations":
+                chain = "geoNames_SPAsubset";
+                break;
+            default:
+                chain = "dbpedia-fst-linking";
+        }
 
+        //todo delete this sout
+        System.out.println("chain: " + chain);
+
+        URL stanbolURL = new URL(stanbolURLString + chain);
+//        URL stanbolURL = new URL(stanbolURLString + "default");
         HttpURLConnection stanbolCon = (HttpURLConnection) stanbolURL.openConnection();
         stanbolCon.setRequestMethod("POST");
         stanbolCon.setRequestProperty("Accept", "application/json");
@@ -111,7 +113,7 @@ public class RequestHandler {
 
         String stanbolOutput = convertStreamToString(stanbolIn).substring(1);
 
-        return sb.toString()+stanbolOutput;
+        return sb.toString() + stanbolOutput;
 
     }
 
