@@ -6,8 +6,11 @@ import at.ac.oeaw.helpers.FileReader;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,6 +26,7 @@ public class Viewable {
     private String latitude;
     private String longitude;
 
+    private final DecimalFormat numberFormatter = new DecimalFormat("###.##");
 
     private EntityEnhancement entityEnhancement;
     private List<TextEnhancement> textEnhancements = new ArrayList<>();
@@ -100,7 +104,7 @@ public class Viewable {
         Document doc = Jsoup.parse(FileReader.readFile(viewableTemplatePath));
 
         doc.body().getElementById("id").attr("name", getId());
-        doc.body().getElementById("id").append(getId());
+        doc.body().getElementById("id").append("<a href='" + getId() + "'>" + getId() + "</a>");
         doc.body().getElementById("label").append(getLabel());
 
         if (getComment() != null) {
@@ -109,13 +113,22 @@ public class Viewable {
             doc.body().getElementById("comment").attr("class", "hidden");
         }
 
-        doc.body().getElementById("confidence").append(String.valueOf(getConfidence()));
+        doc.body().getElementById("confidence").append(getConfidence());
         doc.body().getElementById("context").append(getContext());
 
         doc.body().getElementById("types").append(getTypesHTML());
 
-        doc.body().getElementById("fullImageLink").attr("href", getDepiction());
-        doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());
+        if (getDepiction() == null && getDepictionThumbnail() == null) {
+            Element depiction = doc.body().getElementById("depiction");
+            for (Element child : depiction.children()) {
+                child.remove();
+            }
+            depiction.append("<b>Depiction: </b><div><img id='thumbnailLink' src='/view/image/noImage.png'/></div>");
+        } else {
+            doc.body().getElementById("fullImageLink").attr("href", getDepiction());
+            doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());
+        }
+
 
         if (getLongitude() != null && getLatitude() != null) {
             String coordinates = "<coordinate><long>" + getLongitude() + "</long><lat>" + getLatitude() + "</lat></coordinate>";
@@ -224,8 +237,9 @@ public class Viewable {
         return entityEnhancement;
     }
 
-    public double getConfidence() {
-        return getEntityEnhancement().getConfidence();
+    public String getConfidence() {
+        return numberFormatter.format(getEntityEnhancement().getConfidence());
+
     }
 
     public void setEntityEnhancement(EntityEnhancement entityEnhancement) {
@@ -246,8 +260,8 @@ public class Viewable {
         String selectedText = enhancement.getSelectedText();
         String context = enhancement.getContext();
 
-        if(selectedText!=null){
-            context = context.replaceAll("\\b"+selectedText+"\\b","<span class='yellowText'>" + selectedText + "</span>");
+        if (selectedText != null) {
+            context = context.replaceAll("\\b" + selectedText + "\\b", "<span class='yellowText'>" + selectedText + "</span>");
         }
 
         return context;

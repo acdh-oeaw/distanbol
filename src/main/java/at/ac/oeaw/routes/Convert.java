@@ -52,7 +52,6 @@ public class Convert {
 
 
         boolean json;
-        JsonNode jsonNode;
         try {
             mapper.readTree(input);
             json = true;
