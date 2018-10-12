@@ -53,5 +53,5 @@ for(var i = 0, len = coordinates.length;i<len;i++){
 
 function setGenericImage(element) {
     var parentDiv = element.parentElement.parentElement;
-    parentDiv.innerHTML = "<div><b>Depiction: </b><div><img id='thumbnailLink' src='/view/image/noImage.png'/></div></div>";
+    parentDiv.innerHTML = "<div><img id='thumbnailLink' src='/view/image/noImage.png'/></div>";
 }

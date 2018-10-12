@@ -103,7 +103,7 @@ public class Viewable {
     public String getHTMLDepiction(String viewableTemplatePath) throws IOException {
         Document doc = Jsoup.parse(FileReader.readFile(viewableTemplatePath));
 
-        doc.body().getElementById("id").attr("name", getId());
+        doc.body().getElementById("anchor").attr("name", getId());
         doc.body().getElementById("id").append("<a href='" + getId() + "'>" + getId() + "</a>");
         doc.body().getElementById("label").append(getLabel());
 
@@ -123,7 +123,7 @@ public class Viewable {
             for (Element child : depiction.children()) {
                 child.remove();
             }
-            depiction.append("<b>Depiction: </b><div><img id='thumbnailLink' src='/view/image/noImage.png'/></div>");
+            depiction.append("<div><img id='thumbnailLink' src='/view/image/noImage.png'/></div>");
         } else {
             doc.body().getElementById("fullImageLink").attr("href", getDepiction());
             doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());

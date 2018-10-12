@@ -16,5 +16,19 @@ coordinate, long, lat  {
 }
 
 .yellowText {
-    background-color:yellow;
+    background-color: yellow;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.anchor {
+    padding-top: 90px;
 }

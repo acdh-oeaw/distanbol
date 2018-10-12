@@ -46,6 +46,9 @@ public class RequestHandler {
     }
 
     private static String validateURL(String URL) throws BadRequestException {
+        if(URL==null){
+            throw new BadRequestException("There is no URL given.");
+        }
         URL = URL.trim();
         String[] schemes = {"http", "https"};
         UrlValidator urlValidator = new UrlValidator(schemes, 8L);
