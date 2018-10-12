@@ -113,7 +113,7 @@ public class Viewable {
             doc.body().getElementById("comment").attr("class", "hidden");
         }
 
-        doc.body().getElementById("confidence").append(getConfidence());
+        doc.body().getElementById("confidence").append(numberFormatter.format(getConfidence()));
         doc.body().getElementById("context").append(getContext());
 
         doc.body().getElementById("types").append(getTypesHTML());
@@ -139,12 +139,19 @@ public class Viewable {
 
     public String getHTMLTableRowDepiction() throws IOException {
         StringBuilder sb = new StringBuilder();
-        sb.append("<tr>");
+        double confidence = getConfidence();
+        if(confidence<0.35){
+            sb.append("<tr class='danger'>");
+        }else if(confidence<0.7){
+            sb.append("<tr class='warning'>");
+        }else{
+            sb.append("<tr class='success'>");
+        }
 
         //name
         sb.append("<td><a href='#").append(getId()).append("'>").append(getLabel()).append("</a></td>");
         //confidence
-        sb.append("<td>").append(getConfidence()).append("</td>");
+        sb.append("<td>").append(numberFormatter.format(confidence)).append("</td>");
         //context
         sb.append("<td>").append(getContext()).append("</td>");
         //types
@@ -237,8 +244,8 @@ public class Viewable {
         return entityEnhancement;
     }
 
-    public String getConfidence() {
-        return numberFormatter.format(getEntityEnhancement().getConfidence());
+    public double getConfidence() {
+        return getEntityEnhancement().getConfidence();
 
     }
 

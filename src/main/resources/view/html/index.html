@@ -11,9 +11,7 @@
 
     <!-- Fundament core CSS -->
     <link href="/view/fundament/css/fundament.min.css" rel="stylesheet">
-
     <link href="/view/css/distanbol.css" rel="stylesheet">
-
 </head>
 
 <body class="contained fixed-nav">
@@ -81,7 +79,8 @@
             <div class="col-md-12">
                 <div class="card mb-4 box-shadow p-4">
 
-                    <p class="lead">Distanbol allows you to enrich your text through <a href="https://enrich.acdh.oeaw.ac.at/">Stanbol</a> and visualize the results.</p>
+                    <p class="lead">Distanbol allows you to enrich your text through <a
+                            href="https://enrich.acdh.oeaw.ac.at/">Stanbol</a> and visualize the results.</p>
                     <div class="form-group">
                         <form action="/convert" method="POST">
                             <label for="textInput">Enter the text you want to enrich:</label>
@@ -90,18 +89,20 @@
                             <input type="text" class="form-control" id="confidenceTEXT" name="confidence"/>
                             <!--<label for="chainTEXT">Chain(Optional):</label>-->
                             <!--<select id="chainTEXT" name="chain" class="form-control">-->
-                                <!--<option value="default">Default</option>-->
-                                <!--<option value="countries">Countries</option>-->
-                                <!--<option value="cities">Cities</option>-->
-                                <!--<option value="locations">Locations</option>-->
+                            <!--<option value="default">Default</option>-->
+                            <!--<option value="countries">Countries</option>-->
+                            <!--<option value="cities">Cities</option>-->
+                            <!--<option value="locations">Locations</option>-->
                             <!--</select>-->
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                     <div>
-                        <p class="lead">Distanbol also accepts URL pointing to a "text" or a "Stanbol Json output" as input:</p>
+                        <p class="lead">Distanbol also accepts URL pointing to a "text" or a "Stanbol Json output" as
+                            input:</p>
                         <b>URL:</b> The URL to the text file or the Stanbol output Json file.<br>
-                        <b>Confidence(Optional):</b> The minimum confidence threshold of an element to be displayeddetermined by Stanbol.
+                        <b>Confidence(Optional):</b> The minimum confidence threshold of an element to be
+                        displayeddetermined by Stanbol.
                         The results will have a confidence of greater than this number. The default value is 0.7.
                     </div>
                     <div>
@@ -125,10 +126,10 @@
                                                    name="confidence"/>
                                             <!--<label for="chainURL">Chain(Optional):</label>-->
                                             <!--<select id="chainURL" name="chain" class="form-control">-->
-                                                <!--<option value="default">Default</option>-->
-                                                <!--<option value="countries">Countries</option>-->
-                                                <!--<option value="cities">Cities</option>-->
-                                                <!--<option value="locations">Locations</option>-->
+                                            <!--<option value="default">Default</option>-->
+                                            <!--<option value="countries">Countries</option>-->
+                                            <!--<option value="cities">Cities</option>-->
+                                            <!--<option value="locations">Locations</option>-->
                                             <!--</select>-->
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>

@@ -3,10 +3,6 @@
     width: 100%;
 }
 
-table, th, td {
-    border: 1px solid black;
-}
-
 coordinate, long, lat  {
     display: none;
 }
@@ -19,7 +15,7 @@ coordinate, long, lat  {
     background-color: yellow;
 }
 
-.container {
+.flexContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,4 +27,16 @@ coordinate, long, lat  {
 
 .anchor {
     padding-top: 90px;
+}
+
+.success {
+    background-color: #a5d6a7;
+}
+
+.warning {
+    background-color: #fff59d;
+}
+
+.danger {
+    background-color: #ef9a9a;
 }
