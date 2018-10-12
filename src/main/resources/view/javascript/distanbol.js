@@ -48,6 +48,10 @@ for(var i = 0, len = coordinates.length;i<len;i++){
     addMarker(parseFloat(coordinates[i].getElementsByTagName("long")[0].textContent),parseFloat(coordinates[i].getElementsByTagName("lat")[0].textContent));
 }
 
-//
 //  addMarker(0,0);
 //  addMarker(10,10);
+
+function setGenericImage(element) {
+    var parentDiv = element.parentElement.parentElement;
+    parentDiv.innerHTML = "<div><b>Depiction: </b><div><img id='thumbnailLink' src='/view/image/noImage.png'/></div></div>";
+}
