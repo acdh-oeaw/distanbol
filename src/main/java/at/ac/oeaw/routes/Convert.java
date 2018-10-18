@@ -168,7 +168,7 @@ public class Convert {
             Element urlInput = doc.getElementById("URLInput");
             urlInput.attr("value", URL);
 
-            Element confidenceInputURL = doc.getElementById("confidenceInputURL");
+            Element confidenceInputURL = doc.getElementById("confidenceURL");
             confidenceInputURL.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
 
             Element sourceHTML = doc.getElementById("source");
@@ -177,7 +177,7 @@ public class Convert {
             Element textareaDiv = doc.getElementById("textForm");
             textareaDiv.attr("class", "hidden");
         } else {
-            Element confidenceInputTEXT = doc.getElementById("confidenceInputTEXT");
+            Element confidenceInputTEXT = doc.getElementById("confidenceTEXT");
             confidenceInputTEXT.attr("value", String.valueOf(CONFIDENCE_THRESHOLD));
 
             Element fulltextDiv = doc.getElementById("fulltext");

@@ -21,8 +21,22 @@ coordinate, long, lat  {
     justify-content: space-between;
 }
 
-.margin-right {
+.alignVerticalCenter {
+    display: flex;
+    align-items: center;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-right-10 {
     margin-right: 10px;
+}
+
+.margin-left-2 {
+    margin-left: 2px;
 }
 
 .anchor {
@@ -39,4 +53,12 @@ coordinate, long, lat  {
 
 .danger {
     background-color: #ef9a9a;
+}
+
+.debug {
+    border-style: dotted;
+}
+
+.debug1 {
+    border-style: dashed;
 }

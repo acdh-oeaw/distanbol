@@ -86,9 +86,24 @@
                         <form action="/convert" method="POST">
                             <label for="textInput">Source Text: </label>
                             <textarea class="form-control" rows="9" id="textInput" name="input"></textarea>
-                            <label for="confidenceInputTEXT">Confidence(Optional):</label>
-                            <input type="text" class="form-control" id="confidenceInputTEXT" name="confidence"/>
-                            <input type="submit" class="btn btn-primary" value="submit"/>
+                            <div class="flexContainer alignVerticalCenter">
+                                <div>
+                                    <div class="flexColumn">
+                                        <label for="confidenceTEXT">Confidence(Optional):</label>
+                                        <div class="alignVerticalCenter">
+                                            <input oninput="updateConfidenceSpan(this)" type="range"
+                                                   min="0"
+                                                   max="1.0" value="0.7" step="0.1" class="slider"
+                                                   id="confidenceTEXT"
+                                                   name="confidence"/>
+                                            <span id="demo" class="margin-left-2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
 
@@ -103,9 +118,24 @@
                         <form action="/convert" method="GET">
                             <label for="URLInput">URL:</label>
                             <input type="text" class="form-control" id="URLInput" name="URL"/>
-                            <label for="confidenceInputURL">Confidence(Optional):</label>
-                            <input type="text" class="form-control" id="confidenceInputURL" name="confidence"/>
-                            <input type="submit" class="btn btn-primary" value="submit"/>
+                            <div class="flexContainer alignVerticalCenter">
+                                <div>
+                                    <div class="flexColumn">
+                                        <label for="confidenceURL">Confidence(Optional):</label>
+                                        <div class="alignVerticalCenter">
+                                            <input oninput="updateConfidenceSpan(this)" type="range"
+                                                   min="0"
+                                                   max="1.0" value="0.7" step="0.1" class="slider"
+                                                   id="confidenceURL"
+                                                   name="confidence"/>
+                                            <span class="margin-left-2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
 
@@ -194,5 +224,6 @@
 
 <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
 <script src="/view/javascript/distanbol.js"></script>
+<script src="/view/javascript/distanbolMap.js"></script>
 </body>
 </html>
