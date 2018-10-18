@@ -19,13 +19,11 @@ You can either:
  - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example1.json)
  - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json)
  - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example3.json)
- - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example4.json)
- - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json)
 
 ### Examples with confidence as parameter(same example, different confidence):
 
- - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.5)
- - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example5.json&confidence=0.7)
+ - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json&confidence=0.5](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json&confidence=0.5)
+ - [https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json&confidence=0.7](https://distanbol.acdh.oeaw.ac.at?URL=https://distanbol.acdh.oeaw.ac.at/example/example2.json&confidence=0.7)
 
 
 ## Licensing
