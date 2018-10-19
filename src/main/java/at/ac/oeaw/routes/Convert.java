@@ -20,6 +20,7 @@ import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.StringTokenizer;
 
 @Path("/convert")
 public class Convert {
@@ -70,7 +71,7 @@ public class Convert {
         }
 
         if (json) {
-            return processStanbolJSONtoHTML(doc, null, input);
+            return processStanbolJSONtoHTML(doc, null, input, -1);
         } else {
             return processTEXTtoHTML(doc, null, input);
         }
@@ -123,7 +124,7 @@ public class Convert {
             throw new BadRequestException("The given URL: '" + URL + "' doesn't have a content-type field in its response headers. Distanbol expects either an text/plain for fulltext or an application/json for stanbol output as the Content-Type.");
         } else if (contentType.equals("application/json") || contentType.equals("application/ld+json")) {
             String json = response.readEntity(String.class);
-            return processStanbolJSONtoHTML(doc, URL, json);
+            return processStanbolJSONtoHTML(doc, URL, json, -1);
         } else if (contentType.equals("text/plain")) {
             String fulltext = response.readEntity(String.class);
             return processTEXTtoHTML(doc, URL, fulltext);
@@ -136,9 +137,12 @@ public class Convert {
 
     private Response processTEXTtoHTML(Document doc, String URL, String fulltext) {
 
+        StringTokenizer st = new StringTokenizer(fulltext);
+        int words = st.countTokens();
+
         try {
             String stanbolJson = RequestHandler.postToStanbol(fulltext);
-            return processStanbolJSONtoHTML(doc, URL, stanbolJson);
+            return processStanbolJSONtoHTML(doc, URL, stanbolJson, words);
         } catch (IOException e) {
             logger.error(e.getMessage());
             return Response.serverError().entity("Something went wrong.").build();
@@ -147,7 +151,7 @@ public class Convert {
     }
 
 
-    private Response processStanbolJSONtoHTML(Document doc, String URL, String json) {
+    private Response processStanbolJSONtoHTML(Document doc, String URL, String json, int wordCount) {
         boolean fromURL = true;
         if (URL == null) {
             fromURL = false;
@@ -315,6 +319,14 @@ public class Convert {
                     }
 
                 }
+
+                //statistics
+                Element statisticsHTML = doc.getElementById("statistics");
+                if(wordCount>0){
+                    statisticsHTML.append("<b>Word Count: </b>").append(String.valueOf(wordCount)).append("<br>");
+                }
+                statisticsHTML.append("<b>Total Number of Entities Found: </b>").append(String.valueOf(viewables.size())).append("<br>");
+                statisticsHTML.append("<b>Number of Entities Above Confidence Threshold: </b>").append(String.valueOf(finalViewables.size())).append("<br>");
 
                 return Response.accepted().entity(doc.html()).type("text/html").build();
             }
