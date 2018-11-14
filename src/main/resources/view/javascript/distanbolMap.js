@@ -6,7 +6,7 @@
       anchorXUnits: 'fraction',
       anchorYUnits: 'pixels',
       opacity: 0.75,
-      src: 'https://openlayers.org/en/v4.6.4/examples/data/icon.png'
+      src: '/view/image/icon.png'
     }))
   });
 
