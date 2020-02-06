@@ -1,14 +1,15 @@
 package at.ac.oeaw.routes;
 
-import at.ac.oeaw.elements.enhancements.EntityEnhancement;
 import at.ac.oeaw.elements.Viewable;
+import at.ac.oeaw.elements.enhancements.EntityEnhancement;
 import at.ac.oeaw.elements.enhancements.TextEnhancement;
 import at.ac.oeaw.helpers.FileReader;
 import at.ac.oeaw.helpers.RequestHandler;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -24,7 +25,7 @@ import java.util.StringTokenizer;
 
 @Path("/convert")
 public class Convert {
-    private static final Logger logger = Logger.getLogger(Convert.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(Convert.class);
 
     //default
     private Double CONFIDENCE_THRESHOLD = 0.7;

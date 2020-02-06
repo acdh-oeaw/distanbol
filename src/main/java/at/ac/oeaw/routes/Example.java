@@ -1,6 +1,8 @@
 package at.ac.oeaw.routes;
 
 import at.ac.oeaw.helpers.FileReader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 
 import java.io.IOException;
 import javax.servlet.ServletContext;
@@ -11,12 +13,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
-import org.apache.log4j.Logger;
+
 
 @Path("/example")
 public class Example {
 
-    private static final Logger logger = Logger.getLogger(Example.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(Example.class);
 
     @Context
     ServletContext servletContext;

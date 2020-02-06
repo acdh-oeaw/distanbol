@@ -1,17 +1,16 @@
 package at.ac.oeaw.routes;
 
 import at.ac.oeaw.helpers.FileReader;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 
 import javax.servlet.ServletContext;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +18,7 @@ import java.util.List;
 @Path("/view")
 public class View {
 
-    private static final Logger logger = Logger.getLogger(View.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(View.class);
     //fundament has these types of files
     private final List<String> extensionsText = Arrays.asList("css", "js");
     private final List<String> extensionsImage = Arrays.asList("jpg", "png");
