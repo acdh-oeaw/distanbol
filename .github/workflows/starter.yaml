@@ -15,7 +15,7 @@ jobs:
 # or see the switch on ref_name script below
       environment: ${{ steps.get_environment_from_git_ref.outputs.environment }}
       environment_short: ${{ steps.get_environment_from_git_ref.outputs.environment_short }}
-      image_name: your-image-name
+      image_name: distanbol
 # Please note that the next line only works correctly with repositories that don't contain
 # upper case characters. If you have such a repo name please replace ${{ github.repository }}
 # with org/repo-name (all lower case).
@@ -24,7 +24,7 @@ jobs:
       default_port: "5000"
       submodules: "true"
 #      herokuish_base_image: ghcr.io/acdh-oeaw/herokuish-for-cypress/main:latest-22
-      APP_NAME: your-app-name
+      APP_NAME: distanbol
 # This together with the branch name is also used as the namespace to deploy to
       APP_ROOT: "/"     
       # SERVICE_ID: "99999" # Better use GtiHub environment variables for this
